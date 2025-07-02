@@ -27,6 +27,8 @@
 
 
 
+
+
 | Nombre         | Color                                            | Hex       | Uso sugerido                   |
 | -------------- | ------------------------------------------------ | --------- | ------------------------------ |
 | Negro profundo | ![#0D0D0D](https://www.colorhexa.com/0d0d0d.png) | `#0D0D0D` | Fondo principal                |
