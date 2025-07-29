@@ -22,3 +22,16 @@
   vertical-align: middle;
   text-decoration: none;
 }
+
+
+/* borrar despues */
+.div_ej{
+  background-color: #C19A6B;
+  height: 60vh;
+  margin-bottom: 64px;
+}
+
+.titulo{
+  font-size: 10vh;
+}
+
