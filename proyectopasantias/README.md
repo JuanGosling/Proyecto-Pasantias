@@ -1,17 +1,17 @@
 --- Carpeta de Campo ---
 - Realizar la Carpeta de Campo en el mismo Github 
 - Realizar la Carpeta de Campo siguiendo los requerimientos expresados en los Documentos de Drive. Si se puede hacer uso de las Fotos de la Carpeta Documentos
+- Realizar al estilo APA , los links estan en el otro disco , ambos en la barra de favoritos
 
 --- Login y Register ---
-- Hacer mas sencillo la encriptacion de la Contraseña para que sea entendible (No Necesario)
-- Que funcione el Recordar del Login (Depende de como haga el Inicio de Sesion o como funcione)
-- A la Hora de crear una cuenta se tiene que verificar que la persona sea dueña del Email ingresado (Verificacion por Email con link)
-- Arreglar que al Iniciar Sesion los espacios no se tomen en cuenta (Por mas que no importe si estan o no)
-- Arreglar que a la hora de Crear una Cuenta se tome por igual los Caracteres Mayusculas y Minusculas  ( por ejemplo abc@abc.com es lo mismo que ABC@abc.com)
+- Hacer medidas de seguridad para que el sitio sea seguro , evitando php injection o cosas de ese estilo (Esto es opcional ya que nadie intentaria esas cosas raras en una pagina como esta , pero para tenerlo en cuenta en futuros proyectos )
+
+- A la Hora de crear una cuenta se tiene que verificar que la persona sea dueña del Email ingresado (Verificacion por Email con link que redireccione al inicio de sesion y guarde asi los datos en la base de datos sino no)
+- Hacer que el boton de olvide mi contraseña funcione ( Realizar e investigar )
 - Que cuando se Inicie Sesion se redirrecione a la Pagina y se Inicie una Sesion (Que esta dure hasta que se cierra la Pagina)
-- Indicar que la contraseña tenga una cantidad de caracteres
-- Arreglar que cada vez que salte un error no se borren todos los campos
-- Realizar una vista de Administrador
+- Indicar que la contraseña tenga una cantidad de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
+- Realizar una vista de Administrador (Roles de Usuarios y Administrador)
+
 
 --- Inicio de la Pagina Web ---
 - X Realizar el Diseño Principal
