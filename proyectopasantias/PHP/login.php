@@ -49,7 +49,7 @@
 
                 </div>
 
-                <div class="recordarme-contraseña">
+                <div class="recordarme-contraseña" style="justify-content : center">
 
                     <a href="">Olvide mi Contraseña</a>
 

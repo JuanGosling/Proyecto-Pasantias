@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     // Se solicita la conexion a la Base de Datos para continuar
 
     include ("conexion.php");
@@ -56,8 +58,10 @@
                 //Se redirige a la Pagina Principal
                 //Faltaria Agregar el Inicio de la Sesion
 
-                header("Location:../index.html");
-                exit;
+                $_SESSION['email'] = $email;
+
+                header("Location:../index.php");
+                exit();
 
             }  
             

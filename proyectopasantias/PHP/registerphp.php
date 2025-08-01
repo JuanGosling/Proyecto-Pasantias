@@ -1,5 +1,7 @@
 <?php
 
+    
+
     // Se solicita la conexion a la Base de Datos para continuar
 
     include ("conexion.php");
@@ -60,7 +62,7 @@
                     // Se muestra un mensaje de que se cargaron los Datos (Un mensaje inutil debido a que no se llega a ver)
 
                     ?>
-                    <div class="alert alert-success" role="alert" style="text-align:center">Datos ingresados correctamente!</div>
+                    <div class="alert alert-success" role="alert" style="text-align:center">Cuenta registrada! <a href="login.php">Iniciar Sesión</a></div>
                     <?php
 
                     // Realizar una Verificacion de Email y del Email redirigir al Inicio de Sesion
