@@ -20,12 +20,12 @@
             // Se almacena en variables lo que puso el Usuario en los Campos
 
             $email = trim($_POST['email']);
-            $nombre = trim($_POST['nombre']);
-            $apellido = trim($_POST['apellido']);
+            $nombre = $_POST['nombre'];
+            $apellido = $_POST['apellido'];
 
             // Aca a su vez se Encripta la Contraseña
 
-            $contraseña = password_hash(trim($_POST['contraseña']),PASSWORD_DEFAULT); 
+            $contraseña = password_hash($_POST['contraseña'],PASSWORD_DEFAULT); 
 
             // Se hace una consulta para verificar si el Email ingresado por el usuario esta en la Base de Datos
 
@@ -42,7 +42,7 @@
                 // En caso de que exista Se manda un mensaje de error diciendo que el Email Ingresado ya esta en nuestra Base de Datos
                 
                 ?>
-                <div class="alert alert-danger" role="alert" style="text-align:center">El Correo Electronico ya esta Registrado.</div>
+                <div class="alert alert-danger" role="alert" style="text-align:center">El correo electronico al parecer esta en uso . Intenta iniciar sesion</div>
                 <?php
 
             }
@@ -57,10 +57,10 @@
 
                 if($resultado){
 
-                    // Se muestra un mensaje de que se cargaron los Datos (Un mensaje inutil debido a que no llega a verse)
+                    // Se muestra un mensaje de que se cargaron los Datos (Un mensaje inutil debido a que no se llega a ver)
 
                     ?>
-                    <div class="alert alert-success" role="alert" style="text-align:center">Datos Ingresados Correctamente!</div>
+                    <div class="alert alert-success" role="alert" style="text-align:center">Datos ingresados correctamente!</div>
                     <?php
 
                     // Realizar una Verificacion de Email y del Email redirigir al Inicio de Sesion

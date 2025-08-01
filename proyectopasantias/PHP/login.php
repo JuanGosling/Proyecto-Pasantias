@@ -26,8 +26,6 @@
 
                     <img src="../IMG/mail.png" class="icono">
 
-                    <span class="error"></span>
-
                 </div>
 
                 <div class="cajadetexto">
@@ -36,18 +34,7 @@
 
                     <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
 
-                    <span class="error"></span>
-
                 </div>
-
-                <div class="recordarme-contraseña">
-
-                    <label><input type="checkbox"> Recordarme</label>
-
-                    <a href="">Olvide mi Contraseña</a>
-
-                </div>
-
 
                 <div class="boton">
 
@@ -59,6 +46,12 @@
                 <div class="registrarse">
 
                     <p>No tienes una Cuenta? <a href="../php/register.php" style="padding-left: 10px;">Crear una Cuenta</a></p>
+
+                </div>
+
+                <div class="recordarme-contraseña">
+
+                    <a href="">Olvide mi Contraseña</a>
 
                 </div>
 

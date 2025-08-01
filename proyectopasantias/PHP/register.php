@@ -25,8 +25,6 @@
 
                     <img src="../IMG/mail.png" class="icono">
 
-                    <span class="error"></span>
-
                 </div>
 
                 <div class="cajadetexto">
@@ -34,8 +32,6 @@
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" required>
 
                     <img src="../IMG/user.png" class="icono">
-
-                    <span class="error"></span>
 
                 </div>
 
@@ -45,7 +41,6 @@
 
                     <img src="../IMG/user.png" class="icono">
 
-                    <span class="error" ></span>
 
                 </div>
 
@@ -54,8 +49,6 @@
                     <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese una Contraseña" required>
 
                     <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
-
-                    <span class="error"></span>
 
                 </div>
 

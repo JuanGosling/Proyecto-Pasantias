@@ -2,7 +2,7 @@
 
     // Se solicita la conexion a la Base de Datos para continuar
 
-    require 'conexion.php';
+    include ("conexion.php");
 
     // Se cargan los Datos solo si hay un Metodo POST y si se dio click al boton de Iniciar Sesion
 
@@ -18,7 +18,7 @@
         // Se almacena en variables lo que puso el Usuario en los Campos
 
         $email = trim($_POST['email']) ;
-        $contraseña = trim($_POST['contraseña']);
+        $contraseña = $_POST['contraseña'];
 
         // Se hace una consulta para verificar que el Email ingresado por el usuario esta en la Base de Datos
 
@@ -50,7 +50,7 @@
                 // Se manda un mensaje el cual indica que se Inicio Sesion ( Lo mas probable es que este mensaje no se llegue a ver )
 
                 ?>
-                    <div class="alert alert-success" role="alert" style="text-align:center">Inicio de Sesión Exitoso!</div>
+                    <div class="alert alert-success" role="alert" style="text-align:center">Inicio de sesión exitoso!</div>
                 <?php
 
                 //Se redirige a la Pagina Principal
@@ -59,7 +59,15 @@
                 header("Location:../index.html");
                 exit;
 
-            }           
+            }  
+            
+            // En caso de que la contraseña este mal escrita se manda un mensaje de error
+
+            else{
+                ?>
+                    <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
+                <?php
+            }  
 
         }
 
@@ -75,15 +83,7 @@
 
             if($numero_registros === 0){
                 ?>
-                    <div class="alert alert-danger" role="alert" style="text-align:center">El Correo Electronico ingresado no esta Registrado.</div>
-                <?php
-            }
-
-            // En caso de que el Email si existiese pero la contraseña esta mal escrita se manda un mensaje de error
-
-            else{
-                ?>
-                    <div class="alert alert-danger" role="alert" style="text-align:center">El Email y/o Contraseña son incorrectos</div>
+                    <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
                 <?php
             }
 
