@@ -83,6 +83,7 @@ body{
 
 .bloqueprincipal{
 
+    margin-bottom: 5%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
@@ -95,7 +96,6 @@ body{
 
 .bloque{
 
-    margin-top: 5%;
     background-color: #1F1F1F;
 
 }
