@@ -38,7 +38,7 @@
 
                 <div class="boton">
 
-                    <button type="submit" class="btn btn-dark" name="iniciarsesion">Iniciar Sesión</button>
+                    <button type="submit" class="btn" name="iniciarsesion">Iniciar Sesión</button>
 
                 </div>
                 

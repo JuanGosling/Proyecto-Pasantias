@@ -4,7 +4,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(../IMG/FondoRegister.jpg);
+    background-image: url(../IMG/Fondo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -103,6 +103,8 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: 600;
+    background-color: #C19A6B;
+    --bs-btn-hover-bg: #a5855f;
 
 }
 

@@ -65,7 +65,7 @@
 
                 <div class="boton">
 
-                    <button type="submit" class="btn btn-dark" name="registrar">Crear Cuenta</button>
+                    <button type="submit" class="btn" name="registrar">Crear Cuenta</button>
 
                 </div>
 
