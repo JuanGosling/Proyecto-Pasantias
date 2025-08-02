@@ -42,9 +42,9 @@ asi que empeze otro que esta quedando mejor , no modifiquen nada a menos que yo 
 a su vez no borren el otro 
 
 - Incluir la parte del php de index en index1
-- Ver si puedo poner el usuario en vez del email
+- Ver si puedo poner el usuario en vez del email en la cuenta cuando se lgea
 - Agrandar la imagen principal del bloque principal (lo escribi en el html)
-- Hacer que sea responsive para celulares o ventanas mas pequeñas
+- Hacer que sea responsive para celulares o ventanas mas pequeñas , cuando la pagina se hace mas pequeña poner los div en linea
 
 --- Entrevista ---
 - Se busca una accesibilidad, es decir lo que se muestre este al alcance , se busca un contraste negro en la página junto con una paleta de colores atractivas . Se apunta a los mayoristas especificar esto . Se busca una pagina informativa , apuntamos a cierto público el cual busque algo artenasal no algo típico que se consigue ya armado y te lo llevas , se busca un buen producto el cual apunte a un cliente con un poco de dinero que busque adornar su casa junto con sus entornos y otros muebles . Se busca resaltar los detalles de los productos de como estos están hechos con firmeza y de calidad. Que los productos se encuentran en multiples provincias (no en una gran cantidad) . La venta ya se realiza no hace falta esa parte . Desde la vista de Administrador ver si es posible mostrar que es lo que más se ve , armar estadísticas y poder mostrar más en primera plana que es lo que se quiere mostrar . Especificar datos específicos de los productos . Agregar datos importantes como donde estamos , hace cuánto estamos , como nos contactas , marcas si es posible. Específicar que los productos no son a medida no son a encargo , recordar que toma un tiempo el armar . Foto montajes , videos armados tipo publicidad . Respecto al diseño necesitamos un nuevo nombre y logo.
