@@ -17,7 +17,6 @@
 --- Inicio de la Pagina Web ---
 - X Realizar el Diseño Principal
 - X Usar como guia las páginas mencionadas
-https://www.webnode.com/es/detalles-plantilla/air8wm/ GOTY PAGINA me la voy a robar
 - X Paginas de Guia (carpinteriabenegas.com)(bergamota.com.ar)(https://agencianewmar.es/portfolio/diseno-web-carpinteria-cadiz/)
 - X Ante otras características consultar la entrevista para más detalles
 
@@ -41,8 +40,9 @@ https://www.webnode.com/es/detalles-plantilla/air8wm/ GOTY PAGINA me la voy a ro
 asi que empeze otro que esta quedando mejor , no modifiquen nada a menos que yo les diga
 a su vez no borren el otro 
 
+- https://www.webnode.com/es/detalles-plantilla/air8wm/ GOTY PAGINA me la voy a robar
 - Incluir la parte del php de index en index1
-- Ver si puedo poner el usuario en vez del email en la cuenta cuando se lgea
+- Ver si puedo poner el usuario en vez del email en la cuenta cuando se logea
 - Agrandar la imagen principal del bloque principal (lo escribi en el html)
 - Hacer que sea responsive para celulares o ventanas mas pequeñas , cuando la pagina se hace mas pequeña poner los div en linea
 
