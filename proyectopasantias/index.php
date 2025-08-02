@@ -22,8 +22,6 @@ session_start();
 
             <a class="navbar-brand mx-lg-5 me-auto" style="font-size: 30px;font-weight: 700; color:#C19A6B ; font-family: Arial, Helvetica, sans-serif;">MÓDULO 23</a>
 
-            <img src="./IMG/Logo.png" width="70" height="70" >
-
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
                 <div class="offcanvas-header">
