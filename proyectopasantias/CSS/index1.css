@@ -1,0 +1,74 @@
+/* Fuentes Importadas */
+
+@font-face{
+
+    font-family: "Outfit";
+    src: url(../ASSETS/FONT/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face{
+
+    font-family: "Outfit-Light";
+    src: url(../ASSETS/FONT/static/Outfit-Light.ttf);
+}
+
+/* Boton */
+
+.btn{
+
+    background-color: #C19A6B;
+    --bs-btn-hover-bg: #a5855f;
+    --bs-btn-border-radius: 45px;
+}
+
+/* Barra de Navegacion */
+
+.navbar{
+
+    font-family: Outfit-Light;
+
+}
+
+.nav-item{
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.nav-link.active:hover{
+
+    color: #C19A6B;
+
+}
+
+.dropdown-item:hover{
+
+    color: #C19A6B;
+
+}
+
+.navbar-expand-lg .navbar-nav {
+
+    align-items: center;
+    text-align: -webkit-center;
+
+}
+
+/* Cuerpo de la Pagina */
+
+body{
+
+    background-image: url(../IMG/M2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Outfit;
+
+}
+
+.contenedor{
+
+    display: flex;
+
+}

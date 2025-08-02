@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
-    
-    
         <div class="inicio">
 
             <!-- Se Incluye el Archivo php . Funciona para Mostrar mensajes de Error o Exito provenientes del Archivo php !-->
