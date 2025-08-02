@@ -15,12 +15,14 @@ session_start();
 
 <body style="background-color: #0D0D0D; color: #ffffff ;">
 
-    <!-- navbar -->
+    <!-- Inicio de la Barra de Navegación -->
 
     <nav class="navbar navbar-expand-lg fixed-top " style="background-color: #1F1F1F;" data-bs-theme="dark">
         <div class="container-fluid ">
 
-            <a class="navbar-brand mx-lg-5 me-auto" href="#">Logo</a>
+            <a class="navbar-brand mx-lg-5 me-auto" style="font-size: 30px;font-weight: 700; color:#C19A6B ; font-family: Arial, Helvetica, sans-serif;">MÓDULO 23</a>
+
+            <img src="./IMG/Logo.png" width="70" height="70" >
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
@@ -68,21 +70,48 @@ session_start();
 
     </nav>
     
-    <!-- end navbar -->
+    <!-- Fin de la Barra de Navegación -->
 
-    <!-- carousel -->
+    <!-- Inicio de Carrusel -->
 
-    <div class="div_ej">
-        <img src="./IMG/descarga (1).jpg" class="img-fluid h-100 w-100 " alt="img">      
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner" >
+
+            <div class="carousel-item active" data-bs-interval="4000" style="max-height: 750px ; max-width: 1920;">
+                <img src="./IMG/M2.jpg" class="d-block w-100" alt="..." >
+            </div>
+
+            <section style="display: inline;display: flex;">
+
+            <div style="position: absolute;top: 23%;left: 5%;">
+                <img src="./IMG/Logo1.png" width="500" height="500" >
+            </div>
+
+            <div style="position: absolute;top: 33%; left: 40%;padding-right: 10%;">
+                
+                <p style="font-family: Arial, Helvetica, sans-serif;font-size: 25px; font-weight: 800; color: #8dee8a	;">En Módulo 23 creemos que cada hogar merece calidad</p>
+                <p style="font-family: Arial, Helvetica, sans-serif;font-size: 25px; font-weight: 800;">
+                    Nos especializamos en carpintería a medida, ofreciendo soluciones duraderas, estéticas y funcionales para todo tipo de personas, estilos de vida y presupuestos.
+                    Combinamos diseño moderno, materiales de primera y mano de obra calificada, logrando un equilibrio perfecto entre calidad y precio justo.
+                    <br>
+                    Porque entendemos que tu casa no es solo un lugar: es tu espacio.
+                </p>
+            </div>
+
+        </section>
+            
+        </div>
+
     </div>
 
-    <!-- end carousel -->
+    <!-- Fin de Carrusel -->
 
-    <!--  -->
+    <!-- Inicio del Contenido de la Pagina -->
 
     <div class="container" >
 
-        <div class="row text-center" style="margin: 10px;">
+        <div class="row text-center" style="margin-top: 100px;">
 
             <div class="col-lg-4">
                 <div style="margin-bottom: 15px;">
@@ -132,7 +161,9 @@ session_start();
         </div>
     </div>
 
-<!-- footer -->
+<!-- Inicio del Contenido de la Pagina -->
+
+<!-- Inicio del Pie de Pagina -->
 
     <footer>
         
@@ -180,6 +211,8 @@ session_start();
         </div>
 
     </footer>
+
+    <!-- Fin del Pie de Pagina -->
 
 </body>
 
