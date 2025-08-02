@@ -43,7 +43,7 @@ a su vez no borren el otro
 - https://www.webnode.com/es/detalles-plantilla/air8wm/ GOTY PAGINA me la voy a robar
 - Incluir la parte del php de index en index1
 - Ver si puedo poner el usuario en vez del email en la cuenta cuando se logea
-- Agrandar la imagen principal del bloque principal (lo escribi en el html)
+- Hacer que la barra de navegacion cambie de color al bajar en la pagina y viceversa para subir
 - Hacer que sea responsive para celulares o ventanas mas pequeñas , cuando la pagina se hace mas pequeña poner los div en linea
 
 --- Entrevista ---
