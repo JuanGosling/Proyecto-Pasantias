@@ -67,7 +67,31 @@ body{
 
 }
 
+/* Bloque Principal */
+
 .contenedor{
+
+    display: flex;
+
+}
+
+.imagenprincipal{
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+.barra{
+
+    position: absolute;
+
+}
+
+/* Bloque Contenedor de los Sections */
+
+.contenedor1{
 
     display: flex;
 
