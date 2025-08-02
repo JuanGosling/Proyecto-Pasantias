@@ -16,6 +16,7 @@
 --- Inicio de la Pagina Web ---
 - X Realizar el Diseño Principal
 - X Usar como guia las páginas mencionadas
+https://www.webnode.com/es/detalles-plantilla/air8wm/ GOTY PAGINA me la voy a robar
 - X Paginas de Guia (carpinteriabenegas.com)(bergamota.com.ar)
 - X Ante otras características consultar la entrevista para más detalles
 
