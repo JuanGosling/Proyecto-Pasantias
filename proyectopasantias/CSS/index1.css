@@ -67,32 +67,26 @@ body{
 
 }
 
-/* Bloque Principal */
+/* Contenedor de los Bloques (Sections) */
 
 .contenedor{
 
+    color: #ffffff;
+    font-family: Outfit;
     display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    gap: 0; /* Sin espacio entre los elementos */
 
 }
 
-.imagenprincipal{
+/* Bloque Principal*/
 
-    display: block;
-    width: 100%;
-    height: auto;
+.bloqueprincipal{
 
-}
-
-.barra{
-
-    position: absolute;
-
-}
-
-/* Bloque Contenedor de los Sections */
-
-.contenedor1{
-
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
     display: flex;
+    align-items: center;
 
 }
