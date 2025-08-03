@@ -71,8 +71,6 @@ body{
 
     background-image: url(../IMG/M2.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 
 }
 
@@ -160,7 +158,22 @@ body{
 
         display: inline;
         text-align: center;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
+
+    }
+
+    .bloque{
+
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 10%;
+
+    }
+
+    .divbloque{
+
+        display: inline;
+        text-align: center;
 
     }
 
@@ -169,6 +182,13 @@ body{
         width: 70%;
         margin-top: 5%;
 
+    }
+
+    #img2{
+
+        margin-bottom: 10%;
+        
+        
     }
 
 }
@@ -189,6 +209,13 @@ body{
 
         margin-top: 25%;
         margin-bottom: 15%;
+        
+
+    }
+
+    #img2{
+
+        margin-top: 10%;
 
     }
 
