@@ -10,10 +10,29 @@
 
 <body>
 
+
     <!-- Barra de Navegacion -->
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             
+            <!-- Script para Cambiar el Color -->
+
+            <script>
+
+                const navbar = document.querySelector('.navbar');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                    navbar.style.backgroundColor = '#1F1F1F';
+                    }
+                    else {
+                    navbar.style.backgroundColor = 'transparent';
+                    }
+                });
+
+            </script>
+
+            <!-- Fin del Script para Cambiar el Color -->
+
             <div class="container">
 
                 <a class="navbar-brand" style="font-family: Outfit;font-size: 30px;padding-top: 10px;">Módulo 23</a>
