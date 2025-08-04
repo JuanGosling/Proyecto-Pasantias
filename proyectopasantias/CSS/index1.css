@@ -194,6 +194,12 @@ body{
         
     }
 
+    .col-lg-4{
+
+        margin-top: 2%;
+
+    }
+
 }
 
 @media (max-width: 800px) {
