@@ -123,6 +123,16 @@ body{
 
 /* Pie de Pagina*/
 
+.footer{
+
+    text-align: center;
+    justify-content: center;
+    background-color: #212529 ;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
 
 /* Responsive */
 
