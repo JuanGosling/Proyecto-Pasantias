@@ -88,11 +88,11 @@ session_start();
                             <?php else: ?>
 
                             <li class="nav-item">
-                                <a class="btn" href="./PHP/login.php">Iniciar Sesion</a>
+                                <a class="btn" href="login.php">Iniciar Sesion</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="btn" href="./PHP/register.php">Registrarse</a>
+                                <a class="btn" href="register.php">Registrarse</a>
                             </li>
 
                             <?php endif; ?>
