@@ -33,19 +33,15 @@
 --- paginas extras ---
 - realizar diseño principal
 
---- Index1 ---
+--- Index ---
 
 - 1/8/25 - Cacho
 - Vayanse todos a la concha de su madre
-- Estuve intentando mejorar el index principal pero al final dije "Esto es una mierda" 
-asi que empeze otro que esta quedando mejor , no modifiquen nada a menos que yo les diga 
-(o me pregunten , y si lo hacen hagan las cosas bien hijos de puta) a su vez no borren el otro index
 
-- https://www.webnode.com/es/detalles-plantilla/air8wm/ GOTY PAGINA me la voy a robar
-- Incluir la parte del php de index en index1 (Verificar que funcione con .php)
-- Ver si puedo poner el usuario en vez del email en la cuenta cuando se logea (Pendiente)
-- Hacer que sea responsive para celulares o ventanas mas pequeñas , cuando la pagina se hace mas pequeña poner los div en linea (Hecho en la Pagina de Inicio)
-- Hacer las demas paginas (Servicios , Sobre Nosotros)
+
+--- informacion que vale oro ---
+https://nicepage.com/es/st/2455173/cortes-de-pelo-afeitado-con-toalla-caliente-recorte-de-barba-plantilla-web
+https://bergamin.com.ar/ 
 
 --- Entrevista ---
 - Se busca una accesibilidad, es decir lo que se muestre este al alcance , se busca un contraste negro en la página junto con una paleta de colores atractivas . Se apunta a los mayoristas especificar esto . Se busca una pagina informativa , apuntamos a cierto público el cual busque algo artenasal no algo típico que se consigue ya armado y te lo llevas , se busca un buen producto el cual apunte a un cliente con un poco de dinero que busque adornar su casa junto con sus entornos y otros muebles . Se busca resaltar los detalles de los productos de como estos están hechos con firmeza y de calidad. Que los productos se encuentran en multiples provincias (no en una gran cantidad) . La venta ya se realiza no hace falta esa parte . Desde la vista de Administrador ver si es posible mostrar que es lo que más se ve , armar estadísticas y poder mostrar más en primera plana que es lo que se quiere mostrar . Especificar datos específicos de los productos . Agregar datos importantes como donde estamos , hace cuánto estamos , como nos contactas , marcas si es posible. Específicar que los productos no son a medida no son a encargo , recordar que toma un tiempo el armar . Foto montajes , videos armados tipo publicidad . Respecto al diseño necesitamos un nuevo nombre y logo.
@@ -58,4 +54,5 @@ asi que empeze otro que esta quedando mejor , no modifiquen nada a menos que yo 
 | Crema cálido   | ![#F5F0E6](https://www.colorhexa.com/f5f0e6.png) | `#F5F0E6` | Tipografía secundaria / fondos |
 | Madera natural | ![#C19A6B](https://www.colorhexa.com/c19a6b.png) | `#C19A6B` | Acentos, botones, detalles     |
 | Dorado apagado | ![#A68A64](https://www.colorhexa.com/a68a64.png) | `#A68A64` | Íconos, bordes elegantes       |
+
 | Blanco suave   | ![#FFFFFF](https://www.colorhexa.com/ffffff.png) | `#FFFFFF` | Texto principal                |
