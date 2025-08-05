@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,19 +53,19 @@
                         <ul class="navbar-nav ms-auto">
 
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="index1.php">Inicio</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Servicios</a>
+                                <a class="nav-link active" href="./PHP/servicios.php">Servicios</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Nuestro Trabajo</a>
+                                <a class="nav-link active" href="./PHP/nuestrotrabajo.php">Nuestro Trabajo</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Sobre Nosotros</a>
+                                <a class="nav-link active" href="./PHP/sobrenosotros.php">Sobre Nosotros</a>
                             </li>
 
                             <!-- Verifica si hay una sesion activa , si lo hay se muestra el email y el boton para cerrar sesion
@@ -72,13 +76,13 @@
                             <li class="nav-item dropdown">
 
                                 <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #C19A6B;">
-                                Usuario <img src="./IMG/user.png" class="icono">
+                                <?php echo htmlspecialchars($_SESSION['email']); ?><img src="./IMG/user.png" class="icono">
                                 </a>
                                 
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
                                     <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
-                                    <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                                    <li><a class="dropdown-item" href="PHP/cerrarsesion.php">Cerrar Sesion</a></li>
                                 </ul>
 
                             </li>
@@ -117,7 +121,7 @@
 
         <section class="bloqueprincipal">
 
-            <div style="padding-right: 5%;">
+            <div id="divespacio">
 
                 <h1 style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
@@ -142,7 +146,7 @@
 
             <div class="divbloque">
 
-                <div style="padding-right: 5%;">
+                <div id="divespacio">
 
                     <img src="./IMG/M4.jpg"  class="img-fluid" id="img2">
 
@@ -180,7 +184,7 @@
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Materiales de Calidad</h1>
 
-                        <p>
+                        <p style="font-size: 20px;">
                             En Módulo 23 trabajamos con materiales seleccionados por su durabilidad, resistencia y estética.
                             Usamos maderas nobles, herrajes confiables y terminaciones de alto nivel para garantizar muebles que no solo se ven bien, sino que resisten el paso del tiempo.
                             Porque para nosotros, calidad es más que una promesa: es una base.
@@ -196,7 +200,7 @@
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Accesible</h1>
 
-                        <p >
+                        <p style="font-size: 20px;">
                             Creemos que el diseño funcional y bien hecho no tiene por qué ser inaccesible.
                             Conseguir tu mueble ideal para tu hogar es posible , en Modulo 23
                             buscamos que seas capaz de acceder a lo mejor segun tu estilo de vida.
@@ -212,7 +216,7 @@
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Trabajo Artesanal</h1>
 
-                        <p>
+                        <p style="font-size: 20px;">
                             Cada mueble que sale de nuestro taller lleva el sello del trabajo artesanal.
                             Detrás de cada corte, encastre y acabado, hay manos expertas que cuidan los detalles y entienden que la carpintería es tanto técnica como pasión.
                             En Módulo 23, lo que hacemos es único, porque está hecho por personas, no por máquinas.
@@ -230,11 +234,11 @@
 
         <section class="bloque" style="padding-top: 6%;">
 
-            <h1 style="font-size: 45px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 5%;">Nuestro Trabajo</h1>
+            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 5%;">Nuestros Servicios</h1>
 
             <div style="justify-content: center;display: flex;margin-bottom: 5%;">
 
-                <img src="./IMG/M1.jpg" class="img-fluid" width="60%">
+                <img src="./IMG/M1.jpg" class="img-fluid" width="60%" id="img3">
 
             </div>
 
@@ -324,7 +328,7 @@
 
             <div style="display: flex;justify-content: center;margin-top: 6%;">
 
-                <a href="" class="btn" style="width: 25%;">Ver mas</a>
+                <a href="./PHP/servicios.html" class="btn" id="btn1">Ver mas</a>
 
             </div>
 
