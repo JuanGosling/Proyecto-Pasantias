@@ -1,259 +1,357 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/index.css">
+    <title>Carpinteria Módulo 23</title>
+    <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/index1.css">
 </head>
 
-<body style="background-color: #0D0D0D; color: #ffffff ;">
+<body>
 
-    <!-- Inicio de la Barra de Navegación -->
 
-    <nav class="navbar navbar-expand-lg fixed-top " style="background-color: #1F1F1F;" data-bs-theme="dark">
-        <div class="container-fluid ">
+    <!-- Barra de Navegacion -->
 
-            <a class="navbar-brand mx-3" style="font-size: 30px;font-weight: 700; color:#C19A6B ; font-family: Arial, Helvetica, sans-serif;">MÓDULO 23</a>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            
+            <!-- Script para Cambiar el Color -->
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <script>
 
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                const navbar = document.querySelector('.navbar');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                    navbar.style.backgroundColor = '#212529';
+                    }
+                    else {
+                    navbar.style.backgroundColor = 'transparent';
+                    }
+                });
+
+            </script>
+
+            <!-- Fin del Script para Cambiar el Color -->
+
+            <div class="container">
+
+                <a class="navbar-brand" style="font-family: Outfit;font-size: 30px;padding-top: 10px;">Módulo 23</a>
+
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body ">
+
+                        <ul class="navbar-nav ms-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./PHP/servicios.php">Servicios</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./PHP/nuestrotrabajo.php">Nuestro Trabajo</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./PHP/sobrenosotros.php">Sobre Nosotros</a>
+                            </li>
+
+                            <!-- Verifica si hay una sesion activa , si lo hay se muestra el email y el boton para cerrar sesion
+                            sino se muestras los botones default de iniciar sesion y registrarse-->
+
+                            <?php if (isset($_SESSION['email'])): ?>
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #C19A6B;">
+                                <?php echo htmlspecialchars($_SESSION['email']); ?><img src="./IMG/user.png" class="icono">
+                                </a>
+                                
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
+                                    <li><a class="dropdown-item" href="PHP/cerrarsesion.php">Cerrar Sesion</a></li>
+                                </ul>
+
+                            </li>
+
+                            <?php else: ?>
+
+                            <li class="nav-item">
+                                <a class="btn" href="./PHP/login.php">Iniciar Sesion</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="btn" href="./PHP/register.php">Registrarse</a>
+                            </li>
+
+                            <?php endif; ?>
+
+                        </ul>
+
+                    </div>
+
                 </div>
 
-                <div class="offcanvas-body ">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item px-2">
-                            <a class="nav-link active " aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link "  href="#">Trabajos</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link " href="#">Ubicacion</a>
-                        </li>   
-                        <li class="nav-item px-2">
-                            <a class="nav-link " href="#">Contactanos</a>
-                        </li>
-                    </ul>
-                </div>
+                <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="background-color: #C19A6B;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
             </div>
 
+        </nav>
 
-            <!-- Verifica si hay una sesion activa , si lo hay se muestra el email y el boton para cerrar sesion
-            sino se muestras los botones default de iniciar sesion y registrarse-->
-            <div class="d-flex ms-auto">
-                <?php if (isset($_SESSION['email'])): ?>
-                        <p style="margin-top:15px">Bienvenido, <?php echo htmlspecialchars($_SESSION['email']); ?>!</p>
-                        <a href="PHP/cerrarsesion.php" class="custom-button mx-lg-5">Cerrar sesión</a>
-                <?php else: ?>
-                        <a href="PHP/login.php" class="custom-button mx-lg-5">Iniciar Sesión</a>
-                        <a href="PHP/register.php" class="custom-button mx-lg-5">Registrarse</a>
-                <?php endif; ?>
-            </div>
-            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Contenedor de los Bloques (Sections) -->
 
-        </div>
+    <div class="contenedor">
 
-    </nav>
-    
-    <!-- Fin de la Barra de Navegación -->
+        <!-- Bloque Principal -->
 
-    <!-- Inicio de Carrusel -->
+        <section class="bloqueprincipal">
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div id="divespacio">
 
-        <div class="carousel-inner" >
+                <h1 style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
-            <div class="carousel-item active" data-bs-interval="4000" style="max-height: 750px ; max-width: 1920;">
-                <img src="./IMG/M2.jpg" class="d-block w-100" alt="..." >
-            </div>
-
-        <section style="display: inline;display: flex;">
-
-            <div style="position: absolute;top: 23%;left: 5%;">
-                <img src="./IMG/Logo1.png" width="500" height="500" >
-            </div>
-
-            <div style="position: absolute;top: 33%; left: 40%;padding-right: 10%;">
-                
-                <p style="font-family: Arial, Helvetica, sans-serif;font-size: 25px; font-weight: 800; color: #C19A6B	;">En Módulo 23 creemos que cada hogar merece calidad</p>
-                <p style="font-family: Arial, Helvetica, sans-serif;font-size: 25px; font-weight: 800;">
-                    Nos especializamos en carpintería a medida, ofreciendo soluciones duraderas, estéticas y funcionales para todo tipo de personas, estilos de vida y presupuestos.
-                    Combinamos diseño moderno, materiales de primera y mano de obra calificada, logrando un equilibrio perfecto entre calidad y precio justo.
-                    <br>
-                    Porque entendemos que tu casa no es solo un lugar: es tu espacio.
+                <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
+                Nos especializamos en carpintería, ofreciendo soluciones duraderas, estéticas y funcionales para todo tipo de personas, estilos de vida y presupuestos.
+                Combinamos diseño moderno, materiales de primera y trabajo artesanal, logrando un equilibrio perfecto entre calidad y precio justo.
                 </p>
+
+            </div>
+
+            <div>
+
+                <img src="./IMG/Logo3.png" class="img-fluid" id="img1">
+
             </div>
 
         </section>
-            
-        </div>
 
-    </div>
+        <!-- Bloque 1 -->
 
-    <!-- Fin de Carrusel -->
+        <section class="bloque">
 
-    <!-- Inicio del Contenido de la Pagina -->
+            <div class="divbloque">
 
-    <div class="container" >
+                <div id="divespacio">
 
-        <div class="row text-center" style="margin-top: 100px;">
+                    <img src="./IMG/M4.jpg"  class="img-fluid" id="img2">
 
-            <div class="col-lg-4">
-                <div style="margin-bottom: 15px;">
-                    <img src="./IMG/descarga (1).jpg" class="img-fluid h-50 w-50 rounded-circle " alt="img">
                 </div>
-                <h2>Heading</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid architecto odio itaque perferendis voluptatem, libero voluptates atque ducimus dicta harum non. Quo mollitia sequi fugiat repellat placeat! Voluptate, corrupti illum!</p>
-                <a href="#" class="custom-button mb-4">View details »</a>
+
+                <div>
+
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>Muebles que se adaptan a tu vida y a tu hogar</b></h1>
+
+                    <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
+                    En Módulo 23 diseñamos muebles pensando en la diversidad de hogares y estilos de vida. 
+                    Ya sea un departamento moderno, una casa familiar o un espacio reducido, nuestras piezas 
+                    se ajustan a cada entorno, optimizando el espacio sin perder calidez ni funcionalidad.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="col-lg-4">
-                <div  style="margin-bottom: 15px;">
-                    <img src="./IMG/descarga (1).jpg" class="img-fluid h-50 w-50 rounded-circle " alt="img">
-                </div>
-                <h2>Heading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, deleniti! Ut exercitationem excepturi quos, culpa maxime, eius laborum earum nesciunt corrupti praesentium voluptas ad quia? Reiciendis, quaerat! Optio, id illum?</p>
-                <a href="#" class="custom-button mb-4">View details »</a>  
-            </div>
+        </section>
 
-            <div class="col-lg-4">
-                <div  style="margin-bottom: 15px;">
-                    <img src="./IMG/descarga (1).jpg" class="img-fluid h-50 w-50 rounded-circle " alt="img">
-                </div>
-                <h2>Heading</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, deleniti! Ut exercitationem excepturi quos, culpa maxime, eius laborum earum nesciunt corrupti praesentium voluptas ad quia? Reiciendis, quaerat! Optio, id illum?</p>
-                <a href="#" class="custom-button mb-4">View details »</a>
-            </div>
+        <!-- Bloque 2 -->
 
-        </div>
+        <section class="bloque" style="background-color: #0D0D0D;padding-bottom: 10%;">
 
-    </div>
+            <div class="container">
 
-    <div style="background-color: #1F1F1F; margin-top: 100px;padding-top: 50px; padding-bottom: 50px;" >
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-8" style="margin-top: 5%;">
-                    <div>
-                        <h1>Acerca de nosotros</h1>
-                        <br>
-                        <p>
-                            En Módulo 23 creemos que todos merecen vivir en un hogar cómodo, funcional y con estilo, sin tener que pagar precios excesivos.
-                            Somos una carpintería artesanal especializada en muebles a medida. Nos enfocamos en ofrecer soluciones reales para personas reales: diseños pensados para adaptarse a cada espacio, a cada necesidad y, sobre todo, a cada presupuesto.
-                            <br>
-                            Nuestro compromiso es combinar materiales de calidad, mano de obra calificada y un enfoque práctico que nos permita mantener precios accesibles, sin resignar estética ni durabilidad. Fabricamos cada pieza con dedicación y atención al detalle, porque entendemos que tu hogar es mucho más que un lugar: es tu refugio, tu espacio.
-                            En Módulo 23 trabajamos para que el diseño y la calidad estén al alcance de todos.
+                <div class="row text-center">
+
+                    <div class="col-lg-4">
+                        
+                        <div style="margin-bottom: 8%;">
+                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                        </div>
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Materiales de Calidad</h1>
+
+                        <p style="font-size: 20px;">
+                            En Módulo 23 trabajamos con materiales seleccionados por su durabilidad, resistencia y estética.
+                            Usamos maderas nobles, herrajes confiables y terminaciones de alto nivel para garantizar muebles que no solo se ven bien, sino que resisten el paso del tiempo.
+                            Porque para nosotros, calidad es más que una promesa: es una base.
                         </p>
+
                     </div>
+
+                    <div class="col-lg-4">
+
+                        <div style="margin-bottom: 8%;">
+                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                        </div>
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Accesible</h1>
+
+                        <p style="font-size: 20px;">
+                            Creemos que el diseño funcional y bien hecho no tiene por qué ser inaccesible.
+                            Conseguir tu mueble ideal para tu hogar es posible , en Modulo 23
+                            buscamos que seas capaz de acceder a lo mejor segun tu estilo de vida.
+                        </p>
+                        
+                    </div>
+
+                    <div class="col-lg-4">
+                        
+                        <div style="margin-bottom: 8%;">
+                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                        </div>
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Trabajo Artesanal</h1>
+
+                        <p style="font-size: 20px;">
+                            Cada mueble que sale de nuestro taller lleva el sello del trabajo artesanal.
+                            Detrás de cada corte, encastre y acabado, hay manos expertas que cuidan los detalles y entienden que la carpintería es tanto técnica como pasión.
+                            En Módulo 23, lo que hacemos es único, porque está hecho por personas, no por máquinas.
+                        </p>
+
+                    </div>
+
                 </div>
-                <div class="col-lg-4">
-                    <img src="./IMG/descarga (1).jpg" class="img-fluid h-100 w-100 " alt="img">
-                </div>
+
             </div>
-        </div>
+
+        </section>
+
+        <!-- Bloque 3 -->
+
+        <section class="bloque" style="padding-top: 6%;">
+
+            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 5%;">Nuestros Servicios</h1>
+
+            <div style="justify-content: center;display: flex;margin-bottom: 5%;">
+
+                <img src="./IMG/M1.jpg" class="img-fluid" width="60%" id="img3">
+
+            </div>
+
+            <div class="container">
+
+                <div class="row text-center">
+
+                    <div class="col-lg-4">
+                        
+                        <div style="margin-bottom: 8%;">
+
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
+
+                        </div>         
+
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
+
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        </p>
+                        
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
+
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container" style="margin-top: 5%;">
+
+                <div class="row text-center">
+
+                    <div class="col-lg-4">
+                        
+                        <div style="margin-bottom: 8%;">
+
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Veladores</h1>
+
+                        </div>         
+
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Repisas</h1>
+
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        </p>
+                        
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Comodas</h1>
+
+                        <p style="font-size: 20px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display: flex;justify-content: center;margin-top: 6%;">
+
+                <a href="./PHP/servicios.html" class="btn" id="btn1">Ver mas</a>
+
+            </div>
+
+        </section>
+        
+
     </div>
 
-
-
-
-    <!-- galeria -->
-    <div>
-        <div class="container">
-            <div style="background-color: #0d0d0d ;margin-top: 100px;" class="row text-center " >
-                <h1 class="mb-4" >Nuestros Trabajos</h1>
-                <div class="row">
-                    <div class="col-lg-4 mb-4">
-                        <img src="./IMG/M1.jpg" class="img-fluid h-100 w-100" alt="img">
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <img src="./IMG/M1.jpg" class="img-fluid h-100 w-100" alt="img">
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <img src="./IMG/M1.jpg" class="img-fluid h-100 w-100" alt="img">
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <img src="./IMG/M1.jpg" class="img-fluid h-100 w-100" alt="img">
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <img src="./IMG/M1.jpg" class="img-fluid h-100 w-100" alt="img">
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <img src="./IMG/M1.jpg" class="img-fluid h-100 w-100" alt="img">
-                    </div>
-                    
-                    
-                </div>
-                <div  class="row text-center ">
-                    <div class="col-lg-12">
-                        <a href="#" class="custom-button mb-4">Ver mas </a>
-                    </div>
-            </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <!-- fin de galeria -->
-<!-- Inicio del Contenido de la Pagina -->
-
-<!-- Inicio del Pie de Pagina -->
+    <!-- Pie de Pagina -->
 
     <footer>
-        
-        <div class="footer-container">
-
-            <!-- Logo y presentación -->
-
-            <div class="footer-branding">
-                <img src="ruta-del-logo.png" alt="Logo de la carpintería" class="footer-logo">
-                <p>Nombre de la empresa - Carpintería especializada en muebles a medida.</p>
-            </div>
-
-            <!-- Información de contacto -->
-
-            <div class="footer-contact">
-                <h3>Contacto</h3>
-                <ul>
-                    <li>Dirección: <span>_______________</span></li>
-                    <li>Teléfono: <a href="tel:__________">__________</a></li>
-                    <li>Email: <a href="mailto:__________">__________</a></li>
-                    <li><a href="formulario-contacto.html">Formulario de contacto</a></li>
-                </ul>
-            </div>
-
-            <!-- Enlaces importantes -->
-
-            <div class="footer-links">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="faq.html">Preguntas frecuentes</a></li>
-                    <li><a href="terminos.html">Términos y condiciones</a></li>
-                    <li><a href="privacidad.html">Política de privacidad</a></li>
-                    <li><a href="cookies.html">Política de cookies</a></li>
-                </ul>
-            </div>
-
-        </div>
 
         <!-- Copyright -->
 
-        <div class="footer-bottom">
+        <div class="footer">
             <p>© 2025 Nombre de la empresa. Todos los derechos reservados.</p>
-            <p><a class="custom-button" href="#top">Volver arriba ↑</a></p>
+            <p><a class="btn" href="#top">Volver arriba ↑</a></p>
         </div>
 
     </footer>
 
-    <!-- Fin del Pie de Pagina -->
-
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="./BOOTSTRAP_v5.3/js/bootstrap.bundle.min.js"></script>
+
+</html>

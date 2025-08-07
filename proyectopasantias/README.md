@@ -33,12 +33,6 @@
 --- paginas extras ---
 - realizar diseño principal
 
---- Index ---
-
-- 1/8/25 - Cacho
-- Vayanse todos a la concha de su madre
-
-
 --- informacion que vale oro ---
 https://nicepage.com/es/st/2455173/cortes-de-pelo-afeitado-con-toalla-caliente-recorte-de-barba-plantilla-web
 https://bergamin.com.ar/ 

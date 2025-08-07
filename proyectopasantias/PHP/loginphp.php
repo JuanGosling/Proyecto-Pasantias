@@ -60,7 +60,7 @@
 
                 $_SESSION['email'] = $email;
 
-                header("Location:../index1.php");
+                header("Location:../index.php");
                 exit();
 
             }  
