@@ -1,8 +1,0 @@
-CREATE DATABASE proyectopasantias;
-
-CREATE TABLE `proyectopasantias`.`usuario` 
-(`ID_Usuario` INT NOT NULL AUTO_INCREMENT , 
-`Email` VARCHAR(255) NOT NULL , `Nombre` 
-VARCHAR(255) NOT NULL , `Apellido` VARCHAR(255) 
-NOT NULL , `Contraseña` VARCHAR(255) NOT NULL , 
-PRIMARY KEY (`ID_Usuario`)) ENGINE = InnoDB;

@@ -1,6 +1,4 @@
 <?php
-session_start();
-session_destroy();
-header("Location:../index.php");;
-exit();
-?>
+require_once 'includes/Autenticacion.php';
+Auth::cerrarSesion();
+header("Location: index.php");

@@ -4,68 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear una Cuenta</title>
-    <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./CSS/register.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/register.css">
 </head>
 <body>
     
         <div class="inicio">
 
-            <?php
+            <!-- Se Incluye el Archivo php . Funciona para Mostrar mensajes de Error o Exito provenientes del Archivo php !-->
 
-                require_once 'INCLUDES/Usuario.php';
-
-                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registrar'])) {
-
-                    $error = true;
-
-                    $email = trim($_POST['email']);
-                    $nombre = $_POST['nombre'];
-                    $apellido = $_POST['apellido'];
-                    $contraseña = $_POST['contraseña'];
-
-                    if ( $email === '' || $nombre === '' || $apellido === '' ||$contraseña === ''){
-                        ?>
-                            <div class="alert alert-danger" role="alert" style="text-align:center">Porfavor llena todos los campos solicitados.</div>
-                        <?php
-                        $error = false;
-                    }
-
-                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                        ?>
-                            <div class="alert alert-danger" role="alert" style="text-align:center">El email no es valido.</div>
-                        <?php
-                        $error = false;
-                    }
-
-                    $user = new User();
-
-                    if ($user->existeEmail($email)) {
-                        ?>
-                            <div class="alert alert-danger" role="alert" style="text-align:center">El correo electronico al parecer esta en uso . Intenta iniciar sesion.</div>
-                        <?php
-                        $error = false;
-                    }
-
-                    if($error){
-                        $user->registrar($_POST['email'],$_POST['nombre'],$_POST['apellido'], $_POST['contraseña']);
-
-                        ?>
-                        <div class="alert alert-success" role="alert" style="text-align:center">Cuenta registrada! <a href="login.php">Iniciar Sesión</a></div>
-                        <?php
-                    }
-
-                }
-
-                else{
-
-                    ?>
-                    <div class="alert alert-danger" role="alert" style="text-align:center">Ups! Ocurrio un Error . Intente denuevo mas tarde.</div>
-                    <?php
-            
-                }
-
-            ?>
+            <?php include ("registerphp.php")?>
 
             <form method="post" id="formulario" >
 
@@ -75,7 +23,7 @@
 
                     <input type="email" name="email" id="email" placeholder="Ingrese su Correo Electronico" required>
 
-                    <img src="./IMG/mail.png" class="icono">
+                    <img src="../IMG/mail.png" class="icono">
 
                 </div>
 
@@ -83,7 +31,7 @@
 
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" required>
 
-                    <img src="./IMG/user.png" class="icono">
+                    <img src="../IMG/user.png" class="icono">
 
                 </div>
 
@@ -91,7 +39,7 @@
 
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido" required>
 
-                    <img src="./IMG/user.png" class="icono">
+                    <img src="../IMG/user.png" class="icono">
 
 
                 </div>
@@ -100,7 +48,7 @@
 
                     <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese una Contraseña" required>
 
-                    <img src="./IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
+                    <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
 
                 </div>
 
@@ -108,7 +56,7 @@
 
                     <input type="password" name="confirmar_contraseña" id="confirmar_contraseña" placeholder="Repita su Contraseña" required>
 
-                    <img src="./IMG/cerrado.png" class="icono" id="ojo1" style="cursor: pointer;">
+                    <img src="../IMG/cerrado.png" class="icono" id="ojo1" style="cursor: pointer;">
 
                     <span id="error" class="error"></span>
 
@@ -123,7 +71,7 @@
 
                 <div class="iniciar">
 
-                    <p>Ya tienes una Cuenta?<a href="login.php" style="padding-left: 10px;">Iniciar Sesión</a></p>
+                    <p>Ya tienes una Cuenta?<a href="../php/login.php" style="padding-left: 10px;">Iniciar Sesión</a></p>
 
                 </div>
 
@@ -142,12 +90,12 @@
 
                 if(contraseña.type == "password"){
                     contraseña.type = "text";
-                    ojo.src = "./IMG/abierto.png";
+                    ojo.src = "../IMG/abierto.png";
                 }
 
                 else{
                     contraseña.type = "password";
-                    ojo.src = "./IMG/cerrado.png";
+                    ojo.src = "../IMG/cerrado.png";
                 }
 
             }
@@ -161,12 +109,12 @@
 
                 if(confirmar_contraseña.type == "password"){
                     confirmar_contraseña.type = "text";
-                    ojo1.src = "./IMG/abierto.png";
+                    ojo1.src = "../IMG/abierto.png";
                 }
 
                 else{
                     confirmar_contraseña.type = "password";
-                    ojo1.src = "./IMG/cerrado.png";
+                    ojo1.src = "../IMG/cerrado.png";
                 }
 
             }

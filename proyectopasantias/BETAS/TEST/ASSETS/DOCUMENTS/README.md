@@ -1,1 +1,0 @@
-Estas fotos las pienso utilizar para Documentar el avance del Proyecto . Tal vez las utilize , tal vez no

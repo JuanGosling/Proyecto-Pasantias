@@ -4,15 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/login.css">
 </head>
 <body>
         <div class="inicio">
 
-            <!-- Se Incluye el Archivo php . Funciona para Mostrar mensajes de Error o Exito provenientes del Archivo php !-->
+            <?php
+                require_once 'includes/Usuario.php';
+                require_once 'includes/Autenticacion.php';
 
-            <?php include ("loginphp.php")?>
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['iniciarsesion'])) {
+
+                    $email = trim($_POST['email']);
+                    $contraseña = $_POST['contraseña'];
+
+                    if ( $email === '' || $contraseña === ''){
+                        ?>
+                            <div class="alert alert-danger" role="alert" style="text-align:center">Porfavor llena todos los campos solicitados.</div>
+                        <?php
+                    }
+
+                    else{
+
+                        $user = new User();
+                        $usuario = $user->login($_POST['email'], $_POST['contraseña']);
+
+                        if ($usuario) {
+                            Auth::iniciarSesion($usuario);
+                            header("Location: index.php");
+                        } else {
+                            ?>
+                                <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
+                            <?php
+                        }
+
+                    }
+
+                }
+            ?>
 
             <form method="post">
 
@@ -22,7 +52,7 @@
 
                     <input type="email" placeholder="Correo Electronico" name="email" id="email" required>
 
-                    <img src="../IMG/mail.png" class="icono">
+                    <img src="./IMG/mail.png" class="icono">
 
                 </div>
 
@@ -30,7 +60,7 @@
 
                     <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña" required>
 
-                    <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
+                    <img src="./IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
 
                 </div>
 
@@ -43,7 +73,7 @@
 
                 <div class="registrarse">
 
-                    <p>No tienes una Cuenta? <a href="../php/register.php" style="padding-left: 10px;">Crear una Cuenta</a></p>
+                    <p>No tienes una Cuenta? <a href="register.php" style="padding-left: 10px;">Crear una Cuenta</a></p>
 
                 </div>
 
