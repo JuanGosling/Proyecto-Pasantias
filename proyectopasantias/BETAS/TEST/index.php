@@ -1,5 +1,12 @@
 <?php
-session_start();
+require_once 'includes/Autenticacion.php';
+
+if (!Auth::estaLogueado()) {
+    header("Location: login.php");
+    exit;
+}
+
+$usuario = Auth::obtenerUsuario();
 ?>
 
 <!DOCTYPE html>
@@ -68,21 +75,27 @@ session_start();
                                 <a class="nav-link active" href="./PHP/sobrenosotros.php">Sobre Nosotros</a>
                             </li>
 
-                            <!-- Verifica si hay una sesion activa , si lo hay se muestra el email y el boton para cerrar sesion
+                            <!-- Verifica si hay una sesion activa , si lo hay se muestra el Usuario y el boton para cerrar sesion
                             sino se muestras los botones default de iniciar sesion y registrarse-->
 
-                            <?php if (isset($_SESSION['email'])): ?>
+                            <?php if (Auth::esAdmin()): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Panel de Administrador</a>
+                                </li>
+                            <?php endif; ?>
+
+                            <?php if (isset($_SESSION['Usuario'])): ?>
 
                             <li class="nav-item dropdown">
 
                                 <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #C19A6B;">
-                                <?php echo htmlspecialchars($_SESSION['email']); ?><img src="./IMG/user.png" class="icono">
+                                <?= htmlspecialchars($usuario['Nombre']) ?><img src="./IMG/user.png" class="icono">
                                 </a>
                                 
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
                                     <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
-                                    <li><a class="dropdown-item" href="PHP/cerrarsesion.php">Cerrar Sesion</a></li>
+                                    <li><a class="dropdown-item" href="cerrarsesion.php">Cerrar Sesion</a></li>
                                 </ul>
 
                             </li>

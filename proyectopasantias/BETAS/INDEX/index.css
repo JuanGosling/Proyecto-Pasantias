@@ -1,0 +1,141 @@
+
+.custom-button {
+
+  align-items: center;
+  background-color: #C19A6B;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+}
+
+.custom-button2 {
+  
+  align-items: center;
+  background-color: #444;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+}
+
+/* Fue - "Cacho" */
+
+  .mx-lg-5{
+    margin-right: 10px !important;
+    margin-left: 3rem !important;
+  }
+
+  .contenedor{
+    position: relative;
+  }
+
+/* borrar despues */
+.div_ej{
+  background-color: #C19A6B;
+  height: 60vh;
+  margin-bottom: 64px;
+}
+
+.titulo{
+  font-size: 10vh;
+}
+
+
+
+footer {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  .footer-container > div {
+    flex: 1 1 200px;
+  }
+  h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  ul li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .social-icons img,
+  .cert-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .footer-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 0.9em;
+  }
+  select {
+    padding: 5px;
+    margin-top: 5px;
+  }
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+    .footer-container > div {
+      flex: 1 1 100%;
+    }
+  }
