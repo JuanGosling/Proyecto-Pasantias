@@ -7,13 +7,6 @@ class Auth {
         $_SESSION['Usuario'] = $usuario;
     }
 
-    public static function estaLogueado() {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-        return isset($_SESSION['Usuario']);
-    }
-
     public static function obtenerUsuario() {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
@@ -32,6 +25,7 @@ class Auth {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        return $_SESSION['Usuario']['Rol'] === 'Admin';
+        return ($_SESSION['Usuario']['Rol'] ?? null) === 'Admin';
+        
     }
 }

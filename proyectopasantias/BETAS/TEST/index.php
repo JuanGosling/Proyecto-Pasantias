@@ -1,11 +1,6 @@
 <?php
 require_once 'includes/Autenticacion.php';
 
-if (!Auth::estaLogueado()) {
-    header("Location: login.php");
-    exit;
-}
-
 $usuario = Auth::obtenerUsuario();
 ?>
 
