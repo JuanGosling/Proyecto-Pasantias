@@ -26,4 +26,11 @@ class User {
 
         return false;
     }
+
+    public function existeEmail($email) {
+        $stmt = $this->conn->prepare("SELECT ID_Usuario FROM usuarios WHERE email = ?");
+        $stmt->execute([$email]);
+        return $stmt->fetch() !== false;
+    }
+
 }

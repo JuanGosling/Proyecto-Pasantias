@@ -11,16 +11,60 @@
     
         <div class="inicio">
 
-            <!-- Se Incluye el Archivo php . Funciona para Mostrar mensajes de Error o Exito provenientes del Archivo php !-->
-
             <?php
+
                 require_once 'INCLUDES/Usuario.php';
 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registrar'])) {
+
+                    $error = true;
+
+                    $email = trim($_POST['email']);
+                    $nombre = $_POST['nombre'];
+                    $apellido = $_POST['apellido'];
+                    $contraseña = $_POST['contraseña'];
+
+                    if ( $email === '' || $nombre === '' || $apellido === '' ||$contraseña === ''){
+                        ?>
+                            <div class="alert alert-danger" role="alert" style="text-align:center">Porfavor llena todos los campos solicitados.</div>
+                        <?php
+                        $error = false;
+                    }
+
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        ?>
+                            <div class="alert alert-danger" role="alert" style="text-align:center">El email no es valido.</div>
+                        <?php
+                        $error = false;
+                    }
+
                     $user = new User();
-                    $user->registrar($_POST['email'],$_POST['nombre'],$_POST['apellido'], $_POST['contraseña']);
-                    header("Location: login.php");
+
+                    if ($user->existeEmail($email)) {
+                        ?>
+                            <div class="alert alert-danger" role="alert" style="text-align:center">El correo electronico al parecer esta en uso . Intenta iniciar sesion.</div>
+                        <?php
+                        $error = false;
+                    }
+
+                    if($error){
+                        $user->registrar($_POST['email'],$_POST['nombre'],$_POST['apellido'], $_POST['contraseña']);
+
+                        ?>
+                        <div class="alert alert-success" role="alert" style="text-align:center">Cuenta registrada! <a href="login.php">Iniciar Sesión</a></div>
+                        <?php
+                    }
+
                 }
+
+                else{
+
+                    ?>
+                    <div class="alert alert-danger" role="alert" style="text-align:center">Ups! Ocurrio un Error . Intente denuevo mas tarde.</div>
+                    <?php
+            
+                }
+
             ?>
 
             <form method="post" id="formulario" >

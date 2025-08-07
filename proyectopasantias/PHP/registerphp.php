@@ -65,7 +65,7 @@
                     <div class="alert alert-success" role="alert" style="text-align:center">Cuenta registrada! <a href="login.php">Iniciar Sesión</a></div>
                     <?php
 
-                    // Realizar una Verificacion de Email y del Email redirigir al Inicio de Sesion
+                    
 
                 }
 

@@ -10,22 +10,37 @@
 <body>
         <div class="inicio">
 
-            <!-- Se Incluye el Archivo php . Funciona para Mostrar mensajes de Error o Exito provenientes del Archivo php !-->
-
             <?php
                 require_once 'includes/Usuario.php';
                 require_once 'includes/Autenticacion.php';
 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['iniciarsesion'])) {
-                    $user = new User();
-                    $usuario = $user->login($_POST['email'], $_POST['contraseña']);
 
-                    if ($usuario) {
-                        Auth::iniciarSesion($usuario);
-                        header("Location: index.php");
-                    } else {
-                        echo "Credenciales inválidas";
+                    $email = trim($_POST['email']);
+                    $contraseña = $_POST['contraseña'];
+
+                    if ( $email === '' || $contraseña === ''){
+                        ?>
+                            <div class="alert alert-danger" role="alert" style="text-align:center">Porfavor llena todos los campos solicitados.</div>
+                        <?php
                     }
+
+                    else{
+
+                        $user = new User();
+                        $usuario = $user->login($_POST['email'], $_POST['contraseña']);
+
+                        if ($usuario) {
+                            Auth::iniciarSesion($usuario);
+                            header("Location: index.php");
+                        } else {
+                            ?>
+                                <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
+                            <?php
+                        }
+
+                    }
+
                 }
             ?>
 
