@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/Autenticacion.php';
+require_once '../INCLUDES/Autenticacion.php';
 
 $usuario = Auth::obtenerUsuario();
 ?>
