@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear una Cuenta</title>
-    <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./CSS/register.css">
+    <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/register.css">
 </head>
 <body>
     
@@ -13,7 +13,7 @@
 
             <?php
 
-                require_once 'INCLUDES/Usuario.php';
+                require_once '../INCLUDES/Usuario.php';
 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['registrar'])) {
 
@@ -75,7 +75,7 @@
 
                     <input type="email" name="email" id="email" placeholder="Ingrese su Correo Electronico" required>
 
-                    <img src="./IMG/mail.png" class="icono">
+                    <img src="../IMG/mail.png" class="icono">
 
                 </div>
 
@@ -83,7 +83,7 @@
 
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" required>
 
-                    <img src="./IMG/user.png" class="icono">
+                    <img src="../IMG/user.png" class="icono">
 
                 </div>
 
@@ -91,7 +91,7 @@
 
                     <input type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido" required>
 
-                    <img src="./IMG/user.png" class="icono">
+                    <img src="../IMG/user.png" class="icono">
 
 
                 </div>
@@ -100,7 +100,7 @@
 
                     <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese una Contraseña" required>
 
-                    <img src="./IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
+                    <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
 
                 </div>
 
@@ -108,7 +108,7 @@
 
                     <input type="password" name="confirmar_contraseña" id="confirmar_contraseña" placeholder="Repita su Contraseña" required>
 
-                    <img src="./IMG/cerrado.png" class="icono" id="ojo1" style="cursor: pointer;">
+                    <img src="../IMG/cerrado.png" class="icono" id="ojo1" style="cursor: pointer;">
 
                     <span id="error" class="error"></span>
 
@@ -142,12 +142,12 @@
 
                 if(contraseña.type == "password"){
                     contraseña.type = "text";
-                    ojo.src = "./IMG/abierto.png";
+                    ojo.src = "../IMG/abierto.png";
                 }
 
                 else{
                     contraseña.type = "password";
-                    ojo.src = "./IMG/cerrado.png";
+                    ojo.src = "../IMG/cerrado.png";
                 }
 
             }
@@ -161,12 +161,12 @@
 
                 if(confirmar_contraseña.type == "password"){
                     confirmar_contraseña.type = "text";
-                    ojo1.src = "./IMG/abierto.png";
+                    ojo1.src = "../IMG/abierto.png";
                 }
 
                 else{
                     confirmar_contraseña.type = "password";
-                    ojo1.src = "./IMG/cerrado.png";
+                    ojo1.src = "../IMG/cerrado.png";
                 }
 
             }
@@ -189,6 +189,6 @@
 
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="../BOOTSTRAP_v5.3/js/bootstrap.bundle.min.js"></script>
 
 </html>

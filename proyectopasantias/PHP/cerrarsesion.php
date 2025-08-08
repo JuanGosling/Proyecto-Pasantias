@@ -1,4 +1,4 @@
 <?php
-require_once 'includes/Autenticacion.php';
+require_once '../INCLUDES/Autenticacion.php';
 Auth::cerrarSesion();
-header("Location: index.php");
+header("Location: ../index.php");

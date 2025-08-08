@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./CSS/login.css">
+    <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
         <div class="inicio">
 
             <?php
-                require_once 'includes/Usuario.php';
-                require_once 'includes/Autenticacion.php';
+                require_once '../INCLUDES/Usuario.php';
+                require_once '../INCLUDES/Autenticacion.php';
 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['iniciarsesion'])) {
 
@@ -32,7 +32,7 @@
 
                         if ($usuario) {
                             Auth::iniciarSesion($usuario);
-                            header("Location: index.php");
+                            header("Location: ../index.php");
                         } else {
                             ?>
                                 <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
@@ -52,7 +52,7 @@
 
                     <input type="email" placeholder="Correo Electronico" name="email" id="email" required>
 
-                    <img src="./IMG/mail.png" class="icono">
+                    <img src="../IMG/mail.png" class="icono">
 
                 </div>
 
@@ -60,7 +60,7 @@
 
                     <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña" required>
 
-                    <img src="./IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
+                    <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
 
                 </div>
 
