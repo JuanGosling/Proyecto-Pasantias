@@ -1,6 +1,15 @@
 <?php
 require_once '../INCLUDES/Autenticacion.php';
+require_once '../INCLUDES/Item.php';
 
+// Solo admin puede acceder
+if (!Auth::esAdmin()) {
+    header("Location: ./login.php");
+    exit;
+}
+
+$item = new Item();
+$items = $item->obtenerTodos();
 $usuario = Auth::obtenerUsuario();
 ?>
 
@@ -61,7 +70,7 @@ $usuario = Auth::obtenerUsuario();
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="nuestrotrabajo.php">Nuestro Trabajo</a>
+                                <a class="nav-link active" href="./nuestrotrabajo.php">Nuestro Trabajo</a>
                             </li>
 
                             <li class="nav-item">
@@ -129,7 +138,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div >
 
-                <h1 style="font-size: 35px;color: #C19A6B;">Bienvenido a la Panel de Administrador!</h1>
+                <h1 style="font-size: 35px;color: #C19A6B;">Bienvenido al Panel de Administrador!</h1>
 
             </div>
 
@@ -137,9 +146,51 @@ $usuario = Auth::obtenerUsuario();
 
         <!-- Bloque 1 -->
 
-        <section class="bloque" style="padding-bottom: 100%;padding-top: 5%;">
+        <section class="bloque" style="padding-top: 5%;padding-bottom:3%">
 
-            <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En el Panel de Administrador vas a poder agregar , modificar y quitar articulos</h1>
+            <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En el Panel de Administrador vas a poder ver , agregar , modificar y quitar articulos.</h1>
+
+        </section>
+
+        <section class="bloque" style="padding-top:0%">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Menú lateral -->
+                    <div class="col-md-2 bg-dark text-white p-3">
+                        <h4>Opciones</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a href="agregar.php" class="nav-link text-white">Agregar Ítem</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contenido principal -->
+                    <div class="col-md-10 p-4">
+                        <h2>Listado de Ítems</h2>
+                        <div class="row">
+                            <?php foreach ($items as $i): ?>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <?php if ($i['imagen']): ?>
+                                            <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
+                                        <?php else: ?>
+                                            <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
+                                        <?php endif; ?>
+                                        <div class="card-body">
+                                            <h5 class="card-title"><?= htmlspecialchars($i['titulo']) ?></h5>
+                                            <p class="card-text"><?= nl2br(htmlspecialchars($i['descripcion'])) ?></p>
+                                        </div>
+                                        <div class="card-footer text-end">
+                                            <a href="editar.php?id=<?= $i['id'] ?>" class="btn btn-sm btn-primary">Editar</a>
+                                            <a href="eliminar.php?id=<?= $i['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar este ítem?')">Eliminar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
 

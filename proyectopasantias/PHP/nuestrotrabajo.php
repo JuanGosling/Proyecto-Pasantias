@@ -1,6 +1,9 @@
 <?php
 require_once '../INCLUDES/Autenticacion.php';
+require_once '../includes/Item.php';
 
+$item = new Item();
+$items = $item->obtenerTodos();
 $usuario = Auth::obtenerUsuario();
 ?>
 
@@ -73,7 +76,7 @@ $usuario = Auth::obtenerUsuario();
 
                             <?php if (Auth::esAdmin()): ?>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">Panel de Administrador</a>
+                                    <a class="nav-link active" href="./admin.php">Panel de Administrador</a>
                                 </li>
                             <?php endif; ?>
 
@@ -137,7 +140,7 @@ $usuario = Auth::obtenerUsuario();
 
         <!-- Bloque 1 -->
 
-        <section class="bloque" style="padding-bottom: 100%;padding-top: 5%;">
+        <section class="bloque" style="padding-top: 5%;paddin-bottom:3%">
 
             <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En <b style="color: #C19A6B;">Módulo 23</b> creamos muebles pensados para durar, adaptarse y emocionar.</h1>
 
@@ -151,6 +154,30 @@ $usuario = Auth::obtenerUsuario();
                 Muebles hechos a mano, pensados para vos.
 
             </p>
+
+        </section>
+
+        <section class="bloque" style="padding-top: 0%;">
+
+            <div class="container mt-4">
+                <div class="row">
+                    <?php foreach ($items as $i): ?>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <?php if ($i['imagen']): ?>
+                                    <img src="uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
+                                <?php else: ?>
+                                    <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
+                                <?php endif; ?>
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= htmlspecialchars($i['titulo']) ?></h5>
+                                    <p class="card-text"><?= nl2br(htmlspecialchars($i['descripcion'])) ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
 
         </section>
 

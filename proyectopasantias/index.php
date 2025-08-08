@@ -75,7 +75,7 @@ $usuario = Auth::obtenerUsuario();
 
                             <?php if (Auth::esAdmin()): ?>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">Panel de Administrador</a>
+                                    <a class="nav-link active" href="./PHP/admin.php">Panel de Administrador</a>
                                 </li>
                             <?php endif; ?>
 
