@@ -148,7 +148,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 5%;padding-bottom:3%">
 
-            <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En el Panel de Administrador vas a poder ver , agregar , modificar y quitar articulos.</h1>
+            <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En el Panel de Administrador vas a poder ver , agregar , modificar y quitar Artículos.</h1>
 
         </section>
 
@@ -160,19 +160,19 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-md-2 bg-dark text-white p-3">
                         <h4>Opciones</h4>
                         <ul class="nav flex-column">
-                            <li class="nav-item"><a href="agregar.php" class="nav-link text-white">Agregar Ítem</a></li>
+                            <li class="nav-item"><a href="agregar.php" class="nav-link text-white">Agregar Artículo</a></li>
                         </ul>
                     </div>
 
                     <!-- Contenido principal -->
                     <div class="col-md-10 p-4">
-                        <h2>Listado de Ítems</h2>
+                        <h2>Listado de Artículos</h2>
                         <div class="row">
                             <?php foreach ($items as $i): ?>
                                 <div class="col-md-4 mb-4">
                                     <div class="card h-100">
                                         <?php if ($i['imagen']): ?>
-                                            <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
+                                            <img src="../uploads<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
                                         <?php else: ?>
                                             <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
                                         <?php endif; ?>

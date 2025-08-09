@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="file" name="imagen" class="form-control">
         </div>
         <button type="submit" class="btn btn-success">Guardar</button>
-        <a href="index.php" class="btn btn-secondary">Cancelar</a>
+        <a href="./admin.php" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
 </body>
