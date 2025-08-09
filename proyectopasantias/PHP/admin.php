@@ -180,7 +180,7 @@ $usuario = Auth::obtenerUsuario();
                                             <h5 class="card-title"><?= htmlspecialchars($i['titulo']) ?></h5>
                                             <p class="card-text"><?= nl2br(htmlspecialchars($i['descripcion'])) ?></p>
                                         </div>
-                                        <div class="card-footer text-end">
+                                        <div class="card-footer text-end" style="background-color: #C19A6B; color: #ffffff;font-family: Outfit;">
                                             <a href="editar.php?id=<?= $i['id'] ?>" style="background-color: #6bc16bff;" class="btn btn-sm btn-primary">Editar</a>
                                             <a href="eliminar.php?id=<?= $i['id'] ?>" style="background-color: #c16b6bff;" class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar este ítem?')">Eliminar</a>
                                         </div>

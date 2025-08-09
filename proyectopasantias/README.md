@@ -4,14 +4,15 @@
 - Realizar al estilo APA , los links estan en el otro disco , ambos en la barra de favoritos
 
 --- Login y Register ---
-- Hacer medidas de seguridad para que el sitio sea seguro , evitando php injection o cosas de ese estilo (Esto es opcional ya que nadie intentaria esas cosas raras en una pagina como esta , pero para tenerlo en cuenta en futuros proyectos )
 
 - A la Hora de crear una cuenta se tiene que verificar que la persona sea dueña del Email ingresado (Verificacion por Email con link que redireccione al inicio de sesion y guarde asi los datos en la base de datos sino no)
 - Hacer que el boton de olvide mi contraseña funcione ( Realizar e investigar )
 - Que cuando se Inicie Sesion se redirrecione a la Pagina y se Inicie una Sesion (Que esta dure hasta que se cierra la Pagina)
 - Indicar que la contraseña tenga una cantidad de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
-- Realizar una vista de Administrador (Roles de Usuarios y Administrador)
-- En apartado de trabajos , poder agregar articulos con imagen , titulo y descripcion
+
+- En vista de celular quitar la caja de login y register
+- En el panel de administrador personalizar (poner fondo?) y hacer responsive el agregar y editar
+- Solucionar que no se ven las imagenes
 
 
 --- Inicio de la Pagina Web ---

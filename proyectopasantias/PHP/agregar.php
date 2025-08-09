@@ -30,27 +30,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Agregar Ítem</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
 </head>
-<body>
-<div class="container mt-5">
-    <h2>Agregar Ítem</h2>
-    <form method="POST" enctype="multipart/form-data">
-        <div class="mb-3">
-            <label class="form-label">Título</label>
-            <input type="text" name="titulo" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Descripción</label>
-            <textarea name="descripcion" class="form-control" rows="4" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Imagen (opcional)</label>
-            <input type="file" name="imagen" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Guardar</button>
-        <a href="./admin.php" class="btn btn-secondary">Cancelar</a>
-    </form>
-</div>
+<body style="background-color: #1F1F1F;color: #ffffff;margin-bottom: 5%;margin-left: 25%;margin-right: 25%;margin-top: 10%;">
+
+    <div class="container mt-5">
+        <h2>Agregar Ítem</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input type="text" name="titulo" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descripción</label>
+                <textarea name="descripcion" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Imagen (opcional)</label>
+                <input type="file" name="imagen" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <a href="./admin.php" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
 </body>
 </html>
