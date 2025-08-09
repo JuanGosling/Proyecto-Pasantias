@@ -140,11 +140,11 @@ $usuario = Auth::obtenerUsuario();
 
         <!-- Bloque 1 -->
 
-        <section class="bloque" style="padding-top: 5%;paddin-bottom:3%">
+        <section class="bloque" style="padding-bottom :0%;padding-top: 5%;padding-left :10%;padding-right:10%;">
 
             <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En <b style="color: #C19A6B;">Módulo 23</b> creamos muebles pensados para durar, adaptarse y emocionar.</h1>
 
-            <p style="text-align: center;font-size: 20px;margin-bottom: 5%;" id="texto">
+            <p style="text-align: center;font-size: 20px;margin-bottom: 2%;" id="texto">
 
                 Cada pieza nace del equilibrio entre diseño funcional, materiales de alta calidad y la dedicación del trabajo artesanal. Elegimos cuidadosamente cada madera, cada herraje y cada acabado, para que el resultado sea más que un mueble: sea parte de tu hogar.
 
@@ -169,7 +169,7 @@ $usuario = Auth::obtenerUsuario();
                                 <?php else: ?>
                                     <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
                                 <?php endif; ?>
-                                <div class="card-body">
+                                <div class="card-body" style="background-color: #C19A6B; color: #ffffff;font-family: Outfit;">
                                     <h5 class="card-title"><?= htmlspecialchars($i['titulo']) ?></h5>
                                     <p class="card-text"><?= nl2br(htmlspecialchars($i['descripcion'])) ?></p>
                                 </div>

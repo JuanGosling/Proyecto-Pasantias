@@ -29,6 +29,16 @@
 
 }
 
+/* Cartas */
+
+.card-body {
+
+    background-color: #C19A6B;
+    color: #ffffff;
+    font-family: "Outfit";
+
+}
+
 /* Barra de Navegacion */
 
 .navbar{
@@ -107,7 +117,6 @@ body{
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10%;
-    padding-bottom: 6%;
     
 
 }
