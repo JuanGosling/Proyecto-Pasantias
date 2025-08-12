@@ -57,14 +57,6 @@
 
                 }
 
-                else{
-
-                    ?>
-                    <div class="alert alert-danger" role="alert" style="text-align:center">Ups! Ocurrio un Error . Intente denuevo mas tarde.</div>
-                    <?php
-            
-                }
-
             ?>
 
             <form method="post" id="formulario" >
