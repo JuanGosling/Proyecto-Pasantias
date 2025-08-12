@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <textarea name="descripcion" class="form-control" rows="4" required></textarea>
             </div>
             <div class="mb-3">
-                <label class="form-label">Imagen (opcional)</label>
+                <label class="form-label">Imagen (opcional) (Resolución recomendada : 1000x1000)</label>
                 <input type="file" name="imagen" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Guardar</button>

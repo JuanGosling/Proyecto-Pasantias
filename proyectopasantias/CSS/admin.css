@@ -71,6 +71,8 @@ body{
 
     background-image: url(../IMG/M2.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 
 }
 
