@@ -119,3 +119,12 @@ body{
     
 }
 
+/* Responsive */
+
+@media (max-width: 500px) {
+    
+    .inicio{
+        margin: 0;
+    }
+
+}
