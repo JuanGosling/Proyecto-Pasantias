@@ -1,0 +1,113 @@
+/* Fuentes Importadas */
+
+@font-face{
+
+    font-family: "Outfit";
+    src: url(../ASSETS/FONT/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face{
+
+    font-family: "Outfit-Light";
+    src: url(../ASSETS/FONT/static/Outfit-Light.ttf);
+}
+
+/* Contenedor*/
+
+.mt-5{
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 10%;
+    margin-top: 0%;
+
+}
+
+/* Cuerpo de la Pagina */
+
+body{
+
+    background-image: url(../IMG/M2.jpg);
+    background-repeat: no-repeat;
+    background-color: #1F1F1F;
+    color: #ffffff;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+
+}
+
+
+/* Pie de Pagina*/
+
+.footer{
+
+    text-align: center;
+    justify-content: center;
+    background-color: #212529 ;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+/* Responsive */
+
+/* 
+    Para el que no entienda que remil poronga es esto basicamente
+    el @media y x resolucion de ancho , sirve para modificar ciertos estilos
+    a partir de la resolucion que vos pusiste
+
+    Att - Cacho
+
+*/
+
+@media (max-width: 1300px) {
+    
+    body{
+        margin-top: 8%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    
+
+
+}
+
+@media (max-width: 900px) {
+
+    body{
+        margin-left:15%;
+        margin-right:15%;
+        margin-top: 10%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+
+}
+
+@media (max-width: 500px) {
+    
+    body{
+        margin-left:0%;
+        margin-right:0%;
+    }
+
+    .mt-5{
+
+        box-shadow: 0;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+        padding: 0%;
+
+    }
+
+}
+
+/* Test */
+
+

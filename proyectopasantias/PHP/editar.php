@@ -40,8 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Editar Ítem</title>
     <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/agregaryeditar.css">
 </head>
-<body style="background-color: #1F1F1F;color: #ffffff;margin-bottom: 5%;margin-left: 25%;margin-right: 25%;margin-top: 10%;">
+<body>
 
     <div class="container mt-5">
         <h2>Editar Ítem</h2>
