@@ -172,7 +172,7 @@ $usuario = Auth::obtenerUsuario();
                                 <div class="col-md-4 mb-4">
                                     <div class="card h-100">
                                         <?php if ($i['imagen']): ?>
-                                            <img src="../uploads<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
+                                            <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
                                         <?php else: ?>
                                             <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
                                         <?php endif; ?>
