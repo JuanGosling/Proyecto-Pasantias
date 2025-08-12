@@ -11,8 +11,7 @@
 - Indicar que la contraseña tenga una cantidad de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
 
 - En vista de celular quitar la caja de login y register
-- En el panel de administrador personalizar (poner fondo?) y hacer responsive el agregar y editar
-- Solucionar que no se ven las imagenes
+- En el panel de administrador hacer responsive el agregar y editar
 
 
 --- Inicio de la Pagina Web ---
