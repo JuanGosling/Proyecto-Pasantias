@@ -257,7 +257,7 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4">
                         
                         <div style="margin-bottom: 8%;">
-                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                            <img src="./IMG/mesanordica.jpg" class="img-fluid" id="img1" style="width: 70%;">
                             <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
 
                         </div>         
