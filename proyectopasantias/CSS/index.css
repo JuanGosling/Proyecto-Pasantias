@@ -301,6 +301,38 @@ body{
         width: 100%;
 
     }
+
+   @keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación desde la derecha */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Aplica a los elementos */
+#divespacio{
+    animation: slideInLeft 9.2s ease-out forwards;
+}
+
+#img1{
+    animation: slideInRight 9.2s ease-out forwards;
+}
     
 }
 
