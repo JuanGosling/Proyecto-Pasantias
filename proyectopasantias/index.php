@@ -131,7 +131,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div id="divespacio">
 
-                <h1  style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 24</b> creemos que cada hogar merece calidad</h1>
+                <h1  style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
                 <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
                 Nos especializamos en carpintería, ofreciendo soluciones duraderas, estéticas y funcionales para todo tipo de personas, estilos de vida y presupuestos.
