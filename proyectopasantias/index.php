@@ -244,7 +244,7 @@ $usuario = Auth::obtenerUsuario();
 
             <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 5%;">Nuestros Servicios</h1>
 
-            <div style="justify-content: center;display: flex;margin-bottom: 5%;">
+            <div style="justify-content: center;display: flex;margin-bottom: 10%;">
 
                 <img src="./IMG/M1.jpg" class="img-fluid" width="60%" id="img3">
 
@@ -257,7 +257,7 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4">
                         
                         <div style="margin-bottom: 8%;">
-                            <img src="./IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 20%;" style="margin-bottom: 20px;">
+                            <img src="./IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 7%;">
                             <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
 
                         </div>         
@@ -270,7 +270,7 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
 
-                        <img src="./IMG/silla.jpg" class="img-fluid" id="img1" style="width: 70%;">
+                        <img src="./IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 7%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
 
                         <p style="font-size: 20px;">
@@ -280,11 +280,11 @@ $usuario = Auth::obtenerUsuario();
                     </div>
 
                     <div class="col-lg-4">
-
+                        <img src="./IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 7%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Espaciosos y funcionales, nuestros armarios de madera mantienen tu hogar organizado con el estilo cálido que tu familia merece.
                         </p>
 
                     </div>
@@ -300,33 +300,33 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4">
                         
                         <div style="margin-bottom: 8%;">
-
+                            <img src="./IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 7%;">
                             <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Veladores</h1>
 
                         </div>         
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Prácticos y acogedores, ideales para acompañar tus noches y mantener lo esencial siempre a mano.
                         </p>
 
                     </div>
 
                     <div class="col-lg-4">
-
+                        <img src="./IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 7%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Repisas</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Versátiles y resistentes, perfectas para ordenar o decorar, dando un toque natural y familiar a cada rincón.
                         </p>
                         
                     </div>
 
                     <div class="col-lg-4">
-
+                        <img src="./IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 7%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Comodas</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                            Diseñadas para la vida diaria, combinan capacidad, resistencia y un estilo atemporal que se adapta a cualquier habitación.
                         </p>
 
                     </div>
