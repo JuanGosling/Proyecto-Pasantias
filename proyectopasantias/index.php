@@ -263,18 +263,18 @@ $usuario = Auth::obtenerUsuario();
                         </div>         
 
                         <p style="font-size: 20px;">
-                           En nuestra colección encontrarás mesas diseñadas para reunir a la familia y disfrutar cada momento juntos. Combinamos calidad, estilo y funcionalidad para que tu hogar tenga el espacio perfecto donde conversar, comer y crear recuerdos.
+                        Mesas diseñadas para reunir a la familia, con calidad, estilo y funcionalidad para compartir y crear recuerdos en tu hogar.
                         </p>
 
                     </div>
 
                     <div class="col-lg-4">
 
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
                         <img src="./IMG/silla.jpg" class="img-fluid" id="img1" style="width: 70%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
 
                         <p style="font-size: 20px;">
-                            Nuestra colección ofrece sillas cómodas, resistentes y con diseños versátiles, ideales para el hogar familiar. Pensadas para el día a día, combinan estilo y practicidad, creando espacios acogedores donde compartir en confianza.
+                           Diseños cómodos y resistentes, ideales para la familia. Estilo y practicidad para crear espacios acogedores todos los días.
                         </p>
                         
                     </div>
