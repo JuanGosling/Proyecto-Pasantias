@@ -263,7 +263,7 @@ $usuario = Auth::obtenerUsuario();
                         </div>         
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           En nuestra colección encontrarás mesas diseñadas para reunir a la familia y disfrutar cada momento juntos. Combinamos calidad, estilo y funcionalidad para que tu hogar tenga el espacio perfecto donde conversar, comer y crear recuerdos.
                         </p>
 
                     </div>
@@ -271,9 +271,10 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4">
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
+                        <img src="./IMG/silla.jpg" class="img-fluid" id="img1" style="width: 70%;">
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                            Nuestra colección ofrece sillas cómodas, resistentes y con diseños versátiles, ideales para el hogar familiar. Pensadas para el día a día, combinan estilo y practicidad, creando espacios acogedores donde compartir en confianza.
                         </p>
                         
                     </div>
