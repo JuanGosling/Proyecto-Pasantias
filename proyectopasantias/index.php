@@ -129,7 +129,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloqueprincipal">
 
-            <div id="divespacio">
+            <div id="divespacio" style="animation: slideInLeft 1s ease-out forwards;">
 
                 <h1  style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
@@ -142,7 +142,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div>
 
-                <img src="./IMG/Logo3.png" class="img-fluid" id="img1">
+                <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="animation: slideInRight 1s ease-out forwards;">
 
             </div>
 
