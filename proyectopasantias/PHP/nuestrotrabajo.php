@@ -130,7 +130,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloqueprincipal" style="justify-content: center;">
 
-            <div >
+            <div class="animacion arriba">
 
                 <h1 style="font-size: 35px;color: #C19A6B;">Nuestro Trabajo</h1>
 
@@ -142,9 +142,9 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-bottom :0%;padding-top: 5%;padding-left :10%;padding-right:10%;">
 
-            <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo">En <b style="color: #C19A6B;">Módulo 23</b> creamos muebles pensados para durar, adaptarse y emocionar.</h1>
+            <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo" class="animacion izquierda">En <b style="color: #C19A6B;">Módulo 23</b> creamos muebles pensados para durar, adaptarse y emocionar.</h1>
 
-            <p style="text-align: center;font-size: 20px;margin-bottom: 2%;" id="texto">
+            <p style="text-align: center;font-size: 20px;margin-bottom: 2%;" id="texto" class="animacion derecha">
 
                 Cada pieza nace del equilibrio entre diseño funcional, materiales de alta calidad y la dedicación del trabajo artesanal. Elegimos cuidadosamente cada madera, cada herraje y cada acabado, para que el resultado sea más que un mueble: sea parte de tu hogar.
 
@@ -159,7 +159,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 0%;">
 
-            <div class="container mt-4">
+            <div class="container mt-4 animacion arriba">
                 <div class="row">
                     <?php foreach ($items as $i): ?>
                         <div class="col-md-4 mb-4">
@@ -197,6 +197,27 @@ $usuario = Auth::obtenerUsuario();
     </footer>
 
 </body>
+
+<!-- Animaciones -->
+
+<script>
+    
+    const elementos = document.querySelectorAll('.animacion');
+
+    const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+        }
+        else {
+        entrada.target.classList.remove('visible');
+        }
+        });
+    }, { threshold: 0.2 }); // 20% visible para activarse
+
+    elementos.forEach(el => observer.observe(el));
+
+</script>
 
 <script src="../BOOTSTRAP_v5.3/js/bootstrap.bundle.min.js"></script>
 

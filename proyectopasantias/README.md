@@ -15,29 +15,22 @@
 
 --- Inicio de la Pagina Web ---
 
-- 20/8 Tuve que sacar las antiguas animaciones pero ahi lo solucione
+- SI MODIFICAN O AGREGAN ALGO CORROBOREN QUE TODO SIGA FUNCIONANDO (MAS QUE NADA EN LO RESPONSIVE)
+- RECUERDEN LEER LA ENTREVISTA , ESO FUE LOS QUE NOS PIDIERON
 
-- X Realizar el Diseño Principal
-- X Usar como guia las páginas mencionadas
-- X Paginas de Guia (carpinteriabenegas.com)(bergamota.com.ar)(https://agencianewmar.es/portfolio/diseno-web-carpinteria-cadiz/)
-- X Ante otras características consultar la entrevista para más detalles
+- Agregue animaciones , si tienen dudas preguntenme (Las animaciones del tata pijearon todo y eran una garcha)
+- Agregar , modificar o corroborar todos los textos escritos
+- Agregar/cambiar los iconos y imagenes que hacen falta
+- Si es posible hacer la pagina mas atractiva visualmente ya sea con JS o agregando mas cosas que crean que haga falta
+- No se olviden de las ideas que pensaron sobre las cosas que querian cambiar
+- Agregar o Modificar informacion del footer
 
-    28/7 
-- faltan imagenes :(
-- usar imagenes cuadradas para los circulos 
-- agregar el carousel
-- retocar footer
-- rellenar texto
-- agregar algo mas ?
-- mini galeria de trabajos con un slider
-- hacerlo mas atractivo visualmente (posible JS)
 
---- paginas extras ---
-- realizar diseño principal
-
---- informacion que vale oro ---
+--- Paginas GUIA ---
 https://nicepage.com/es/st/2455173/cortes-de-pelo-afeitado-con-toalla-caliente-recorte-de-barba-plantilla-web
-https://bergamin.com.ar/ 
+carpinteriabenegas.com
+bergamota.com.ar
+https://agencianewmar.es/portfolio/diseno-web-carpinteria-cadiz/
 
 --- Entrevista ---
 - Se busca una accesibilidad, es decir lo que se muestre este al alcance , se busca un contraste negro en la página junto con una paleta de colores atractivas . Se apunta a los mayoristas especificar esto . Se busca una pagina informativa , apuntamos a cierto público el cual busque algo artenasal no algo típico que se consigue ya armado y te lo llevas , se busca un buen producto el cual apunte a un cliente con un poco de dinero que busque adornar su casa junto con sus entornos y otros muebles . Se busca resaltar los detalles de los productos de como estos están hechos con firmeza y de calidad. Que los productos se encuentran en multiples provincias (no en una gran cantidad) . La venta ya se realiza no hace falta esa parte . Desde la vista de Administrador ver si es posible mostrar que es lo que más se ve , armar estadísticas y poder mostrar más en primera plana que es lo que se quiere mostrar . Especificar datos específicos de los productos . Agregar datos importantes como donde estamos , hace cuánto estamos , como nos contactas , marcas si es posible. Específicar que los productos no son a medida no son a encargo , recordar que toma un tiempo el armar . Foto montajes , videos armados tipo publicidad . Respecto al diseño necesitamos un nuevo nombre y logo.

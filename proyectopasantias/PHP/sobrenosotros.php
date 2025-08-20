@@ -127,7 +127,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloqueprincipal" style="justify-content: center;">
 
-            <div >
+            <div class="animacion arriba">
 
                 <h1 style="font-size: 35px;color: #C19A6B;">Sobre Nosotros</h1>
 
@@ -139,13 +139,13 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 5%;" >
 
-            <div id="divespacio">
+            <div id="divespacio" class="animacion izquierda">
 
                 <img src="../IMG/Logo3.png" class="img-fluid" id="img1">
 
             </div>
 
-            <div>
+            <div class="animacion derecha">
 
                 <h1 style="font-size: 35px;text-align: center;">
                     En <b style="color: #C19A6B;">Módulo 23</b> 
@@ -196,6 +196,27 @@ $usuario = Auth::obtenerUsuario();
     </footer>
 
 </body>
+
+<!-- Animaciones -->
+
+<script>
+    
+    const elementos = document.querySelectorAll('.animacion');
+
+    const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+        }
+        else {
+        entrada.target.classList.remove('visible');
+        }
+        });
+    }, { threshold: 0.2 }); // 20% visible para activarse
+
+    elementos.forEach(el => observer.observe(el));
+
+</script>
 
 <script src="../BOOTSTRAP_v5.3/js/bootstrap.bundle.min.js"></script>
 
