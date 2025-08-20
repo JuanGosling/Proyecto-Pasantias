@@ -10,7 +10,6 @@
 - Que cuando se Inicie Sesion se redirrecione a la Pagina y se Inicie una Sesion (Que esta dure hasta que se cierra la Pagina)
 - Indicar que la contraseña tenga una cantidad de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
 
-- En vista de celular quitar la caja de login y register
 - En el panel de administrador hacer responsive el agregar y editar
 - En el apartado de trabajos poner una barra de busqueda para los items
 
