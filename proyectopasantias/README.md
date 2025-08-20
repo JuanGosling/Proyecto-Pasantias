@@ -10,11 +10,13 @@
 - Que cuando se Inicie Sesion se redirrecione a la Pagina y se Inicie una Sesion (Que esta dure hasta que se cierra la Pagina)
 - Indicar que la contraseña tenga una cantidad de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
 
-- En el panel de administrador hacer responsive el agregar y editar
 - En el apartado de trabajos poner una barra de busqueda para los items
-
+- Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
 
 --- Inicio de la Pagina Web ---
+
+- 20/8 NO FUNCIONA EL FUCKIN BOTON EN VISTA DE CELULAR , QUIEN CARAJOS MODIFICO ESO?
+
 - X Realizar el Diseño Principal
 - X Usar como guia las páginas mencionadas
 - X Paginas de Guia (carpinteriabenegas.com)(bergamota.com.ar)(https://agencianewmar.es/portfolio/diseno-web-carpinteria-cadiz/)

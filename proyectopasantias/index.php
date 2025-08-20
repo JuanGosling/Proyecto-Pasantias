@@ -130,7 +130,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloqueprincipal">
 
-            <div id="divespacio" style="animation: slideInLeft 1s ease-out forwards;">
+            <div id="divespacio">
 
                 <h1  style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
@@ -143,7 +143,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div>
 
-                <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="animation: slideInRight 1s ease-out forwards;">
+                <img src="./IMG/Logo3.png" class="img-fluid" id="img1" >
 
             </div>
 
@@ -187,11 +187,11 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
                         
-                        <div style="margin-bottom: 8%;">
+                        <div style="margin-bottom: 4%;">
                             <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
                         </div>
 
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Materiales de Calidad</h1>
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 4%;" >Materiales de Calidad</h1>
 
                         <p style="font-size: 20px;">
                             En Módulo 23 trabajamos con materiales seleccionados por su durabilidad, resistencia y estética.
@@ -203,11 +203,11 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
 
-                        <div style="margin-bottom: 8%;">
+                        <div style="margin-bottom: 4%;">
                             <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
                         </div>
 
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Accesible</h1>
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 4%;" >Accesible</h1>
 
                         <p style="font-size: 20px;">
                             Creemos que el diseño funcional y bien hecho no tiene por qué ser inaccesible.
@@ -219,11 +219,11 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
                         
-                        <div style="margin-bottom: 8%;">
+                        <div style="margin-bottom: 4%;">
                             <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
                         </div>
 
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Trabajo Artesanal</h1>
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 4%;" >Trabajo Artesanal</h1>
 
                         <p style="font-size: 20px;">
                             Cada mueble que sale de nuestro taller lleva el sello del trabajo artesanal.
@@ -243,7 +243,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 6%;">
 
-            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 5%;">Nuestros Servicios</h1>
+            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 3%;">Nuestros Servicios</h1>
 
             <div style="justify-content: center;display: flex;margin-bottom: 10%;">
 
@@ -257,9 +257,9 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
                         
-                        <div style="margin-bottom: 8%;">
-                            <img src="./IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 7%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
+                        <div style="margin-bottom: 3%;">
+                            <img src="./IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 4%;">
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas</h1>
 
                         </div>         
 
@@ -271,8 +271,8 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
 
-                        <img src="./IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 7%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
+                        <img src="./IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Sillas</h1>
 
                         <p style="font-size: 20px;">
                            Diseños cómodos y resistentes, ideales para la familia. Estilo y practicidad para crear espacios acogedores todos los días.
@@ -281,8 +281,8 @@ $usuario = Auth::obtenerUsuario();
                     </div>
 
                     <div class="col-lg-4">
-                        <img src="./IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 7%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
+                        <img src="./IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Armarios</h1>
 
                         <p style="font-size: 20px;">
                            Espaciosos y funcionales, nuestros armarios de madera mantienen tu hogar organizado con el estilo cálido que tu familia merece.
@@ -300,9 +300,9 @@ $usuario = Auth::obtenerUsuario();
 
                     <div class="col-lg-4">
                         
-                        <div style="margin-bottom: 8%;">
-                            <img src="./IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 7%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Veladores</h1>
+                        <div style="margin-bottom: 3%;">
+                            <img src="./IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 4%;">
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Veladores</h1>
 
                         </div>         
 
@@ -313,8 +313,8 @@ $usuario = Auth::obtenerUsuario();
                     </div>
 
                     <div class="col-lg-4">
-                        <img src="./IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 7%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Repisas</h1>
+                        <img src="./IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Repisas</h1>
 
                         <p style="font-size: 20px;">
                            Versátiles y resistentes, perfectas para ordenar o decorar, dando un toque natural y familiar a cada rincón.
@@ -323,8 +323,8 @@ $usuario = Auth::obtenerUsuario();
                     </div>
 
                     <div class="col-lg-4">
-                        <img src="./IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 7%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Comodas</h1>
+                        <img src="./IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Comodas</h1>
 
                         <p style="font-size: 20px;">
                             Diseñadas para la vida diaria, combinan capacidad, resistencia y un estilo atemporal que se adapta a cualquier habitación.

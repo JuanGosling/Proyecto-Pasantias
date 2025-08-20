@@ -14,29 +14,6 @@
 
 /* Animaciones */
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 
 /* Boton */
 
@@ -205,6 +182,22 @@ body{
 
     }
 
+    .col-lg-4{
+
+        margin-top: 2%;
+
+    }
+
+}
+
+@media (max-width: 991px) {
+    
+    .col-lg-4{
+
+        margin-top: 8%;
+
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -235,7 +228,6 @@ body{
     #divespacio{
 
         margin-right: 0%;
-        animation: slideInLeft 9.2s ease-out forwards;
 
     }
 
@@ -305,7 +297,6 @@ body{
     #img1{
 
         width: 100%;
-        animation: slideInRight 9.2s ease-out forwards;
 
     }
 
