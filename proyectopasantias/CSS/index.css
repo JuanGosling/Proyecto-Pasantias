@@ -12,6 +12,8 @@
     src: url(../ASSETS/FONT/static/Outfit-Light.ttf);
 }
 
+/* Animaciones */
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-100px);
