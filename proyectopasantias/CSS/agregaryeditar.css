@@ -14,7 +14,7 @@
 
 /* Contenedor*/
 
-.mt-5{
+.contenedor{
 
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     padding: 5%;
@@ -37,55 +37,10 @@ body{
     background-size: cover;
     background-color: #1F1F1F;
     color: #ffffff;
-    margin-left: 25%;
-    margin-right: 25%;
-
-}
-
-
-
-/* Responsive */
-
-/* 
-    Para el que no entienda que remil poronga es esto basicamente
-    el @media y x resolucion de ancho , sirve para modificar ciertos estilos
-    a partir de la resolucion que vos pusiste
-
-    Att - Cacho
-
-*/
-
-@media (max-width: 1300px) {
- 
     
 
 }
 
-@media (max-width: 1200px) {
-    
-
-
-}
-
-@media (max-width: 900px) {
-
-
-
-}
-
-@media (max-width: 800px) {
-
-
-}
-
-@media (max-width: 500px) {
-
-    body{
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-
-}
 
 /* Test */
 

@@ -29,13 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Ítem</title>
     <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/agregaryeditar.css">
 </head>
 <body>
 
-    <div class="container mt-5">
+    <div class="contenedor">
         <h2>Agregar Ítem</h2>
         <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
