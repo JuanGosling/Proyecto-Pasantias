@@ -130,7 +130,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloqueprincipal">
 
-            <div id="divespacio">
+            <div id="divespacio" class="animacion izquierda">
 
                 <h1  style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
@@ -141,7 +141,7 @@ $usuario = Auth::obtenerUsuario();
 
             </div>
 
-            <div>
+            <div class="animacion derecha">
 
                 <img src="./IMG/Logo3.png" class="img-fluid" id="img1" >
 
@@ -155,13 +155,13 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="divbloque">
 
-                <div id="divespacio">
+                <div id="divespacio" class="animacion derecha">
 
                     <img src="./IMG/M4.jpg"  class="img-fluid" id="img2">
 
                 </div>
 
-                <div>
+                <div class="animacion izquierda">
 
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>Muebles que se adaptan a tu vida y a tu hogar</b></h1>
 
@@ -183,7 +183,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="container">
 
-                <div class="row text-center">
+                <div class="row text-center animacion arriba">
 
                     <div class="col-lg-4">
                         
@@ -243,15 +243,15 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 6%;">
 
-            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 3%;">Nuestros Servicios</h1>
+            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 3%;" class="animacion izquierda">Nuestros Servicios</h1>
 
-            <div style="justify-content: center;display: flex;margin-bottom: 10%;">
+            <div style="justify-content: center;display: flex;margin-bottom: 10%;" class="animacion derecha">
 
                 <img src="./IMG/M1.jpg" class="img-fluid" width="60%" id="img3">
 
             </div>
 
-            <div class="container">
+            <div class="container animacion arriba">
 
                 <div class="row text-center">
 
@@ -294,7 +294,7 @@ $usuario = Auth::obtenerUsuario();
 
             </div>
 
-            <div class="container" style="margin-top: 5%;">
+            <div class="container animacion arriba" style="margin-top: 5%;">
 
                 <div class="row text-center">
 
@@ -361,6 +361,27 @@ $usuario = Auth::obtenerUsuario();
     </footer>
 
 </body>
+
+<!-- Animaciones -->
+
+<script>
+    
+    const elementos = document.querySelectorAll('.animacion');
+
+    const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+        }
+        else {
+        entrada.target.classList.remove('visible');
+        }
+        });
+    }, { threshold: 0.2 }); // 20% visible para activarse
+
+    elementos.forEach(el => observer.observe(el));
+
+</script>
 
 <script src="./BOOTSTRAP_v5.3/js/bootstrap.bundle.min.js"></script>
 

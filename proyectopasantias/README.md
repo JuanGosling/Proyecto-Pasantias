@@ -15,7 +15,7 @@
 
 --- Inicio de la Pagina Web ---
 
-- 20/8 NO FUNCIONA EL FUCKIN BOTON EN VISTA DE CELULAR , QUIEN CARAJOS MODIFICO ESO?
+- 20/8 Tuve que sacar las antiguas animaciones pero ahi lo solucione
 
 - X Realizar el Diseño Principal
 - X Usar como guia las páginas mencionadas
