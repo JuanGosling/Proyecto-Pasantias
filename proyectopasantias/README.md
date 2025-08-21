@@ -13,15 +13,15 @@ ESTA MIERDA ES IMPOSIBLE DE HACER SIN UN SERVICIO DE HOST , O NO ME DI LA CABEZA
 QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - Indicar que la contraseña tenga una cantidad de especifica de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
-QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
+- QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
-QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
+- QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - En el apartado de trabajos poner una barra de busqueda para los items
-QUEDA POR INVESTIGAR , ES NECESARIO
+- QUEDA POR INVESTIGAR , ES NECESARIO
 
--Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil )
+- Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil )
 
 --- Inicio de la Pagina Web ---
 
