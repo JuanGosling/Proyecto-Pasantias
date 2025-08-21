@@ -7,11 +7,21 @@
 
 - A la Hora de crear una cuenta se tiene que verificar que la persona sea dueña del Email ingresado (Verificacion por Email con link que redireccione al inicio de sesion y guarde asi los datos en la base de datos sino no)
 - Hacer que el boton de olvide mi contraseña funcione ( Realizar e investigar )
-- Que cuando se Inicie Sesion se redirrecione a la Pagina y se Inicie una Sesion (Que esta dure hasta que se cierra la Pagina)
-- Indicar que la contraseña tenga una cantidad de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
+ESTA MIERDA ES IMPOSIBLE DE HACER SIN UN SERVICIO DE HOST , O NO ME DI LA CABEZA LO SUFICIENTE CONTRA LA MESA PARA AVERIGUARLO
+
+- Que cuando se Inicie Sesion se inice una sesion qque dure hasta que se cierra la Pagina
+QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
+
+- Indicar que la contraseña tenga una cantidad de especifica de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
+QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
+
+- Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
+QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - En el apartado de trabajos poner una barra de busqueda para los items
-- Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
+QUEDA POR INVESTIGAR , ES NECESARIO
+
+-Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil )
 
 --- Inicio de la Pagina Web ---
 
