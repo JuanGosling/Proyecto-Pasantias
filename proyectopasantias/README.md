@@ -9,7 +9,7 @@
 - Hacer que el boton de olvide mi contraseña funcione ( Realizar e investigar )
 ESTA MIERDA ES IMPOSIBLE DE HACER SIN UN SERVICIO DE HOST , O NO ME DI LA CABEZA LO SUFICIENTE CONTRA LA MESA PARA AVERIGUARLO
 
-- Que cuando se Inicie Sesion se inice una sesion qque dure hasta que se cierra la Pagina
+- Que cuando se Inicie Sesion se inice una sesion que dure hasta que se cierra la Pagina
 QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - Indicar que la contraseña tenga una cantidad de especifica de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
