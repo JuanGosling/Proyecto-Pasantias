@@ -241,7 +241,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 6%;">
 
-            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 3%;" class="animacion izquierda">Nuestros Servicios</h1>
+            <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 6%;" class="animacion izquierda">Nuestros Servicios</h1>
 
             <div class="container">
 
