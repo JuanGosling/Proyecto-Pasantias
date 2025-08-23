@@ -164,10 +164,10 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 0%;">
 
-            <div class="container mt-4 animacion arriba">
+            <div class="container mt-4">
                 <div class="row">
                     <?php foreach ($items as $i): ?>
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-4 mb-4 animacion arriba">
                             <div class="card h-100">
                                 <?php if ($i['imagen']): ?>
                                     <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
