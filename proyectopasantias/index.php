@@ -10,7 +10,7 @@ $usuario = Auth::obtenerUsuario();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muebleria Módulo 23</title>
-    <link rel="icon" href="./IMG/icono.png" type="image/png">
+    <link rel="icon" href="./IMG/Logo4.png" type="image/png">
     <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="./CSS/index.css">
 </head>
@@ -183,9 +183,9 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="container">
 
-                <div class="row text-center animacion arriba">
+                <div class="row text-center">
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         
                         <div style="margin-bottom: 4%;">
                             <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
@@ -201,7 +201,7 @@ $usuario = Auth::obtenerUsuario();
 
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
 
                         <div style="margin-bottom: 4%;">
                             <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
@@ -217,7 +217,7 @@ $usuario = Auth::obtenerUsuario();
                         
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         
                         <div style="margin-bottom: 4%;">
                             <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
@@ -251,11 +251,11 @@ $usuario = Auth::obtenerUsuario();
 
             </div>
 
-            <div class="container animacion arriba">
+            <div class="container">
 
                 <div class="row text-center">
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         
                         <div style="margin-bottom: 3%;">
                             <img src="./IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 4%;">
@@ -269,7 +269,7 @@ $usuario = Auth::obtenerUsuario();
 
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
 
                         <img src="./IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 4%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Sillas</h1>
@@ -280,7 +280,7 @@ $usuario = Auth::obtenerUsuario();
                         
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         <img src="./IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 4%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Armarios</h1>
 
@@ -294,15 +294,15 @@ $usuario = Auth::obtenerUsuario();
 
             </div>
 
-            <div class="container animacion arriba" style="margin-top: 5%;">
+            <div class="container" style="margin-top: 5%;">
 
                 <div class="row text-center">
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         
                         <div style="margin-bottom: 3%;">
                             <img src="./IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 4%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Veladores</h1>
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas de Luz</h1>
 
                         </div>         
 
@@ -312,7 +312,7 @@ $usuario = Auth::obtenerUsuario();
 
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         <img src="./IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 4%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Repisas</h1>
 
@@ -322,7 +322,7 @@ $usuario = Auth::obtenerUsuario();
                         
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         <img src="./IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 4%;">
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Comodas</h1>
 
