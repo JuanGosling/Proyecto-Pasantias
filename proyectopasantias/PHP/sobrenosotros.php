@@ -190,7 +190,7 @@ $usuario = Auth::obtenerUsuario();
         <!-- Copyright -->
 
         <div class="footer">
-            <p>© 2025 Nombre de la empresa. Todos los derechos reservados.</p>
+            <p style="font-size:16px">© 2025 Nombre de la empresa. Todos los derechos reservados.</p>
             <p><a class="btn" href="#top">Volver arriba ↑</a></p>
         </div>
 
