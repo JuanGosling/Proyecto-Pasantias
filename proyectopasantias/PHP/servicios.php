@@ -142,38 +142,39 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="container">
 
-                <div class="row text-center">
+                <div class="row text-center" id="titulo" style="margin-bottom: 3%;">
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         
-                        <div style="margin-bottom: 8%;">
-
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
+                        <div style="margin-bottom: 3%;">
+                            <img src="../IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 4%;">
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas</h1>
 
                         </div>         
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                        Mesas diseñadas para reunir a la familia, con calidad, estilo y funcionalidad para compartir y crear recuerdos en tu hogar.
                         </p>
 
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
 
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
+                        <img src="../IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Sillas</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Diseños cómodos y resistentes, ideales para la familia. Estilo y practicidad para crear espacios acogedores todos los días.
                         </p>
                         
                     </div>
 
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
+                    <div class="col-lg-4 animacion arriba">
+                        <img src="../IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Armarios</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Espaciosos y funcionales, nuestros armarios de madera mantienen tu hogar organizado con el estilo cálido que tu familia merece.
                         </p>
 
                     </div>
@@ -182,40 +183,40 @@ $usuario = Auth::obtenerUsuario();
 
             </div>
 
-            <div class="container">
+            <div class="container" style="margin-top: 5%;">
 
                 <div class="row text-center">
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 animacion arriba">
                         
-                        <div style="margin-bottom: 8%;">
-
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
+                        <div style="margin-bottom: 3%;">
+                            <img src="../IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 4%;">
+                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas de Luz</h1>
 
                         </div>         
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Prácticos y acogedores, ideales para acompañar tus noches y mantener lo esencial siempre a mano.
                         </p>
 
                     </div>
 
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
+                    <div class="col-lg-4 animacion arriba">
+                        <img src="../IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Repisas</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                           Versátiles y resistentes, perfectas para ordenar o decorar, dando un toque natural y familiar a cada rincón.
                         </p>
                         
                     </div>
 
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
+                    <div class="col-lg-4 animacion arriba">
+                        <img src="../IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 4%;">
+                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Comodas</h1>
 
                         <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
+                            Diseñadas para la vida diaria, combinan capacidad, resistencia y un estilo atemporal que se adapta a cualquier habitación.
                         </p>
 
                     </div>
@@ -223,91 +224,6 @@ $usuario = Auth::obtenerUsuario();
                 </div>
 
             </div>
-
-            <div class="container">
-
-                <div class="row text-center">
-
-                    <div class="col-lg-4">
-                        
-                        <div style="margin-bottom: 8%;">
-
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
-
-                        </div>         
-
-                        <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
-
-                        <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
-                        </p>
-                        
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
-
-                        <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="container">
-
-                <div class="row text-center">
-
-                    <div class="col-lg-4">
-                        
-                        <div style="margin-bottom: 8%;">
-
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Mesas</h1>
-
-                        </div>         
-
-                        <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Sillas</h1>
-
-                        <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
-                        </p>
-                        
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 8%;" >Armarios</h1>
-
-                        <p style="font-size: 20px;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et nesciunt officiis obcaecati natus
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-           
 
         </section>
 
