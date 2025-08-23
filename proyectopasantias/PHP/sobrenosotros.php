@@ -190,7 +190,8 @@ $usuario = Auth::obtenerUsuario();
         <!-- Copyright -->
 
         <div class="footer">
-            <p style="font-size:16px">© 2025 Nombre de la empresa. Todos los derechos reservados.</p>
+            <p style="font-size:16px">© 2025 Módulo 23. Todos los derechos reservados.</p>
+            <p style="font-size:16px">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
             <p><a class="btn" href="#top">Volver arriba ↑</a></p>
         </div>
 
