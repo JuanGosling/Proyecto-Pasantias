@@ -9,7 +9,7 @@ $usuario = Auth::obtenerUsuario();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpinteria Módulo 23</title>
+    <title>Muebleria Módulo 23</title>
     <link rel="icon" href="./IMG/icono.png" type="image/png">
     <link rel="stylesheet" href="./BOOTSTRAP_v5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="./CSS/index.css">
@@ -135,7 +135,7 @@ $usuario = Auth::obtenerUsuario();
                 <h1  style="font-size: 35px;">En <b style="color: #C19A6B;">Módulo 23</b> creemos que cada hogar merece calidad</h1>
 
                 <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                Nos especializamos en carpintería, ofreciendo soluciones duraderas, estéticas y funcionales para todo tipo de personas, estilos de vida y presupuestos.
+                Nos especializamos en muebles, ofreciendo soluciones duraderas, estéticas y funcionales para todo tipo de personas, estilos de vida y presupuestos.
                 Combinamos diseño moderno, materiales de primera y trabajo artesanal, logrando un equilibrio perfecto entre calidad y precio justo.
                 </p>
 
@@ -143,7 +143,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="animacion derecha">
 
-                <img src="./IMG/Logo3.png" class="img-fluid" id="img1" >
+                <img src="./IMG/Logo4.png" class="img-fluid" id="img1" >
 
             </div>
 
@@ -338,7 +338,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div style="display: flex;justify-content: center;margin-top: 6%;">
 
-                <a href="./PHP/servicios.html" class="btn" id="btn1">Ver mas</a>
+                <a href="./PHP/servicios.php" class="btn" id="btn1">Ver mas</a>
 
             </div>
 

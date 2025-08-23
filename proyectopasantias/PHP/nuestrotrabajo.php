@@ -12,7 +12,7 @@ $usuario = Auth::obtenerUsuario();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro Trabajo</title>
+    <title>Muebleria Módulo 23</title>
     <link rel="stylesheet" href="../BOOTSTRAP_v5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/nuestrotrabajo.css">
 </head>
