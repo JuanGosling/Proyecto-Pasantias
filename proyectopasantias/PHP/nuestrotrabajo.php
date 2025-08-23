@@ -149,6 +149,10 @@ $usuario = Auth::obtenerUsuario();
 
                 Cada pieza nace del equilibrio entre diseño funcional, materiales de alta calidad y la dedicación del trabajo artesanal. Elegimos cuidadosamente cada madera, cada herraje y cada acabado, para que el resultado sea más que un mueble: sea parte de tu hogar.
 
+            </p>
+
+            <p style="text-align: center;font-size: 20px;margin-top: 2%;" id="texto" class="animacion izquierda">
+
                 Entendemos que cada persona y cada espacio son únicos, por eso ofrecemos opciones accesibles sin comprometer la estética ni la resistencia.
                 Desde el primer trazo hasta el último detalle, todo lo que hacemos lleva nuestra marca: compromiso con la calidad, pasión por la carpintería y respeto por tus ideas.
 
