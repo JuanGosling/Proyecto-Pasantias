@@ -188,13 +188,12 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4 animacion arriba">
                         
                         <div style="margin-bottom: 4%;">
-                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                            <img src="./IMG/Icono1.png" class="img-fluid" id="img1" style="width: 70%;">
                         </div>
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 4%;" >Materiales de Calidad</h1>
 
                         <p style="font-size: 20px;">
-                            En Módulo 23 trabajamos con materiales seleccionados por su durabilidad, resistencia y estética.
                             Usamos maderas nobles, herrajes confiables y terminaciones de alto nivel para garantizar muebles que no solo se ven bien, sino que resisten el paso del tiempo.
                             Porque para nosotros, calidad es más que una promesa: es una base.
                         </p>
@@ -204,7 +203,7 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4 animacion arriba">
 
                         <div style="margin-bottom: 4%;">
-                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                            <img src="./IMG/Icono2.png" class="img-fluid" id="img1" style="width: 70%;">
                         </div>
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 4%;" >Accesible</h1>
@@ -220,13 +219,12 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-lg-4 animacion arriba">
                         
                         <div style="margin-bottom: 4%;">
-                            <img src="./IMG/Logo3.png" class="img-fluid" id="img1" style="width: 70%;">
+                            <img src="./IMG/Icono3.png" class="img-fluid" id="img1" style="width: 70%;">
                         </div>
 
                         <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 4%;" >Trabajo Artesanal</h1>
 
                         <p style="font-size: 20px;">
-                            Cada mueble que sale de nuestro taller lleva el sello del trabajo artesanal.
                             Detrás de cada corte, encastre y acabado, hay manos expertas que cuidan los detalles y entienden que la carpintería es tanto técnica como pasión.
                             En Módulo 23, lo que hacemos es único, porque está hecho por personas, no por máquinas.
                         </p>
@@ -244,12 +242,6 @@ $usuario = Auth::obtenerUsuario();
         <section class="bloque" style="padding-top: 6%;">
 
             <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 3%;" class="animacion izquierda">Nuestros Servicios</h1>
-
-            <div style="justify-content: center;display: flex;margin-bottom: 10%;" class="animacion derecha">
-
-                <img src="./IMG/M1.jpg" class="img-fluid" width="60%" id="img3">
-
-            </div>
 
             <div class="container">
 
