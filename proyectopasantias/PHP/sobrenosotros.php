@@ -153,7 +153,7 @@ $usuario = Auth::obtenerUsuario();
                 </h1>
 
                 <p >
-                    Somos una empresa de carpintería comprometida con crear
+                    Somos una empresa de muebleria comprometida con crear
                     muebles que combinan calidad, funcionalidad y diseño, pensados para 
                     acompañarte en cada etapa de tu vida.
                 </p>
