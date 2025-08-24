@@ -167,7 +167,7 @@ $usuario = Auth::obtenerUsuario();
             <div class="container mt-4">
                 <div class="row text-center">
                     <?php foreach ($items as $i): ?>
-                        <div class="col-lg-4 animacion arriba">
+                        <div class="col-lg-4 animacion arriba" style="margin-bottom:5%">
                             <div style="margin-bottom: 3%;">
                                 <?php if ($i['imagen']): ?>
                                     <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="img-fluid" style="width: 70%; margin-bottom: 4%;" alt="Imagen">
