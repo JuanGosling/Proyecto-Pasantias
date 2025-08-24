@@ -21,6 +21,9 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - En el apartado de trabajos poner una barra de busqueda para los items
 - QUEDA POR INVESTIGAR , ES NECESARIO
 
+- En el apartado de trabajos ordenador los items segun su tipo
+- QUEDA POR INVESTIGAR , ES NECESARIO (?)
+
 - Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil )
 
 --- Pagina Web ---

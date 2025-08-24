@@ -330,7 +330,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div style="display: flex;justify-content: center;margin-top: 6%;">
 
-                <a href="./PHP/servicios.php" class="btn" id="btn1">Ver mas</a>
+                <a href="./PHP/nuestrotrabajo.php" class="btn" id="btn1">Ver mas</a>
 
             </div>
 
