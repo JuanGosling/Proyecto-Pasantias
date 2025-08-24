@@ -178,7 +178,7 @@ $usuario = Auth::obtenerUsuario();
                             </div>
                             <div>
                                 <p style="font-size: 20px;">
-                                    <?= nl2br(htmlspecialchars($i['descripcion'])) ?>gar.
+                                    <?= nl2br(htmlspecialchars($i['descripcion'])) ?>
                                 </p>
                             </div>
                         </div>
