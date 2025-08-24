@@ -57,9 +57,6 @@ $usuario = Auth::obtenerUsuario();
                                 <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link active" href="./servicios.php">Servicios</a>
-                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link active" href="nuestrotrabajo.php">Nuestro Trabajo</a>
@@ -67,6 +64,10 @@ $usuario = Auth::obtenerUsuario();
 
                             <li class="nav-item">
                                 <a class="nav-link active" href="./sobrenosotros.php">Sobre Nosotros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./servicios.php">FAQs</a>
                             </li>
 
                             <!-- Verifica si hay una sesion activa , si lo hay se muestra el email y el boton para cerrar sesion

@@ -58,15 +58,15 @@ $usuario = Auth::obtenerUsuario();
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="servicios.php">Servicios</a>
-                            </li>
-
-                            <li class="nav-item">
                                 <a class="nav-link active" href="./nuestrotrabajo.php">Nuestro Trabajo</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link active" href="./sobrenosotros.php">Sobre Nosotros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="servicios.php">FAQs</a>
                             </li>
 
                             <!-- Verifica si hay una sesion activa , si lo hay se muestra el email y el boton para cerrar sesion
@@ -130,7 +130,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div >
 
-                <h1 style="font-size: 35px;color: #C19A6B;">Servicios</h1>
+                <h1 style="font-size: 35px;color: #C19A6B;">FAQs</h1>
 
             </div>
 
