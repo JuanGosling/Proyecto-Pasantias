@@ -142,84 +142,47 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="container">
 
-                <div class="row text-center" id="titulo" style="margin-top: 3%;">
+                <div class="animacion izquierda" style="margin-bottom:5%">
 
-                    <div class="col-lg-4 animacion arriba">
-                        
-                        <div style="margin-bottom: 3%;">
-                            <img src="../IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 4%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas</h1>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
 
-                        </div>         
-
-                        <p style="font-size: 20px;">
-                        Mesas diseñadas para reunir a la familia, con calidad, estilo y funcionalidad para compartir y crear recuerdos en tu hogar.
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-4 animacion arriba">
-
-                        <img src="../IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Sillas</h1>
-
-                        <p style="font-size: 20px;">
-                           Diseños cómodos y resistentes, ideales para la familia. Estilo y practicidad para crear espacios acogedores todos los días.
-                        </p>
-                        
-                    </div>
-
-                    <div class="col-lg-4 animacion arriba">
-                        <img src="../IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Armarios</h1>
-
-                        <p style="font-size: 20px;">
-                           Espaciosos y funcionales, nuestros armarios de madera mantienen tu hogar organizado con el estilo cálido que tu familia merece.
-                        </p>
-
-                    </div>
+                    <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
+                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                    </p>
 
                 </div>
 
-            </div>
+                <div class="animacion derecha" style="margin-bottom:5%">
 
-            <div class="container" style="margin-top: 5%;">
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
 
-                <div class="row text-center">
+                    <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
+                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                    </p>
 
-                    <div class="col-lg-4 animacion arriba">
-                        
-                        <div style="margin-bottom: 3%;">
-                            <img src="../IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 4%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas de Luz</h1>
+                </div>
 
-                        </div>         
+                <div class="animacion izquierda" style="margin-bottom:5%">
 
-                        <p style="font-size: 20px;">
-                           Prácticos y acogedores, ideales para acompañar tus noches y mantener lo esencial siempre a mano.
-                        </p>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
 
-                    </div>
+                    <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
+                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                    </p>
 
-                    <div class="col-lg-4 animacion arriba">
-                        <img src="../IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Repisas</h1>
+                </div>
 
-                        <p style="font-size: 20px;">
-                           Versátiles y resistentes, perfectas para ordenar o decorar, dando un toque natural y familiar a cada rincón.
-                        </p>
-                        
-                    </div>
+                <div class="animacion derecha" style="margin-bottom:5%">
 
-                    <div class="col-lg-4 animacion arriba">
-                        <img src="../IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Comodas</h1>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
 
-                        <p style="font-size: 20px;">
-                            Diseñadas para la vida diaria, combinan capacidad, resistencia y un estilo atemporal que se adapta a cualquier habitación.
-                        </p>
-
-                    </div>
+                    <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
+                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                    </p>
 
                 </div>
 
