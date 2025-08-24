@@ -162,22 +162,24 @@ $usuario = Auth::obtenerUsuario();
 
         </section>
 
-        <section class="bloque" style="padding-top: 0%;">
+        <section class="bloque" style="padding-top: 2%;padding-bottom:5%">
 
             <div class="container mt-4">
-                <div class="row">
+                <div class="row text-center">
                     <?php foreach ($items as $i): ?>
-                        <div class="col-md-4 mb-4 animacion arriba">
-                            <div class="card h-100">
+                        <div class="col-lg-4 animacion arriba">
+                            <div style="margin-bottom: 3%;">
                                 <?php if ($i['imagen']): ?>
-                                    <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
+                                    <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="img-fluid" style="width: 70%; margin-bottom: 4%;" alt="Imagen">
                                 <?php else: ?>
                                     <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
                                 <?php endif; ?>
-                                <div class="card-body" style="background-color: #C19A6B; color: #ffffff;font-family: Outfit;">
-                                    <h5 class="card-title"><?= htmlspecialchars($i['titulo']) ?></h5>
-                                    <p class="card-text"><?= nl2br(htmlspecialchars($i['descripcion'])) ?></p>
-                                </div>
+                                    <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" ><?= htmlspecialchars($i['titulo']) ?></h1>
+                            </div>
+                            <div>
+                                <p style="font-size: 20px;">
+                                    <?= nl2br(htmlspecialchars($i['descripcion'])) ?>gar.
+                                </p>
                             </div>
                         </div>
                     <?php endforeach; ?>
