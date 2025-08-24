@@ -192,7 +192,7 @@ $usuario = Auth::obtenerUsuario();
 
         <div class="footer">
             <p style="font-size:16px;padding-top:0">© 2025 Módulo 23. Todos los derechos reservados.</p>
-            <p style="font-size:16px;padding-top:0">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
+            <p style="font-size:16px;padding-top:0;padding-left:10%;padding-right:10%" >Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
             <p><a class="btn" href="#top">Volver arriba ↑</a></p>
         </div>
 

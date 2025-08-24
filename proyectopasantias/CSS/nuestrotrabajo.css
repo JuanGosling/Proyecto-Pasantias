@@ -216,6 +216,22 @@ body{
 
     }
 
+    .col-lg-4{
+
+        margin-top: 2%;
+
+    }
+
+}
+
+@media (max-width: 991px) {
+    
+    .col-lg-4{
+
+        margin-top: 8%;
+
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -256,11 +272,6 @@ body{
 
     }
 
-    .col-lg-4{
-
-        margin-top: 2%;
-
-    }
 
     .footer{
 
@@ -300,6 +311,12 @@ body{
 
         margin-top: 10%;
         margin-bottom: 12%;
+
+    }
+
+     .col-lg-4{
+
+        margin-top: 15%;
 
     }
 

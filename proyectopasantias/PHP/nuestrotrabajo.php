@@ -151,7 +151,7 @@ $usuario = Auth::obtenerUsuario();
 
             </p>
 
-            <p style="text-align: center;font-size: 20px;margin-top: 2%;" id="texto" class="animacion izquierda">
+            <p style="text-align: center;font-size: 20px;margin-top: 3%;" id="texto" class="animacion izquierda">
 
                 Entendemos que cada persona y cada espacio son únicos, por eso ofrecemos opciones accesibles sin comprometer la estética ni la resistencia.
                 Desde el primer trazo hasta el último detalle, todo lo que hacemos lleva nuestra marca: compromiso con la calidad, pasión por la carpintería y respeto por tus ideas.
@@ -198,7 +198,7 @@ $usuario = Auth::obtenerUsuario();
 
         <div class="footer">
             <p>© 2025 Módulo 23. Todos los derechos reservados.</p>
-            <p>Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
+            <p style="padding-left:10%;padding-right:10%">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
             <p><a class="btn" href="#top">Volver arriba ↑</a></p>
         </div>
 
