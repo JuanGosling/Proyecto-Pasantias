@@ -142,7 +142,7 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="container">
 
-                <div class="animacion izquierda" style="margin-bottom:5%">
+                <div class="animacion izquierda" id="pregunta" >
 
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Puedo comprar directamente desde la página web?</b></h1>
 
@@ -152,7 +152,7 @@ $usuario = Auth::obtenerUsuario();
 
                 </div>
 
-                <div class="animacion derecha" style="margin-bottom:5%">
+                <div class="animacion derecha" id="pregunta">
 
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Venden al público en general o solo a mayoristas?</b></h1>
 
@@ -162,7 +162,7 @@ $usuario = Auth::obtenerUsuario();
 
                 </div>
 
-                <div class="animacion izquierda" style="margin-bottom:5%">
+                <div class="animacion izquierda" id="pregunta">
 
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Los productos que aparecen en la web siempre están en stock?</b></h1>
 
@@ -172,7 +172,7 @@ $usuario = Auth::obtenerUsuario();
 
                 </div>
 
-                <div class="animacion derecha" style="margin-bottom:5%">
+                <div class="animacion derecha" id="pregunta">
 
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Cómo puedo solicitar una cotización o más información?</b></h1>
 

@@ -184,11 +184,27 @@ body{
 
 */
 
+@media (max-width: 1900px) {
+
+    #pregunta{
+
+        margin-bottom:5%;
+
+    }
+
+}
+
 @media (max-width: 1300px) {
     
     .bloqueprincipal{
 
         margin-top: 10%;
+
+    }
+
+    #pregunta{
+
+        margin-bottom:5%;
 
     }
 
@@ -267,6 +283,12 @@ body{
 
     }
 
+    #pregunta{
+
+        margin-bottom:10%;
+
+    }
+
 }
 
 @media (max-width: 800px) {
@@ -299,6 +321,12 @@ body{
 
         margin-top: 10%;
         margin-bottom: 12%;
+
+    }
+
+    #pregunta{
+
+        margin-bottom: 15%;
 
     }
 
