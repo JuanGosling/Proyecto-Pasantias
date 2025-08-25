@@ -144,44 +144,40 @@ $usuario = Auth::obtenerUsuario();
 
                 <div class="animacion izquierda" style="margin-bottom:5%">
 
-                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Puedo comprar directamente desde la página web?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
-                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                     No, nuestra página funciona únicamente como un catálogo digital para mostrar nuestros productos. Para realizar compras, debes comunicarte con nuestro equipo de ventas.
                     </p>
 
                 </div>
 
                 <div class="animacion derecha" style="margin-bottom:5%">
 
-                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Venden al público en general o solo a mayoristas?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
-                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                   Somos una empresa mayorista, por lo que nuestras ventas están dirigidas exclusivamente a comercios, distribuidores y profesionales del rubro.
                     </p>
 
                 </div>
 
                 <div class="animacion izquierda" style="margin-bottom:5%">
 
-                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Los productos que aparecen en la web siempre están en stock?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
-                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                   El catálogo refleja los modelos que trabajamos habitualmente, pero la disponibilidad puede variar. Te recomendamos consultar con nuestro equipo antes de realizar un pedido.
                     </p>
 
                 </div>
 
                 <div class="animacion derecha" style="margin-bottom:5%">
 
-                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿ Lorem ipsum dolor sit amet consectetur, adipisicing elit.?</b></h1>
+                    <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Cómo puedo solicitar una cotización o más información?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus enim excepturi doloribus porro modi 
-                    sunt quia! Debitis impedit eos voluptatibus officiis velit at, odit quasi blanditiis eum rem maxime quibusdam!
+                    Podés ponerte en contacto con nosotros a través de nuestro formulario web, por teléfono, WhatsApp o correo electrónico. Nuestro equipo de ventas te brindará toda la información necesaria.
                     </p>
 
                 </div>
