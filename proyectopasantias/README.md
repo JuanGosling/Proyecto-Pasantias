@@ -40,6 +40,32 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - No se olviden de las ideas que pensaron sobre las cosas que querian cambiar (Implementenlas)
 - Agregar o Modificar informacion del footer
 
+--- Exposicion ---
+
+Hablar equitativamente
+Vender el producto (?)
+
+- Nuestro Cliente , que nos pidio y que estamos desarrollando
+- Como dividimos el trabajo y de que se encarga cada uno
+- Que herramientas o software estamos utilizando
+- Teorema de Gantt (?) 
+- Los resultados hasta el momento de la pagina
+- Futuras mejoras o el resultado que se planea obtener
+- Donde se va a subir la pagina (Todavia no se sabe)
+
+- Eguiluz
+Nuestro Cliente , a que se dedica, que nos pidio 
+
+- Diaz
+Como trabajamos en equipo , como nos divimos las tareas , maquetacion de la pagina
+
+. Cotti
+Apartado visual de la pagina como se hizo , animaciones
+
+- Alcibar
+Apartado php (login , register , vista admin ) , base de datos
+
+
 
 --- Paginas GUIA ---
 - https://nicepage.com/es/st/2455173/cortes-de-pelo-afeitado-con-toalla-caliente-recorte-de-barba-plantilla-web
