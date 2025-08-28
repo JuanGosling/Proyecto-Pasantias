@@ -199,15 +199,65 @@ $usuario = Auth::obtenerUsuario();
 
     <!-- Pie de Pagina -->
 
-    <footer>
+     <footer>
+<style>
+.footer {
+    background-color: #1b1b1bff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: nowrap; 
+    text-align: center;
+}
 
-        <!-- Copyright -->
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1; 
+}
 
-        <div class="footer">
-            <p>© 2025 Módulo 23. Todos los derechos reservados.</p>
-            <p style="padding-left:10%;padding-right:10%">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
-            <p><a class="btn" href="#top">Volver arriba ↑</a></p>
-        </div>
+.footer-left {
+    text-align: center;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: left;
+}
+
+.footer-left img {
+    height: 150px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+</style>
+
+<div class="footer">
+
+    <div class="footer-left">
+        <img src="../IMG/footerimg.png" alt="Logo">
+    </div>
+
+    <div class="footer-center">
+        <p><a class="btn" href="#top" style="color:white;">Volver arriba ↑</a></p>
+        <p style="font-size:16px; padding-top: 9%;">© 2025 Módulo 23. Todos los derechos reservados.</p>
+    </div>
+
+    <div class="footer-right">
+        <p style="font-size:16px; text-align: center;">Contacto: +54 9 223 111-3377</p>
+        <p style="font-size:16px; text-align: center;">Correo: muebleriamodulo23@correo.com</p>
+        <p style="font-size:10px; text-align: center; padding-top: 5%;">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
+    </div>
+
+</div>
 
     </footer>
 
