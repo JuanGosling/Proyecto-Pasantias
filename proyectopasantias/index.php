@@ -386,7 +386,7 @@ $usuario = Auth::obtenerUsuario();
 
     <!-- Izquierda: Logo -->
     <div class="footer-left">
-        <img src="../IMG/footerimg.png" alt="Logo">
+        <img src="../proyectopasantias/IMG/footerimg.png" alt="Logo">
     </div>
 
     <!-- Centro: Copyright y créditos -->
