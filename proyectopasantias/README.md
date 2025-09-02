@@ -3,16 +3,16 @@
 - Realizar la Carpeta de Campo siguiendo los requerimientos expresados en los Documentos de Drive. Si se puede hacer uso de las Fotos de la Carpeta Documentos
 - Realizar al estilo APA , los links estan en el otro disco , ambos en la barra de favoritos
 
---- Login y Register ---
+--- PHP ---
 
 - A la Hora de crear una cuenta se tiene que verificar que la persona sea dueña del Email ingresado (Verificacion por Email con link que redireccione al inicio de sesion y guarde asi los datos en la base de datos sino no)
 - Hacer que el boton de olvide mi contraseña funcione ( Realizar e investigar )
-ESTA MIERDA ES IMPOSIBLE DE HACER SIN UN SERVICIO DE HOST , O NO ME DI LA CABEZA LO SUFICIENTE CONTRA LA MESA PARA AVERIGUARLO
+  QUEDA POR INVESTIGAR
 
 - Que cuando se Inicie Sesion se inice una sesion que dure hasta que se cierra la Pagina
 QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
-- Indicar que la contraseña tenga una cantidad de especifica de caracteres (Se puede realizar , pero es un poco engorroso ,en todo caso la soluciòn la tengo , opcion facil html , un poco rebuscada php)
+- Indicar que la contraseña tenga una cantidad de especifica de caracteres (Se puede realizar ,  ya sea mediante HTML o PHP)
 - QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
@@ -24,7 +24,7 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - En el apartado de trabajos ordenador los items segun su tipo
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
-- Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil )
+- Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil , etc )
 
 --- Pagina Web ---
 
@@ -43,15 +43,13 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 --- Exposicion ---
 
 Hablar equitativamente
-Vender el producto (?)
-
 - Nuestro Cliente , que nos pidio y que estamos desarrollando
 - Como dividimos el trabajo y de que se encarga cada uno
 - Que herramientas o software estamos utilizando
 - Teorema de Gantt (?) 
 - Los resultados hasta el momento de la pagina
 - Futuras mejoras o el resultado que se planea obtener
-- Donde se va a subir la pagina (Todavia no se sabe)
+- Donde se va a subir la pagina 
 
 - Eguiluz
 Nuestro Cliente , a que se dedica, que nos pidio 
@@ -64,7 +62,6 @@ Apartado visual de la pagina como se hizo , animaciones
 
 - Alcibar
 Apartado php (login , register , vista admin ) , base de datos
-
 
 
 --- Paginas GUIA ---
