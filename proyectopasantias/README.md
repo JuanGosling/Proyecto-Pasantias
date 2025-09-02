@@ -57,7 +57,7 @@ Nuestro Cliente , a que se dedica, que nos pidio
 - Diaz
 Como trabajamos en equipo , como nos divimos las tareas , maquetacion de la pagina
 
-. Cotti
+- Cotti
 Apartado visual de la pagina como se hizo , animaciones
 
 - Alcibar
