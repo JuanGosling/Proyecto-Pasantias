@@ -151,6 +151,29 @@ $usuario = Auth::obtenerUsuario();
 
             <h1 style="font-size: 35px;text-align: center;margin-bottom: 1%;" id="titulo">En el Panel de Administrador vas a poder ver , agregar , modificar y quitar Artículos.</h1>
 
+            <!-- Busqueda y Filtro -->
+
+            <form method="GET" class="mb-3">
+                <div class="row">
+                    <div class="col-md-3 animacion arriba">
+                        <select name="tipo" class="form-control">
+                            <option value="">Todos los tipos</option>
+                            <option value="silla">Silla</option>
+                            <option value="mesa">Mesa</option>
+                            <option value="ropero">Ropero</option>
+                            <!-- Podés traer dinámicamente los tipos desde DB -->
+                        </select>
+                    </div>
+                    <div class="col-md-6 animacion arriba">
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..." 
+                            value="<?php echo isset($_GET['busqueda']) ? htmlspecialchars($_GET['busqueda']) : '' ?>">
+                    </div>
+                    <div class="col-md-3 animacion arriba">
+                        <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                    </div>
+                </div>
+            </form>
+
         </section>
 
         <section class="bloque" style="padding-top:0%">

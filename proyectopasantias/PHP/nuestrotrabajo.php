@@ -162,41 +162,26 @@ $usuario = Auth::obtenerUsuario();
 
             <!-- Busqueda y Filtro -->
 
-            <div class="busqueda">
-
-                <div style="margin-right:2%" class="animacion izquierda container">
-
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar Mueble" aria-label="Search"/>
-                        <button class="btn" type="submit">Buscar</button>
-                    </form>
-
-                </div>
-
-                <div class="animacion derecha tipomueble" style="align-items: center;text-align: center;">
-
-                    <div>
-                        <a class="nav-link" style="margin-right:16px">
-                            Tipo de Mueble
-                        </a>
+            <form method="GET" class="mb-3">
+                <div class="row busqueda">
+                    <div class="col-md-3 animacion arriba">
+                        <select name="tipo" class="form-control">
+                            <option value="">Todos los tipos</option>
+                            <option value="silla">Sillas</option>
+                            <option value="mesa">Mesas</option>
+                            <option value="ropero">Roperos</option>
+                            <!-- Podés traer dinámicamente los tipos desde DB -->
+                        </select>
                     </div>
-                                    
-                    <div class="dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #C19A6B;">
-                            Cualquiera
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mesas</a></li>
-                            <li><a class="dropdown-item" href="#">Sillas</a></li>
-                            <li><a class="dropdown-item" href="#">Camas</a></li>
-                        </ul>
+                    <div class="col-md-6 animacion arriba">
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..." 
+                            value="<?php echo isset($_GET['busqueda']) ? htmlspecialchars($_GET['busqueda']) : '' ?>">
                     </div>
-
+                    <div class="col-md-3 animacion arriba">
+                        <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                    </div>
                 </div>
-
-            </div>
-
+            </form>
 
         </section>
 
