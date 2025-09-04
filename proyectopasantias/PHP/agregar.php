@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $item->agregar($titulo, $descripcion, $imagen);
-    header("Location: ../index.php");
+    header("Location: ./admin.php");
 }
 ?>
 

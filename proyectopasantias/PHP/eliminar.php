@@ -15,5 +15,5 @@ if (!$id || !is_numeric($id)) {
 $item = new Item();
 $item->eliminar($id);
 
-header("Location: ../index.php");
+header("Location: ./admin.php");
 exit;

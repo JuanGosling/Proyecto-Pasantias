@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $item->actualizar($id, $titulo, $descripcion, $imagen);
-    header("Location: ../index.php");
+    header("Location: ./admin.php");
 }
 ?>
 
