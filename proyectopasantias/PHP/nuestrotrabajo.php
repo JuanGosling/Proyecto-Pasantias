@@ -174,7 +174,7 @@ $usuario = Auth::obtenerUsuario();
                         </select>
                     </div>
                     <div class="col-md-6 animacion arriba">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..." 
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Muebles..." 
                             value="<?php echo isset($_GET['busqueda']) ? htmlspecialchars($_GET['busqueda']) : '' ?>">
                     </div>
                     <div class="col-md-3 animacion arriba">

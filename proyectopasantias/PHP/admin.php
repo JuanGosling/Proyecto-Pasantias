@@ -149,7 +149,7 @@ $usuario = Auth::obtenerUsuario();
 
         <section class="bloque" style="padding-top: 5%;padding-bottom:3%">
 
-            <h1 style="font-size: 35px;text-align: center;margin-bottom: 1%;" id="titulo">En el Panel de Administrador vas a poder ver , agregar , modificar y quitar Artículos.</h1>
+            <h1 style="font-size: 35px;text-align: center;margin-bottom: 1%;" id="titulo">En el Panel de Administrador vas a poder ver , agregar , modificar y quitar Muebles.</h1>
 
             <!-- Busqueda y Filtro -->
 
@@ -165,7 +165,7 @@ $usuario = Auth::obtenerUsuario();
                         </select>
                     </div>
                     <div class="col-md-6 animacion arriba">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..." 
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Muebles..." 
                             value="<?php echo isset($_GET['busqueda']) ? htmlspecialchars($_GET['busqueda']) : '' ?>">
                     </div>
                     <div class="col-md-3 animacion arriba">
@@ -184,13 +184,13 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-md-2 bg-dark text-white p-3">
                         <h4>Opciones</h4>
                         <ul class="nav flex-column">
-                            <li class="nav-item"><a href="agregar.php" class="btn">Agregar Artículo</a></li>
+                            <li class="nav-item"><a href="agregar.php" class="btn">Agregar Mueble</a></li>
                         </ul>
                     </div>
 
                     <!-- Contenido principal -->
                     <div class="col-md-10 p-4">
-                        <h2>Listado de Artículos</h2>
+                        <h2>Listado de Muebles</h2>
                         <div class="row">
                             <?php foreach ($items as $i): ?>
                                 <div class="col-md-4 mb-4">

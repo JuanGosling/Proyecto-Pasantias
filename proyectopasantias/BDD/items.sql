@@ -3,5 +3,6 @@ CREATE TABLE items (
     titulo VARCHAR(255) NOT NULL,
     descripcion TEXT NOT NULL,
     imagen VARCHAR(255) DEFAULT NULL,
+    tipo VARCHAR(100) NOT NULL ;
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
