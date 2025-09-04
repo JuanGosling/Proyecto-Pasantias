@@ -188,8 +188,8 @@ $usuario = Auth::obtenerUsuario();
 
     <div class="footer">
 
-        <p>© 2025 Módulo 23. Todos los derechos reservados.</p>
-        <p style="padding-left:10%;padding-right:10%">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
+        <p style="font-size:16px">© 2025 Módulo 23. Todos los derechos reservados.</p>
+        <p style="padding-left:10%;padding-right:10%;font-size:16px">Sitio Desarrollado por Santiago Alcibar , Lautaro Cotti , Leonel Diaz y Felipe Eguiluz</p>
         <p><a class="btn" href="#top" >Volver arriba ↑</a></p>
 
     </div>
