@@ -145,13 +145,13 @@ $usuario = Auth::obtenerUsuario();
 
             <h1 style="font-size: 35px;text-align: center;margin-bottom: 3%;" id="titulo" class="animacion izquierda">En <b style="color: #C19A6B;">Módulo 23</b> creamos muebles pensados para durar, adaptarse y emocionar.</h1>
 
-            <p style="text-align: center;font-size: 20px;margin-bottom: 2%;" id="texto" class="animacion derecha">
+            <p class="animacion derecha texto">
 
                 Cada pieza nace del equilibrio entre diseño funcional, materiales de alta calidad y la dedicación del trabajo artesanal. Elegimos cuidadosamente cada madera, cada herraje y cada acabado, para que el resultado sea más que un mueble: sea parte de tu hogar.
 
             </p>
 
-            <p style="text-align: center;font-size: 20px;margin-top: 3%;" id="texto" class="animacion izquierda">
+            <p class="animacion izquierda texto">
 
                 Entendemos que cada persona y cada espacio son únicos, por eso ofrecemos opciones accesibles sin comprometer la estética ni la resistencia.
                 Desde el primer trazo hasta el último detalle, todo lo que hacemos lleva nuestra marca: compromiso con la calidad, pasión por la carpintería y respeto por tus ideas.
@@ -160,7 +160,48 @@ $usuario = Auth::obtenerUsuario();
 
             </p>
 
+            <!-- Busqueda y Filtro -->
+
+            <div class="busqueda">
+
+                <div style="margin-right:2%" class="animacion izquierda container">
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar Mueble" aria-label="Search"/>
+                        <button class="btn" type="submit">Buscar</button>
+                    </form>
+
+                </div>
+
+                <div class="animacion derecha tipomueble" style="align-items: center;text-align: center;">
+
+                    <div>
+                        <a class="nav-link" style="margin-right:16px">
+                            Tipo de Mueble
+                        </a>
+                    </div>
+                                    
+                    <div class="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #C19A6B;">
+                            Cualquiera
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Mesas</a></li>
+                            <li><a class="dropdown-item" href="#">Sillas</a></li>
+                            <li><a class="dropdown-item" href="#">Camas</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </section>
+
+
+        <!-- Items -->
 
         <section class="bloque" style="padding-top: 2%;padding-bottom:5%">
 
@@ -217,7 +258,7 @@ $usuario = Auth::obtenerUsuario();
         entrada.target.classList.remove('visible');
         }
         });
-    }, { threshold: 0.2 }); // 20% visible para activarse
+    }, { threshold: 0.1 }); // 10% visible para activarse
 
     elementos.forEach(el => observer.observe(el));
 

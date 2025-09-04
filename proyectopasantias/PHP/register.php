@@ -52,7 +52,7 @@
                         $user->registrar($_POST['email'],$_POST['nombre'],$_POST['apellido'], $_POST['contraseña']);
 
                         ?>
-                        <div class="alert alert-success" role="alert" style="text-align:center">Cuenta registrada! <a href="login.php">Iniciar Sesión</a></div>
+                        <div class="alert alert-success" role="alert" style="text-align:center">Cuenta registrada! <b>Te hemos enviado un mail a tu correo para activar tu cuenta.</b></div>
                         <?php
                     }
 

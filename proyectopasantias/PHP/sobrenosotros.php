@@ -211,7 +211,7 @@ $usuario = Auth::obtenerUsuario();
         entrada.target.classList.remove('visible');
         }
         });
-    }, { threshold: 0.2 }); // 20% visible para activarse
+    }, { threshold: 0.1 }); // 10% visible para activarse
 
     elementos.forEach(el => observer.observe(el));
 
