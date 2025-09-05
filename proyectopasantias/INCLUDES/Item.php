@@ -14,9 +14,35 @@ class Item {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function agregar($titulo, $descripcion, $imagen) {
-        $stmt = $this->conn->prepare("INSERT INTO items (titulo, descripcion, imagen) VALUES (?, ?, ?)");
-        return $stmt->execute([$titulo, $descripcion, $imagen]);
+    public function buscarItems($tipo = null, $busqueda = null) {
+        $sql = "SELECT * FROM items WHERE 1=1";
+        $parametros = [];
+
+        if (!empty($tipo)) {
+            $sql .= " AND tipo = ?";
+            $parametros[] = $tipo;
+        }
+
+        if (!empty($busqueda)) {
+            $sql .= " AND (titulo LIKE ? OR descripcion LIKE ?)";
+            $parametros[] = "%$busqueda%";
+            $parametros[] = "%$busqueda%";
+        }
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute($parametros);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function obtenerTipos() {
+        $stmt = $this->conn->query("SELECT DISTINCT tipo FROM items ORDER BY tipo ASC");
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
+
+    public function agregar($titulo, $descripcion, $imagen , $tipo) {
+        $stmt = $this->conn->prepare("INSERT INTO items (titulo, descripcion, imagen , tipo) VALUES (?, ?, ?, ?)");
+        return $stmt->execute([$titulo, $descripcion, $imagen, $tipo]);
     }
 
     public function obtenerPorId($id) {
@@ -25,14 +51,10 @@ class Item {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function actualizar($id, $titulo, $descripcion, $imagen = null) {
-        if ($imagen) {
-            $stmt = $this->conn->prepare("UPDATE items SET titulo = ?, descripcion = ?, imagen = ? WHERE id = ?");
-            return $stmt->execute([$titulo, $descripcion, $imagen, $id]);
-        } else {
-            $stmt = $this->conn->prepare("UPDATE items SET titulo = ?, descripcion = ? WHERE id = ?");
-            return $stmt->execute([$titulo, $descripcion, $id]);
-        }
+    public function actualizar($id, $titulo, $descripcion, $imagen = null , $tipo) {
+        $stmt = $this->conn->prepare("UPDATE items SET titulo = ?, descripcion = ?, imagen = ? , tipo = ? WHERE id = ?");
+        return $stmt->execute([$titulo, $descripcion, $imagen, $tipo , $id]);
+        
     }
 
     public function eliminar($id) {

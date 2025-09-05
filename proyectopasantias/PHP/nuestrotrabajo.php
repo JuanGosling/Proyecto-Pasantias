@@ -3,8 +3,14 @@ require_once '../INCLUDES/Autenticacion.php';
 require_once '../includes/Item.php';
 
 $item = new Item();
-$items = $item->obtenerTodos();
 $usuario = Auth::obtenerUsuario();
+
+$tipo = isset($_GET['tipo']) ? $_GET['tipo'] : null;
+$busqueda = isset($_GET['busqueda']) ? $_GET['busqueda'] : null;
+
+$items = $item->obtenerTodos();
+$items = $item->buscarItems($tipo, $busqueda);
+
 ?>
 
 <!DOCTYPE html>
@@ -164,18 +170,20 @@ $usuario = Auth::obtenerUsuario();
 
             <form method="GET" class="mb-3">
                 <div class="row busqueda">
-                    <div class="col-md-3 animacion arriba">
-                        <select name="tipo" class="form-control">
+                    <div class="col-md-3">
+                        <select name="tipo" class="form-select">
                             <option value="">Todos los tipos</option>
-                            <option value="silla">Sillas</option>
-                            <option value="mesa">Mesas</option>
-                            <option value="ropero">Roperos</option>
-                            <!-- Podés traer dinámicamente los tipos desde DB -->
+                            <?php foreach ($tipos as $t): ?>
+                                <option value="<?php echo htmlspecialchars($t, ENT_QUOTES); ?>" 
+                                    <?php if ($tipo == $t) echo "selected"; ?>>
+                                    <?php echo ucfirst($t); ?>
+                                </option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
-                    <div class="col-md-6 animacion arriba">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Muebles..." 
-                            value="<?php echo isset($_GET['busqueda']) ? htmlspecialchars($_GET['busqueda']) : '' ?>">
+                    <div class="col-md-6">
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..."
+                            value="<?php echo htmlspecialchars($busqueda ?? '', ENT_QUOTES); ?>">
                     </div>
                     <div class="col-md-3 animacion arriba">
                         <button type="submit" class="btn btn-primary w-100">Filtrar</button>

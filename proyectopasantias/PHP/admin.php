@@ -154,19 +154,21 @@ $usuario = Auth::obtenerUsuario();
             <!-- Busqueda y Filtro -->
 
             <form method="GET" class="mb-3">
-                <div class="row">
-                    <div class="col-md-3 animacion arriba">
-                        <select name="tipo" class="form-control">
+                <div class="row busqueda">
+                    <div class="col-md-3">
+                        <select name="tipo" class="form-select">
                             <option value="">Todos los tipos</option>
-                            <option value="silla">Silla</option>
-                            <option value="mesa">Mesa</option>
-                            <option value="ropero">Ropero</option>
-                            <!-- Podés traer dinámicamente los tipos desde DB -->
+                            <?php foreach ($tipos as $t): ?>
+                                <option value="<?php echo htmlspecialchars($t, ENT_QUOTES); ?>" 
+                                    <?php if ($tipo == $t) echo "selected"; ?>>
+                                    <?php echo ucfirst($t); ?>
+                                </option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
-                    <div class="col-md-6 animacion arriba">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Muebles..." 
-                            value="<?php echo isset($_GET['busqueda']) ? htmlspecialchars($_GET['busqueda']) : '' ?>">
+                    <div class="col-md-6">
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..."
+                            value="<?php echo htmlspecialchars($busqueda ?? '', ENT_QUOTES); ?>">
                     </div>
                     <div class="col-md-3 animacion arriba">
                         <button type="submit" class="btn btn-primary w-100">Filtrar</button>

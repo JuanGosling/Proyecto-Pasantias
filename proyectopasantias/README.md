@@ -24,6 +24,9 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - En el apartado de trabajos ordenador los items segun su tipo
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
+- En el apartado Admin , a la hora de crear un item que no sea necesario tener que poner una descripcion para poder crear un item
+- QUEDA POR INVESTIGAR , ES NECESARIO (?)
+
 - Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil , etc )
 
 --- Pagina Web ---

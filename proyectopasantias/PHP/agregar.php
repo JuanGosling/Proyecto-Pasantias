@@ -10,19 +10,24 @@ if (!Auth::esAdmin()) {
 $item = new Item();
 $mensaje = "";
 
+$tiposDisponibles = ["Sillas", "Mesas", "Roperas", "Armarios", "Camas", "Escritorios","Repisas"];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = trim($_POST['titulo']);
     $descripcion = trim($_POST['descripcion']);
     $imagen = null;
+    $tipo = trim($_POST['tipo']);
 
     if ($_FILES['imagen']['name']) {
         $imagen = basename($_FILES['imagen']['name']);
         move_uploaded_file($_FILES['imagen']['tmp_name'], "../uploads/$imagen");
     }
 
-    $item->agregar($titulo, $descripcion, $imagen);
+    $item->agregar($titulo, $descripcion, $imagen, $tipo);
     header("Location: ./admin.php");
+
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <textarea name="descripcion" class="form-control" rows="4" required></textarea>
             </div>
             <div class="mb-3">
-                <label class="form-label">Imagen (opcional) (Resolución recomendada : 1000x1000)</label>
+                <label class="form-label">Imagen</label>
                 <input type="file" name="imagen" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Tipo de Mueble</label>
+                <select name="tipo" class="form-select" required>
+                    <option value="">Selecciona un tipo</option>
+                    <?php foreach ($tiposDisponibles as $t): ?>
+                        <option value="<?php echo $t; ?>"><?php echo ucfirst($t); ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             <button type="submit" class="btn btn-success">Guardar</button>
             <a href="./admin.php" class="btn btn-secondary">Cancelar</a>

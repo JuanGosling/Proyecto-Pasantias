@@ -10,6 +10,8 @@ if (!Auth::esAdmin()) {
 $item = new Item();
 $id = $_GET['id'] ?? null;
 
+$tiposDisponibles = ["Sillas", "Mesas", "Roperas", "Armarios", "Camas", "Escritorios","Repisas"];
+
 if (!$id || !is_numeric($id)) {
     die("ID inválido");
 }
@@ -23,13 +25,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = trim($_POST['titulo']);
     $descripcion = trim($_POST['descripcion']);
     $imagen = $datos['imagen']; // Por defecto, mantener la actual
+    $tipo = trim($_POST['tipo']);
 
     if ($_FILES['imagen']['name']) {
         $imagen = basename($_FILES['imagen']['name']);
         move_uploaded_file($_FILES['imagen']['tmp_name'], "../uploads/$imagen");
     }
 
-    $item->actualizar($id, $titulo, $descripcion, $imagen);
+    $item->actualizar($id, $titulo, $descripcion, $imagen ,$tipo);
     header("Location: ./admin.php");
 }
 ?>
@@ -64,6 +67,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php else: ?>
                         <span>No hay imagen</span>
                     <?php endif; ?>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Mueble</label>
+                    <select name="tipo" class="form-select" required>
+                        <option value="">Selecciona un tipo</option>
+                        <?php foreach ($tiposDisponibles as $t): ?>
+                            <option value="<?php echo $t; ?>" <?php if($datos['tipo'] == $t) echo "selected"; ?>>
+                                <?php echo ucfirst($t); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Cambiar Imagen (opcional)</label>
