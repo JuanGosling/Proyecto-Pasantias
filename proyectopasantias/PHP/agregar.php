@@ -10,7 +10,7 @@ if (!Auth::esAdmin()) {
 $item = new Item();
 $mensaje = "";
 
-$tiposDisponibles = ["Sillas", "Mesas", "Roperas", "Armarios", "Camas", "Escritorios","Repisas"];
+$tiposDisponibles = ["Sillas", "Mesas", "Roperos", "Armarios", "Camas", "Escritorios","Repisas","Otro"];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = trim($_POST['titulo']);

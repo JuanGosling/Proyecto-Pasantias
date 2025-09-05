@@ -197,7 +197,7 @@ $usuario = Auth::obtenerUsuario();
                         </ul>
                     </div>
 
-                    <!-- Contenido principal -->
+                    <!-- Muebles -->
                     <div class="col-md-10 p-4">
                         <h2>Listado de Muebles</h2>
                         <div class="row">
