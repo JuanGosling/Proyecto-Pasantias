@@ -10,6 +10,7 @@ $busqueda = isset($_GET['busqueda']) ? $_GET['busqueda'] : null;
 
 $items = $item->obtenerTodos();
 $items = $item->buscarItems($tipo, $busqueda);
+$tipos = $item->obtenerTipos();
 
 ?>
 
@@ -182,7 +183,7 @@ $items = $item->buscarItems($tipo, $busqueda);
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar ítem..."
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Muebles..."
                             value="<?php echo htmlspecialchars($busqueda ?? '', ENT_QUOTES); ?>">
                     </div>
                     <div class="col-md-3 animacion arriba">
