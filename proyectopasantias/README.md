@@ -18,13 +18,11 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
 - QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
-- En el apartado de trabajos poner una barra de busqueda para los items
-- QUEDA POR INVESTIGAR , ES NECESARIO
-
-- En el apartado de trabajos ordenador los items segun su tipo
-- QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
 - En el apartado Admin , a la hora de crear un item que no sea necesario tener que poner una descripcion para poder crear un item
+- Verificar que la barra de busqueda y filtrar funcione correctamente
+- En el apartado Admin , poner un boton para poder agregar un nuevo tipo de mueble
+- Crear una tabla de tipos de muebles
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
 - Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil , etc )
