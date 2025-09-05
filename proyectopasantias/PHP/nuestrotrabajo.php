@@ -183,7 +183,7 @@ $tipos = $item->obtenerTipos();
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Muebles..."
+                        <input type="text" name="busqueda" class="form-control" placeholder="Buscar Mueble..."
                             value="<?php echo htmlspecialchars($busqueda ?? '', ENT_QUOTES); ?>">
                     </div>
                     <div class="col-md-3 animacion arriba">
