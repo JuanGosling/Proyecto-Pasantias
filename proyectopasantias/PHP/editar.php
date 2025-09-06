@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Descripción</label>
-                    <textarea name="descripcion" class="form-control" rows="4" required><?= htmlspecialchars($datos['descripcion']) ?></textarea>
+                    <textarea name="descripcion" class="form-control" rows="4"><?= htmlspecialchars($datos['descripcion']) ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Imagen actual</label><br>

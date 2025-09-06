@@ -10,7 +10,7 @@ if (!Auth::esAdmin()) {
 $item = new Item();
 $mensaje = "";
 
-$tiposDisponibles = ["Sillas", "Mesas", "Roperos", "Armarios", "Camas", "Escritorios","Repisas","Otro"];
+$tiposDisponibles = ["Sillas", "Mesas", "Roperos", "Armarios", "Camas", "Escritorios","Repisas","Comodas","Otro"];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = trim($_POST['titulo']);
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="mb-3">
                 <label class="form-label">Descripción</label>
-                <textarea name="descripcion" class="form-control" rows="4" required></textarea>
+                <textarea name="descripcion" class="form-control" rows="4"></textarea>
             </div>
             <div class="mb-3">
                 <label class="form-label">Imagen</label>

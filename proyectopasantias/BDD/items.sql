@@ -1,7 +1,7 @@
 CREATE TABLE items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
-    descripcion TEXT NOT NULL,
+    descripcion TEXT NULL,
     imagen VARCHAR(255) DEFAULT NULL,
     tipo VARCHAR(100) NOT NULL ;
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
