@@ -18,9 +18,6 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
 - QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
-
-- En el apartado Admin , a la hora de crear un item que no sea necesario tener que poner una descripcion para poder crear un item
-- Verificar que la barra de busqueda y filtrar funcione correctamente
 - En el apartado Admin , poner un boton para poder agregar un nuevo tipo de mueble
 - Crear una tabla de tipos de muebles O SINO agregar mas tipos de muebles al array de tipos de muebles
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
