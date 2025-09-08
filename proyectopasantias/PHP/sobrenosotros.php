@@ -59,11 +59,11 @@ $usuario = Auth::obtenerUsuario();
 
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="nuestrotrabajo.php">Nuestro Trabajo</a>
+                                <a class="nav-link active" href="./nuestrotrabajo.php">Nuestro Trabajo</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link active" href="./sobrenosotros.php">Sobre Nosotros</a>
+                                <a class="nav-link active" href="sobrenosotros.php">Sobre Nosotros</a>
                             </li>
 
                             <li class="nav-item">

@@ -29,20 +29,32 @@
                     else{
 
                         $user = new User();
-                        $usuario = $user->login($_POST['email'], $_POST['contraseña']);
 
-                        if ($usuario) {
-                            Auth::iniciarSesion($usuario);
-                            header("Location: ../index.php");
-                        } else {
+                        if ($user->noEstaVerificado($email) && $user->existeEmail($email)) {
                             ?>
-                                <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
+                                <div class="alert alert-warning" role="alert" style="text-align:center">Debes verificar tu cuenta antes de iniciar sesión. Revisa tu correo o solicita un nuevo link</div>
                             <?php
+                        }
+
+                        else{
+
+                            $usuario = $user->login($_POST['email'], $_POST['contraseña']);
+
+                            if ($usuario) {
+                                Auth::iniciarSesion($usuario);
+                                header("Location: ../index.php");
+                            } else {
+                                ?>
+                                    <div class="alert alert-danger" role="alert" style="text-align:center">El email y/o contraseña son incorrectos</div>
+                                <?php
+                            }
+
                         }
 
                     }
 
                 }
+    
             ?>
 
             <form method="post">

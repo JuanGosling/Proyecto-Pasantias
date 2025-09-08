@@ -8,5 +8,8 @@ CREATE TABLE usuarios (
     Apellido VARCHAR(100) NOT NULL,
     Email VARCHAR(100) NOT NULL UNIQUE,
     Contraseña VARCHAR(255) NOT NULL,
-    Rol ENUM('Admin', 'Usuario') DEFAULT 'Usuario'
+    Rol ENUM('Admin', 'Usuario') DEFAULT 'Usuario',
+    verificado TINYINT(1) DEFAULT 0,
+    token_verificacion VARCHAR(255) NULL,
+    token_expira DATETIME NULL;
 );

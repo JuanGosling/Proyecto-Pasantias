@@ -5,12 +5,15 @@
 
 --- PHP ---
 
-- A la Hora de crear una cuenta se tiene que verificar que la persona sea dueña del Email ingresado (Verificacion por Email con link que redireccione al inicio de sesion y guarde asi los datos en la base de datos sino no)
-- Hacer que el boton de olvide mi contraseña funcione ( Realizar e investigar )
-  QUEDA POR INVESTIGAR
+- Cometi un error a la hora de diseñar el registro de usuarios , hubiese sido mejor primero verificar que la persona es dueño del email 
+con un link a su mail , el cual le permite continuar con el registro y recien ahi cargar sus datos a la base de datos , pero ahora ya es un poco tarde
+- QUEDA POR INVESTIGAR , ES NECESARIO , OPCIONAL (?)
+
+- Hacer que el boton de olvide mi contraseña funcione 
+- QUEDA POR INVESTIGAR , ES NECESARIO
 
 - Que cuando se Inicie Sesion se inice una sesion que dure hasta que se cierra la Pagina
-QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
+- QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
 - Indicar que la contraseña tenga una cantidad de especifica de caracteres (Se puede realizar ,  ya sea mediante HTML o PHP)
 - QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
@@ -22,7 +25,17 @@ QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 - Crear una tabla de tipos de muebles O SINO agregar mas tipos de muebles al array de tipos de muebles
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
+- Verificar el caso en donde se agota el tiempo del link para verificar para ver si funciona
+- NO OLVIDAR DE CAMBIAR LA EXPIRACION DEL TOKEN A 1 DIA
+- QUEDA POR INVESTIGAR , ES NECESARIO
+
+- Realizar el caso donde se reenvie el mail para verificar la cuenta, en la funcion verificar , como a su vez la funcion reenviar mail
+- HACER QUE SOLO SE PUEDA ENVIAR 1 CADA X DETERMINADO TIEMPO , para no agotar los recursos del mail
+- QUEDA POR INVESTIGAR , ES NECESARIO
+
 - Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil , etc )
+- Cambiar y verificar todo aquello que sea necesario una vez se suba la pagina (Links mails , links barra de navegacion , cualquier otro link)
+- Una vez se suba la pagina verificar que todo funcione correctamente
 
 --- Pagina Web ---
 
