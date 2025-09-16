@@ -11,5 +11,5 @@ CREATE TABLE usuarios (
     Rol ENUM('Admin', 'Usuario') DEFAULT 'Usuario',
     verificado TINYINT(1) DEFAULT 0,
     token_verificacion VARCHAR(255) NULL,
-    token_expira DATETIME NULL;
+    token_expira DATETIME NULL
 );

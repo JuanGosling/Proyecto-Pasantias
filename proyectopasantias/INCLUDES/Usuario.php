@@ -49,7 +49,7 @@ class User {
 
     public function verificar($token){
 
-        $stmt = $this->conn->prepare("SELECT ID_Usuario, token_expira, verificado FROM usuarios WHERE token_verificacion = ?");
+        $stmt = $this->conn->prepare("SELECT ID_Usuario, Email ,token_expira, verificado FROM usuarios WHERE token_verificacion = ?");
         $stmt->execute([$token]);
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -63,6 +63,7 @@ class User {
                         
             } 
             else {
+                
                 ?>
                     <div class='alert alert-danger' style="text-align: center;">
                         
@@ -71,7 +72,7 @@ class User {
                         </div>
 
                         <div style="padding-top:5%">
-                            <a href="" class="btn" style="padding-left: 60px;padding-right: 60px;" >Reenviar Mail</a>
+                            <a href="reenviar.php?email=<?php echo urlencode($usuario['Email']); ?>" class="btn" style="padding-left: 60px;padding-right: 60px;" >Reenviar Mail</a>
                         </div>
 
                     </div>
@@ -87,26 +88,43 @@ class User {
 
     }
 
-    public function reenviarMail($email , $token){
+    public function reenviarMail($email){
 
-        $token = bin2hex(random_bytes(32));
-        $expira = date("Y-m-d H:i:s", strtotime("+1 day"));
+        $stmt = $this->conn->prepare("SELECT ID_Usuario , token_verificacion, token_expira FROM usuarios WHERE Email = ?");
+        $stmt->execute([$email]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Hacer una consulta y actualizar el token del usuario con el mismo mail
+        if ($usuario) {
 
-        require_once '../vendor/autoload.php';
+            if (strtotime($usuario['token_expira']) > time()) {
+                ?>
+                    <div class="alert alert-warning" role="alert" style="text-align:center;padding-top:5%">Ya se envió un enlace de verificación. Revisa tu correo</div>
+                <?php
+            }
 
-        $resend = Resend::client('re_KXsZ9Yuv_4gLK5VHWy5Lz6LvE6mEPhkmy');
+            else{
 
-        $link = "http://localhost/proyectopasantias/PHP/verificar.php?token=".$token;
+                $token = bin2hex(random_bytes(32));
+                $expira = date("Y-m-d H:i:s", strtotime("+1 day"));
 
-        $resend->emails->send([
-        'from' => 'Módulo23 <soporte-modulo23@resend.dev>',
-        'to' => $email,
-        'subject' => 'Verificar tu cuenta',
-        'html' => "<p>Gracias por registrarte. Haz click en el siguiente enlace para activar tu cuenta:</p>
-                    <p><a href='$link'>$link</a></p>"
-        ]);
+                $stmt = $this->conn->prepare("UPDATE usuarios SET token_verificacion = ?, token_expira = ? WHERE ID_Usuario = ?");
+                $stmt->execute([$token, $expira, $usuario['ID_Usuario']]);
+
+                $this->enviarMail($email, $token);
+
+                ?>
+                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Se ha enviado un nuevo mail para verificar tu cuenta!</b></a></div>
+                <?php
+
+            } 
+
+        }
+
+        else {
+            ?>
+             <div class='alert alert-danger' style="text-align: center;">Error al intentar reenviar el mail . Intente de nuevo mas tarde</div>
+            <?php
+        }
 
     }
 

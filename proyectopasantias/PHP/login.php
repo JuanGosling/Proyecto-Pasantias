@@ -32,7 +32,12 @@
 
                         if ($user->noEstaVerificado($email) && $user->existeEmail($email)) {
                             ?>
-                                <div class="alert alert-warning" role="alert" style="text-align:center">Debes verificar tu cuenta antes de iniciar sesión. Revisa tu correo o solicita un nuevo link</div>
+                                <div class="alert alert-warning" role="alert" style="text-align:center">Debes verificar tu cuenta antes de iniciar sesión. Revisa tu correo o solicita un nuevo mail</div>
+
+                                <div style="padding-top:5%">
+                                    <a href="reenviar.php?email=<?php echo urlencode($usuario['Email']); ?>" class="btn" style="padding-left: 60px;padding-right: 60px;" >Reenviar Mail</a>
+                                </div>
+
                             <?php
                         }
 
