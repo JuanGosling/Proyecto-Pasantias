@@ -18,7 +18,7 @@ class User {
     public function registrar($email ,$nombre, $apellido, $password, $rol = 'Usuario') {
 
         $token = bin2hex(random_bytes(32));
-        $expira = date("Y-m-d H:i:s", strtotime("+1 second"));
+        $expira = date("Y-m-d H:i:s", strtotime("+1 day"));
 
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $this->conn->prepare("INSERT INTO usuarios (Email,Nombre, Apellido ,Contraseña, Rol , token_verificacion , token_expira) VALUES (?, ?, ?, ?, ? , ?, ?)");
@@ -90,15 +90,23 @@ class User {
 
     public function reenviarMail($email){
 
-        $stmt = $this->conn->prepare("SELECT ID_Usuario , token_verificacion, token_expira FROM usuarios WHERE Email = ?");
+        $stmt = $this->conn->prepare("SELECT ID_Usuario , verificado ,token_verificacion, token_expira FROM usuarios WHERE Email = ?");
         $stmt->execute([$email]);
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($usuario) {
 
-            if (strtotime($usuario['token_expira']) > time()) {
+            if ($usuario['verificado'] == 1) {
+
                 ?>
-                    <div class="alert alert-warning" role="alert" style="text-align:center;padding-top:5%">Ya se envió un enlace de verificación. Revisa tu correo</div>
+                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Tu cuenta ya estaba verificada. Puedes <a href="login.php"><b>Iniciar Sesión</b></a></div>
+                <?php
+
+            }
+
+            else if (strtotime($usuario['token_expira']) > time()) {
+                ?>
+                    <div class="alert alert-warning" role="alert" style="text-align:center;padding-top:5%">Ya se envió un enlace de verificación. <br> Revisa tu correo</div>
                 <?php
             }
 
@@ -113,7 +121,7 @@ class User {
                 $this->enviarMail($email, $token);
 
                 ?>
-                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Se ha enviado un nuevo mail para verificar tu cuenta!</b></a></div>
+                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Se ha enviado un nuevo mail para verificar tu cuenta!</a></div>
                 <?php
 
             } 
