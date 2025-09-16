@@ -99,7 +99,7 @@ class User {
             if ($usuario['verificado'] == 1) {
 
                 ?>
-                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Tu cuenta ya estaba verificada. Puedes <a href="login.php"><b>Iniciar Sesión</b></a></div>
+                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Tu cuenta ya esta verificada. <br> Puedes <a href="login.php"><b>Iniciar Sesión</b></a></div>
                 <?php
 
             }
