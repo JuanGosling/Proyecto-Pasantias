@@ -216,4 +216,86 @@ class User {
 
     }
 
+    public function restablecer($token,$password){
+
+        $stmt = $this->conn->prepare("SELECT ID_Usuario , password_expira FROM usuarios WHERE token_password = ?");
+        $stmt->execute([$token]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($usuario){
+
+            if (strtotime($usuario['password_expira']) > time()) {
+                
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['actualizar'])) {
+
+                    $hash = password_hash($password, PASSWORD_DEFAULT);
+                    $stmt = $this->conn->prepare("UPDATE usuarios SET Contraseña = ?, token_password = NULL, password_expira = NULL WHERE ID_Usuario = ?");
+
+                    $stmt->execute([$hash, $usuario['ID_Usuario']]);
+
+                    ?>
+                        <div class='alert alert-success' style="text-align: center;padding-top:5%">Contraseña actualizada. <br> Ya puedes <a href="login.php"><b>Iniciar Sesión</b></a></div>
+                    <?php
+
+                }
+
+                ?>
+
+                    <form method="post">
+
+                        <h1 style="font-size:25px">Restablecer Contraseña</h1>
+
+                        <div class="cajadetexto">
+
+                            <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese una nueva Contraseña" required>
+
+                            <img src="../IMG/cerrado.png" class="icono" id="ojo" style="cursor: pointer;">
+
+                        </div>
+
+                        <div class="cajadetexto">
+
+                            <input type="password" name="confirmar_contraseña" id="confirmar_contraseña" placeholder="Repita su Contraseña" required>
+
+                            <img src="../IMG/cerrado.png" class="icono" id="ojo1" style="cursor: pointer;">
+
+                            <span id="error" class="error"></span>
+
+                        </div>
+
+
+                        <div class="boton">
+
+                            <button type="submit" class="btn" name="actualizar" style="padding-left: 60px;padding-right: 60px;">Actualizar Contraseña</button>
+
+                        </div>
+                        
+                    </form>
+
+                <?php
+                
+            }
+
+            else{
+
+                ?>
+                    <div class='alert alert-danger' style="text-align: center;">
+                        El tiempo para restablecer tu contraseña ha expirado . Vuelve al <a href="login.php"><b>Inicio de Sesion</b></a> para intentarlo de nuevo
+                    </div>
+                <?php
+
+            }
+
+        }
+
+        else{
+
+            ?>
+             <div class='alert alert-danger' style="text-align: center;">Link invalido o contraseña ya actualizada</div>
+            <?php
+
+        }
+
+    }
+
 }

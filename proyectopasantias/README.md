@@ -25,6 +25,15 @@ con un link a su mail , el cual le permite continuar con el registro y recien ah
 - Crear una tabla de tipos de muebles O SINO agregar mas tipos de muebles al array de tipos de muebles
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
+- ------------------------------------------------------------------------------------------------------
+
+- A la hora de restablecer la contraseña enviando un mail a tu correo, se puede enviar infinitamente correos para restablecer la contraseña , implementar
+que se puedan enviar una cantidad de mails cada X tiempo
+
+- A la hora de restablecer tu contraseña hay un problema con la variable Contraseña , aun asi todo funciona igual
+
+- ------------------------------------------------------------------------------------------------------
+
 - ------------------------------------------------------------------------------------------------------------------------------------------
 
 - Verificar el caso en donde se agota el tiempo del link para verificar para ver si funciona
