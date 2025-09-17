@@ -93,7 +93,7 @@
 
                 <div class="recordarme-contraseña" style="justify-content : center">
 
-                    <a href="">Olvide mi Contraseña</a>
+                    <a href="olvide.php">Olvide mi Contraseña</a>
 
                 </div>
 

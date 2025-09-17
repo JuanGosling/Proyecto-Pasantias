@@ -106,7 +106,7 @@ class User {
 
             else if (strtotime($usuario['token_expira']) > time()) {
                 ?>
-                    <div class="alert alert-warning" role="alert" style="text-align:center;padding-top:5%">Ya se envió un enlace de verificación. <br> Revisa tu correo</div>
+                    <div class="alert alert-warning" role="alert" style="text-align:center;padding-top:5%">Ya se envió un mail para verificar tu cuenta. <br> Revisa tu correo</div>
                 <?php
             }
 
@@ -160,6 +160,60 @@ class User {
         }
 
         return false;
+    }
+
+    public function olvide($email){
+
+        $stmt = $this->conn->prepare("SELECT ID_Usuario  , token_password , password_expira FROM usuarios WHERE Email = ?");
+        $stmt->execute([$email]);
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($usuario) {
+
+            if (strtotime($usuario['password_expira']) > time()) {
+                ?>
+                    <div class="alert alert-warning" role="alert" style="text-align:center;padding-top:5%">Ya se envió un mail para restablecer tu contraseña. <br> Revisa tu correo</div>
+                <?php
+            }
+
+            else{
+                
+                $token = bin2hex(random_bytes(32));
+                $expira = date("Y-m-d H:i:s", strtotime("+1 hour"));
+
+                $stmt = $this->conn->prepare("UPDATE usuarios SET token_password = ?, password_expira = ? WHERE ID_Usuario = ?");
+                $stmt->execute([$token, $expira , $usuario['ID_Usuario']]);
+
+                require_once '../vendor/autoload.php';
+
+                $resend = Resend::client('re_KXsZ9Yuv_4gLK5VHWy5Lz6LvE6mEPhkmy');
+
+                $link = "http://localhost/proyectopasantias/PHP/restablecer.php?token=".$token;
+
+                $resend->emails->send([
+                'from' => 'Módulo23 <soporte-modulo23@resend.dev>',
+                'to' => $email,
+                'subject' => 'Restablecer tu contraseña',
+                'html' => "<p>Haz click en el siguiente enlace para restablecer tu contraseña:</p>
+                            <p><a href='$link'>$link</a></p>"
+                ]);
+
+                ?>
+                    <div class='alert alert-success' style="text-align: center;padding-top:5%">Se ha enviado un mail a tu correo para restablecer tu contraseña.</a></div>
+                <?php
+
+            }
+
+        }
+
+        else{
+
+            ?>
+            <div class="alert alert-danger" role="alert" style="text-align:center">El correo electronico ingresado es incorrecto o no existe</div>
+            <?php
+
+        }
+
     }
 
 }
