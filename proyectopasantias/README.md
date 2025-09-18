@@ -9,9 +9,6 @@
 con un link a su mail , el cual le permite continuar con el registro y recien ahi cargar sus datos a la base de datos , pero ahora ya es un poco tarde
 - QUEDA POR INVESTIGAR , ES NECESARIO , OPCIONAL (?)
 
-- Hacer que el boton de olvide mi contraseña funcione 
-- QUEDA POR INVESTIGAR , ES NECESARIO
-
 - Que cuando se Inicie Sesion se inice una sesion que dure hasta que se cierra la Pagina
 - QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
 
@@ -25,30 +22,8 @@ con un link a su mail , el cual le permite continuar con el registro y recien ah
 - Crear una tabla de tipos de muebles O SINO agregar mas tipos de muebles al array de tipos de muebles
 - QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
-- ------------------------------------------------------------------------------------------------------
-
-- A la hora de restablecer la contraseña enviando un mail a tu correo, se puede enviar infinitamente correos para restablecer la contraseña , implementar
-que se puedan enviar una cantidad de mails cada X tiempo
-
-- A la hora de restablecer tu contraseña hay un problema con la variable Contraseña , aun asi todo funciona igual
-
-- ------------------------------------------------------------------------------------------------------
-
-- ------------------------------------------------------------------------------------------------------------------------------------------
-
-- Verificar el caso en donde se agota el tiempo del link para verificar para ver si funciona
-- NO OLVIDAR DE CAMBIAR LA EXPIRACION DEL TOKEN A 1 DIA
-- QUEDA POR INVESTIGAR , ES NECESARIO
-
-- Realizar el caso donde se reenvie el mail para verificar la cuenta, en la funcion verificar , como a su vez la funcion reenviar mail
-- HACER QUE SOLO SE PUEDA ENVIAR 1 CADA X DETERMINADO TIEMPO , para no agotar los recursos del mail
-- QUEDA POR INVESTIGAR , ES NECESARIO
-
-- Al parecer el error esta en que no se obtiene el email por ende no se puede realizar la funcion reenviarmail
-
-- ------------------------------------------------------------------------------------------------------------------------------------------
-
-- Borrar todo aquello que no vaya a utilizar en la pagina final (Cambiar mi contraseña , mi perfil , etc )
+- SUBIR LA PAGINA WEB A INTERNET (INVESTIGAR)
+- Borrar todo aquello que no vaya a utilizar en la pagina final ( mi perfil , etc )
 - Cambiar y verificar todo aquello que sea necesario una vez se suba la pagina (Links mails , links barra de navegacion , cualquier otro link)
 - Una vez se suba la pagina verificar que todo funcione correctamente
 

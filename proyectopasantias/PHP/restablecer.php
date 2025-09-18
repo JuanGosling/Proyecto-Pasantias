@@ -18,7 +18,7 @@
 
             if (isset($_GET['token'])) {
                 $usuario = new User();
-                $usuario->restablecer($_GET['token'], $_POST['contraseña']);
+                $usuario->restablecer($_GET['token']);
             }
 
         ?>

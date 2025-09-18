@@ -216,7 +216,7 @@ class User {
 
     }
 
-    public function restablecer($token,$password){
+    public function restablecer($token){
 
         $stmt = $this->conn->prepare("SELECT ID_Usuario , password_expira FROM usuarios WHERE token_password = ?");
         $stmt->execute([$token]);
@@ -228,7 +228,7 @@ class User {
                 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['actualizar'])) {
 
-                    $hash = password_hash($password, PASSWORD_DEFAULT);
+                    $hash = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
                     $stmt = $this->conn->prepare("UPDATE usuarios SET Contraseña = ?, token_password = NULL, password_expira = NULL WHERE ID_Usuario = ?");
 
                     $stmt->execute([$hash, $usuario['ID_Usuario']]);
@@ -241,7 +241,7 @@ class User {
 
                 ?>
 
-                    <form method="post">
+                    <form method="post" id="formulario">
 
                         <h1 style="font-size:25px">Restablecer Contraseña</h1>
 
