@@ -5,6 +5,11 @@
 
 --- PHP ---
 
+- Se podria agregar una interfaz que muestre mas en detalle cada mueble a la hora de hacer click
+- Habria que hacer alguna opcion hacia el portal de venta o sino poner la informacion hacia donde ir
+- La imagen principal de Modulo 23 tiene mucha resolucion , tarda un poco en cargar por lo tanto habria que hacerla de menor resolucion y hacer que quede igual que la actual
+- La imagen del inicio que es el fondo en aspectos mas pequeños como de un celular se bugea debido a que es una imagen del fondo y no una imagen del section , ver si se puede arreglar
+
 - Cometi un error a la hora de diseñar el registro de usuarios , hubiese sido mejor primero verificar que la persona es dueño del email 
 con un link a su mail , el cual le permite continuar con el registro y recien ahi cargar sus datos a la base de datos , pero ahora ya es un poco tarde
 - QUEDA POR INVESTIGAR , ES NECESARIO , OPCIONAL (?)
