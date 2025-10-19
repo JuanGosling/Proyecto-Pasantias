@@ -3,6 +3,8 @@
 - Realizar la Carpeta de Campo siguiendo los requerimientos expresados en los Documentos de Drive. Si se puede hacer uso de las Fotos de la Carpeta Documentos
 - Realizar al estilo APA , los links estan en el otro disco , ambos en la barra de favoritos
 
+VERIFICAR LA INTEGRIDAD DE LOS ARCHIVOS DE GITHUB CON LOS LOCALES (SQL Usuarios)
+
 --- PHP ---
 
 - Se podria agregar una interfaz que muestre mas en detalle cada mueble a la hora de hacer click
