@@ -137,7 +137,7 @@ body{
     background-color: #1F1F1F;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 6%;
     
 
@@ -158,6 +158,58 @@ body{
     display: flex;
     align-items: center;
     
+}
+
+/* Boton de Contacto */
+
+#contacto-btn{
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999; /* 🔹 muy alto para que quede encima de todo */
+
+
+}
+
+/* Panel de Informacion */
+
+#contacto-panel {
+        position: fixed;
+        bottom: 80px;
+        right: 25px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        padding: 20px;
+        padding-top: 40px;
+        background-color: #212529;
+        width: 260px;
+        z-index: 1000;
+        animation: fadeIn 0.3s ease;
+        color: white;
+}
+
+@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+}
+
+#cerrar-contacto {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 30px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#cerrar-contacto:hover {
+    color: #000;
 }
 
 /* Pie de Pagina*/
@@ -299,6 +351,12 @@ body{
 
     }
 
+    .bloque{
+
+        padding-top: 10%;
+
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -308,6 +366,12 @@ body{
         margin-top: 25%;
         margin-bottom: 15%;
         
+
+    }
+
+    .bloque{
+
+        padding-top: 15%;
 
     }
 
@@ -327,6 +391,12 @@ body{
     #pregunta{
 
         margin-bottom: 15%;
+
+    }
+
+    #contacto-btn{
+
+        right: 1px;
 
     }
 

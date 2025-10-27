@@ -6,7 +6,6 @@ body{
     min-height: 100vh;
     background-image: url(../IMG/Fondo1.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
 
 }

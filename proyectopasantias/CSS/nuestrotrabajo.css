@@ -187,6 +187,94 @@ body{
 
 }
 
+/* Informacion en Detalle de los Productos */
+
+.modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #212529;
+  font-family: Outfit-Light;
+
+}
+
+.modal-title {
+  color: #C19A6B;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+#modalDescripcion {
+ 
+  padding-top: 15px;
+  line-height: 1.6;
+  color: white !important;
+}
+
+/* Animacion de los Productos */
+
+.producto {
+  cursor: pointer;
+  
+}
+
+.producto:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Boton de Contacto */
+
+#contacto-btn{
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding: 12px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999; /* 🔹 muy alto para que quede encima de todo */
+
+
+}
+
+/* Panel de Informacion */
+
+#contacto-panel {
+        position: fixed;
+        bottom: 80px;
+        right: 25px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        padding: 20px;
+        padding-top: 40px;
+        background-color: #212529;
+        width: 260px;
+        z-index: 1000;
+        animation: fadeIn 0.3s ease;
+        color: white;
+}
+
+@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+}
+
+#cerrar-contacto {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 30px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#cerrar-contacto:hover {
+    color: #000;
+}
+
 /* Pie de Pagina*/
 
 .footer{
@@ -376,6 +464,11 @@ body{
 
     }
 
+    #contacto-btn{
+
+        right: 1px;
+
+    }
 
 }
 

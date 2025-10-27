@@ -1,7 +1,13 @@
 <?php
-require_once 'includes/Autenticacion.php';
+require_once 'INCLUDES/Autenticacion.php';
+require_once 'INCLUDES/Item.php';
+
+$item = new Item();
 
 $usuario = Auth::obtenerUsuario();
+
+$items = $item->obtenerTodos();
+
 ?>
 
 <!DOCTYPE html>
@@ -143,14 +149,13 @@ $usuario = Auth::obtenerUsuario();
 
             <div class="animacion derecha">
 
-                <img src="./IMG/Logo4.png" class="img-fluid" id="img1" >
+                <img src="./IMG/Logo5.png" class="img-fluid" id="img1" width="2560" height="2560" >
 
             </div>
 
         </section>
 
-        <!-- Bloque 1 -->
-
+        <!-- Bloque 1 -->                      
         <section class="bloque">
 
             <div class="divbloque">
@@ -243,89 +248,44 @@ $usuario = Auth::obtenerUsuario();
 
             <h1 style="font-size: 40px;color: #C19A6B;display: flex;justify-content: center;margin-bottom: 6%;" class="animacion izquierda">Nuestro Trabajo</h1>
 
-            <div class="container">
+            <div class="container mt-4">
 
-                <div class="row text-center">
+                    <div class="row text-center">
+                        <?php 
+                        // Mostrar solo los primeros 6
+                        $items = array_reverse($items);
+                        $items_mostrados = array_slice($items, 0, 6);
+                        foreach ($items_mostrados as $i): 
+                        ?>
+                            <div class="col-lg-4 animacion arriba producto" style="margin-bottom:5%"
+                                style="margin-bottom:5%; cursor:pointer;"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalProducto"
+                                data-titulo="<?= htmlspecialchars($i['titulo']) ?>"
+                                data-descripcion="<?= htmlspecialchars($i['descripcion']) ?>"
+                                data-imagen="UPLOADS/<?= htmlspecialchars($i['imagen']) ?>"
+                            >
+                                <div style="margin-bottom: 3%;">
+                                    <?php if ($i['imagen']): ?>
+                                        <img src="UPLOADS/<?= htmlspecialchars($i['imagen']) ?>" class="img-fluid"
+                                            style="width: 70%; margin-bottom: 4%; object-fit: cover;" alt="Imagen">
+                                    <?php else: ?>
+                                        <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
+                                    <?php endif; ?>
 
-                    <div class="col-lg-4 animacion arriba">
-                        
-                        <div style="margin-bottom: 3%;">
-                            <img src="./IMG/mesanordica.jpg" class="img-fluid" id="mesa" style="width: 70%; margin-bottom: 4%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas</h1>
-
-                        </div>         
-
-                        <p style="font-size: 20px;">
-                        Mesas diseñadas para reunir a la familia, con calidad, estilo y funcionalidad para compartir y crear recuerdos en tu hogar.
-                        </p>
-
+                                    <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;">
+                                        <?= htmlspecialchars($i['titulo']) ?>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <p style="font-size: 20px;">
+                                        <?= nl2br(htmlspecialchars($i['descripcion'])) ?>
+                                    </p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-
-                    <div class="col-lg-4 animacion arriba">
-
-                        <img src="./IMG/silla.jpg" class="img-fluid" id="silla" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Sillas</h1>
-
-                        <p style="font-size: 20px;">
-                           Diseños cómodos y resistentes, ideales para la familia. Estilo y practicidad para crear espacios acogedores todos los días.
-                        </p>
-                        
-                    </div>
-
-                    <div class="col-lg-4 animacion arriba">
-                        <img src="./IMG/armario.jpg" class="img-fluid" id="armario" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Armarios</h1>
-
-                        <p style="font-size: 20px;">
-                           Espaciosos y funcionales, nuestros armarios de madera mantienen tu hogar organizado con el estilo cálido que tu familia merece.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="container" style="margin-top: 5%;">
-
-                <div class="row text-center">
-
-                    <div class="col-lg-4 animacion arriba">
-                        
-                        <div style="margin-bottom: 3%;">
-                            <img src="./IMG/velador.jpg" class="img-fluid" id="velador" style="width: 70%; margin-bottom: 4%;">
-                            <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Mesas de Luz</h1>
-
-                        </div>         
-
-                        <p style="font-size: 20px;">
-                           Prácticos y acogedores, ideales para acompañar tus noches y mantener lo esencial siempre a mano.
-                        </p>
-
-                    </div>
-
-                    <div class="col-lg-4 animacion arriba">
-                        <img src="./IMG/repisa.jpg" class="img-fluid" id="repisa" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Repisas</h1>
-
-                        <p style="font-size: 20px;">
-                           Versátiles y resistentes, perfectas para ordenar o decorar, dando un toque natural y familiar a cada rincón.
-                        </p>
-                        
-                    </div>
-
-                    <div class="col-lg-4 animacion arriba">
-                        <img src="./IMG/comoda.jpg" class="img-fluid" id="comoda" style="width: 70%; margin-bottom: 4%;">
-                        <h1 style="font-size: 35px; color: #C19A6B;margin-bottom: 3%;" >Comodas</h1>
-
-                        <p style="font-size: 20px;">
-                            Diseñadas para la vida diaria, combinan capacidad, resistencia y un estilo atemporal que se adapta a cualquier habitación.
-                        </p>
-
-                    </div>
-
-                </div>
-
+                    
             </div>
 
             <div style="display: flex;justify-content: center;margin-top: 6%;">
@@ -351,6 +311,46 @@ $usuario = Auth::obtenerUsuario();
 
 </body>
 
+<!-- Informacion en Detalle de los Productos -->
+
+<div class="modal fade" id="modalProducto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4 shadow-lg">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="modalTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImagen" src="" alt="" class="img-fluid rounded mb-3" style="max-height: 300px; object-fit: cover;">
+        <p id="modalDescripcion" class="fs-5 text-muted"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Boton de Contacto -->
+
+<div id="contacto-btn" onclick="toggleContacto()">
+        <a class="btn"><b>📞 Contacto</b></a>
+</div>
+
+<!-- Panel De Informacion -->
+
+<div id="contacto-panel" style="display:none; text-align:center">
+    <span id="cerrar-contacto" onclick="toggleContacto()">&times;</span>
+    <?php if (isset($_SESSION['Usuario'])): ?>
+        <h5 style="color: #C19A6B; font-size:20px;padding-bottom:10px"><b>Información de Contacto</b></h5>
+        <p><b style="color: #C19A6B;">Email:</b> </p>
+        <p>soporte@modulo23.com</p>
+        <p><b style="color: #C19A6B;">Teléfono:</b></p>
+        <p> +54 223 123-4567</p>
+        <p><b style="color: #C19A6B;">WhatsApp</b></p>
+        <p>Link</p>
+    <?php else: ?>
+        <p class="alert alert-warning" role="alert">Debes <a href="./PHP/login.php">Iniciar Sesión</a> para ver la información de contacto.</p>
+    <?php endif; ?>
+</div>
+
 <!-- Animaciones -->
 
 <script>
@@ -366,9 +366,35 @@ $usuario = Auth::obtenerUsuario();
         entrada.target.classList.remove('visible');
         }
         });
-    }, { threshold: 0.1 }); // 10% visible para activarse
+    }, { threshold: 0.3 }); // 30% visible para activarse
 
     elementos.forEach(el => observer.observe(el));
+
+    // Panel de los Productos
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('modalProducto');
+
+        modal.addEventListener('show.bs.modal', function (event) {
+            const item = event.relatedTarget; // el div clickeado
+            const titulo = item.getAttribute('data-titulo');
+            const descripcion = item.getAttribute('data-descripcion');
+            const imagen = item.getAttribute('data-imagen');
+
+            document.getElementById('modalTitulo').textContent = titulo;
+            document.getElementById('modalDescripcion').textContent = descripcion;
+            document.getElementById('modalImagen').src = imagen;
+        });
+    });
+
+    // Panel de Informacion
+
+    function toggleContacto() {
+        const panel = document.getElementById('contacto-panel');
+        panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
+
+    
 
 </script>
 

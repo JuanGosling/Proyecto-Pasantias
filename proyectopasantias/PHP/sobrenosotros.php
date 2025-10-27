@@ -153,27 +153,27 @@ $usuario = Auth::obtenerUsuario();
                     En <b style="color: #C19A6B;">Módulo 23</b> 
                 </h1>
 
-                <p >
+                <p style="padding-top: 15px;">
                     Somos una empresa de muebleria comprometida con crear
                     muebles que combinan calidad, funcionalidad y diseño, pensados para 
                     acompañarte en cada etapa de tu vida.
                 </p>
 
-                <p >
+                <p style="padding-top: 15px;">
                     Desde nuestros inicios, apostamos por un enfoque artesanal, donde cada 
                     pieza se trabaja con detalle, dedicación y pasión por el oficio. Utilizamos
                     materiales seleccionados por su resistencia y belleza, asegurando que cada 
                     mueble no solo luzca bien, sino que perdure en el tiempo.
                 </p>
 
-                <p >
+                <p style="padding-top: 15px;">
                     Sabemos que cada hogar es único, por eso ofrecemos soluciones personalizadas y accesibles, 
                     adaptándonos a distintos estilos, espacios y presupuestos. Nos especializamos en crear muebles 
                     que encajan en los entornos más importantes de tu casa: la cocina donde se comparten historias, el living que reúne a la familia, o ese rincón especial que necesitás hacer tuyo.
                     
                 </p>
 
-                <p > 
+                <p style="padding-top: 15px;"> 
                     En Módulo 23, más que fabricar muebles, construimos confianza, funcionalidad y belleza para tu hogar.
                 </p>
 
@@ -196,6 +196,30 @@ $usuario = Auth::obtenerUsuario();
 
 </body>
 
+<!-- Boton de Contacto -->
+
+<div id="contacto-btn" onclick="toggleContacto()">
+        <a class="btn"><b>📞 Contacto</b></a>
+</div>
+
+<!-- Panel De Informacion -->
+
+<div id="contacto-panel" style="display:none; text-align:center">
+    <span id="cerrar-contacto" onclick="toggleContacto()">&times;</span>
+    <?php if (isset($_SESSION['Usuario'])): ?>
+        <h5 style="color: #C19A6B; font-size:20px;padding-bottom:10px"><b>Información de Contacto</b></h5>
+        <p><b style="color: #C19A6B;">Email:</b> </p>
+        <p>soporte@modulo23.com</p>
+        <p><b style="color: #C19A6B;">Teléfono:</b></p>
+        <p> +54 223 123-4567</p>
+        <p><b style="color: #C19A6B;">WhatsApp</b></p>
+        <p>Link</p>
+    <?php else: ?>
+        <p class="alert alert-warning" role="alert">Debes <a href="./PHP/login.php">Iniciar Sesión</a> para ver la información de contacto.</p>
+    <?php endif; ?>
+</div>
+
+
 <!-- Animaciones -->
 
 <script>
@@ -211,9 +235,16 @@ $usuario = Auth::obtenerUsuario();
         entrada.target.classList.remove('visible');
         }
         });
-    }, { threshold: 0.1 }); // 10% visible para activarse
+    }, { threshold: 0.2 }); // 20% visible para activarse
 
     elementos.forEach(el => observer.observe(el));
+
+    // Animacion del Panel de Informacion
+
+    function toggleContacto() {
+        const panel = document.getElementById('contacto-panel');
+        panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
 
 </script>
 

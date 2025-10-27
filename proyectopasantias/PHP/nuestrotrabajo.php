@@ -202,7 +202,14 @@ $tipos = $item->obtenerTipos();
             <div class="container mt-4">
                 <div class="row text-center">
                     <?php foreach ($items as $i): ?>
-                        <div class="col-lg-4 animacion arriba" style="margin-bottom:5%">
+                        <div class="col-lg-4 animacion arriba producto" style="margin-bottom:5%" 
+                            style="margin-bottom:5%; cursor:pointer;"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalProducto"
+                            data-titulo="<?= htmlspecialchars($i['titulo']) ?>"
+                            data-descripcion="<?= htmlspecialchars($i['descripcion']) ?>"
+                            data-imagen="../uploads/<?= htmlspecialchars($i['imagen']) ?>"
+                        >
                             <div style="margin-bottom: 3%;">
                                 <?php if ($i['imagen']): ?>
                                     <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="img-fluid" style="width: 70%; margin-bottom: 4%;" alt="Imagen">
@@ -237,6 +244,46 @@ $tipos = $item->obtenerTipos();
 
 </body>
 
+<!-- Informacion en Detalle de los Productos -->
+
+<div class="modal fade" id="modalProducto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4 shadow-lg">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="modalTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImagen" src="" alt="" class="img-fluid rounded mb-3" style="max-height: 300px; object-fit: cover;">
+        <p id="modalDescripcion" class="fs-5 text-muted"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Boton de Contacto -->
+
+<div id="contacto-btn" onclick="toggleContacto()">
+        <a class="btn"><b>📞 Contacto</b></a>
+</div>
+
+<!-- Panel De Informacion -->
+
+<div id="contacto-panel" style="display:none; text-align:center">
+    <span id="cerrar-contacto" onclick="toggleContacto()">&times;</span>
+    <?php if (isset($_SESSION['Usuario'])): ?>
+        <h5 style="color: #C19A6B; font-size:20px;padding-bottom:10px"><b>Información de Contacto</b></h5>
+        <p><b style="color: #C19A6B;">Email:</b> </p>
+        <p>soporte@modulo23.com</p>
+        <p><b style="color: #C19A6B;">Teléfono:</b></p>
+        <p> +54 223 123-4567</p>
+        <p><b style="color: #C19A6B;">WhatsApp</b></p>
+        <p>Link</p>
+    <?php else: ?>
+        <p class="alert alert-warning" role="alert">Debes <a href="./PHP/login.php">Iniciar Sesión</a> para ver la información de contacto.</p>
+    <?php endif; ?>
+</div>
+
 <!-- Animaciones -->
 
 <script>
@@ -252,9 +299,33 @@ $tipos = $item->obtenerTipos();
         entrada.target.classList.remove('visible');
         }
         });
-    }, { threshold: 0.1 }); // 10% visible para activarse
+    }, { threshold: 0.35 }); // 20% visible para activarse
 
     elementos.forEach(el => observer.observe(el));
+
+    // Panel de los Productos
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('modalProducto');
+
+        modal.addEventListener('show.bs.modal', function (event) {
+            const item = event.relatedTarget; // el div clickeado
+            const titulo = item.getAttribute('data-titulo');
+            const descripcion = item.getAttribute('data-descripcion');
+            const imagen = item.getAttribute('data-imagen');
+
+            document.getElementById('modalTitulo').textContent = titulo;
+            document.getElementById('modalDescripcion').textContent = descripcion;
+            document.getElementById('modalImagen').src = imagen;
+        });
+    });
+
+    // Panel de Informacion
+
+    function toggleContacto() {
+        const panel = document.getElementById('contacto-panel');
+        panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
 
 </script>
 

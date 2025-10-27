@@ -138,7 +138,7 @@ $usuario = Auth::obtenerUsuario();
 
         <!-- Bloque 1 -->
 
-        <section class="bloque" style="padding-top: 5%;">
+        <section class="bloque" >
 
             <div class="container">
 
@@ -147,7 +147,7 @@ $usuario = Auth::obtenerUsuario();
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Puedo comprar directamente desde la página web?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                     No, nuestra página funciona únicamente como un catálogo digital para mostrar nuestros productos. Para realizar compras, debes comunicarte con nuestro equipo de ventas.
+                     No, nuestra página funciona únicamente como un catálogo digital para mostrar nuestros productos. Para realizar compras, debes comunicarte con nosotros
                     </p>
 
                 </div>
@@ -167,7 +167,7 @@ $usuario = Auth::obtenerUsuario();
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Los productos que aparecen en la web siempre están en stock?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                   El catálogo refleja los modelos que trabajamos habitualmente, pero la disponibilidad puede variar. Te recomendamos consultar con nuestro equipo antes de realizar un pedido.
+                   El catálogo refleja los modelos que trabajamos habitualmente, pero la disponibilidad puede variar. Te recomendamos contactarte con nosotros para tener mas detalles.
                     </p>
 
                 </div>
@@ -177,7 +177,7 @@ $usuario = Auth::obtenerUsuario();
                     <h1 style="font-size: 35px; color: #C19A6B;"><b>¿Cómo puedo solicitar una cotización o más información?</b></h1>
 
                     <p style="padding-top: 15px; font-size: 20px;font-family: Outfit-Light;">
-                    Podés ponerte en contacto con nosotros a través de nuestro formulario web, por teléfono, WhatsApp o correo electrónico. Nuestro equipo de ventas te brindará toda la información necesaria.
+                    Podés ponerte en contacto con nosotros a través de nuestro boton de contacto una vez que hayas Iniciado Sesion,ahi tendras nuestro teléfono, WhatsApp o correo electrónico. Nosotros te brindararemos toda la información necesaria.
                     </p>
 
                 </div>
@@ -200,6 +200,29 @@ $usuario = Auth::obtenerUsuario();
 
 </body>
 
+<!-- Boton de Contacto -->
+
+<div id="contacto-btn" onclick="toggleContacto()">
+        <a class="btn"><b>📞 Contacto</b></a>
+</div>
+
+<!-- Panel De Informacion -->
+
+<div id="contacto-panel" style="display:none; text-align:center">
+    <span id="cerrar-contacto" onclick="toggleContacto()">&times;</span>
+    <?php if (isset($_SESSION['Usuario'])): ?>
+        <h5 style="color: #C19A6B; font-size:20px;padding-bottom:10px"><b>Información de Contacto</b></h5>
+        <p><b style="color: #C19A6B;">Email:</b> </p>
+        <p>soporte@modulo23.com</p>
+        <p><b style="color: #C19A6B;">Teléfono:</b></p>
+        <p> +54 223 123-4567</p>
+        <p><b style="color: #C19A6B;">WhatsApp</b></p>
+        <p>Link</p>
+    <?php else: ?>
+        <p class="alert alert-warning" role="alert">Debes <a href="./PHP/login.php">Iniciar Sesión</a> para ver la información de contacto.</p>
+    <?php endif; ?>
+</div>
+
 <!-- Animaciones -->
 
 <script>
@@ -215,9 +238,16 @@ $usuario = Auth::obtenerUsuario();
         entrada.target.classList.remove('visible');
         }
         });
-    }, { threshold: 0.1 }); // 10% visible para activarse
+    }, { threshold: 0.2 }); // 20% visible para activarse
 
     elementos.forEach(el => observer.observe(el));
+
+    // Animacion del Panel de Informacion
+
+    function toggleContacto() {
+        const panel = document.getElementById('contacto-panel');
+        panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+    }
 
 </script>
 

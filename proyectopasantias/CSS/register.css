@@ -6,7 +6,6 @@ body{
     min-height: 100vh;
     background-image: url(../IMG/Fondo.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
 
 }
@@ -127,5 +126,6 @@ body{
         padding-left: 5%;
         padding-right: 5%;
     }
+    
 
 }
