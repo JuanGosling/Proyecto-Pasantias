@@ -1,6 +1,6 @@
 <?php
 require_once '../includes/Autenticacion.php';
-require_once '../includes/Item.php';
+require_once '../INCLUDES/Item.php';
 
 if (!Auth::esAdmin()) {
     header("Location: ./login.php");
@@ -10,20 +10,32 @@ if (!Auth::esAdmin()) {
 $item = new Item();
 $mensaje = "";
 
-$tiposDisponibles = ["Sillas", "Mesas", "Roperos", "Armarios", "Camas", "Escritorios","Repisas","Comodas","Otro"];
+$tipos = $item->obtenerTipos();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = trim($_POST['titulo']);
     $descripcion = trim($_POST['descripcion']);
-    $imagen = null;
-    $tipo = trim($_POST['tipo']);
+    $tipo_id = !empty($_POST['tipo_id']) ? $_POST['tipo_id'] : null;
+    $imagenes = $_FILES['imagenes'];
+    $imagenesNombres = [];
 
-    if ($_FILES['imagen']['name']) {
-        $imagen = basename($_FILES['imagen']['name']);
-        move_uploaded_file($_FILES['imagen']['tmp_name'], "../uploads/$imagen");
+    foreach ($imagenes['tmp_name'] as $key => $tmp_name) {
+        if ($imagenes['error'][$key] === UPLOAD_ERR_OK) {
+            $nombreArchivo = uniqid() . "_" . basename($imagenes['name'][$key]);
+            $rutaDestino = "../UPLOADS/" . $nombreArchivo;
+
+            if (move_uploaded_file($tmp_name, $rutaDestino)) {
+                $imagenesNombres[] = $nombreArchivo;
+            }
+        }
     }
 
-    $item->agregar($titulo, $descripcion, $imagen, $tipo);
+    $imagenPrincipal = !empty($imagenesNombres) ? $imagenesNombres[0] : null;
+
+    $item->agregar($titulo, $descripcion, $tipo_id );
+    $item_id = $item->obtenerUltimoId();
+    $item->agregarImagenes($imagenesNombres, $item_id);
+
     header("Location: ./admin.php");
 
 }
@@ -32,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,17 +67,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <textarea name="descripcion" class="form-control" rows="4"></textarea>
             </div>
             <div class="mb-3">
-                <label class="form-label">Imagen</label>
-                <input type="file" name="imagen" class="form-control">
+                <label class="form-label">Imagen (Se pueden seleccionar varias Imagenes con CTRL + CLICK IZQUIERDO)</label>
+                <input type="file" name="imagenes[]" class="form-control" multiple required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Tipo de Mueble</label>
-                <select name="tipo" class="form-select" required>
-                    <option value="">Selecciona un tipo</option>
-                    <?php foreach ($tiposDisponibles as $t): ?>
-                        <option value="<?php echo $t; ?>"><?php echo ucfirst($t); ?></option>
-                    <?php endforeach; ?>
-                </select>
+                <select name="tipo_id" class="form-select" required>
+                <option value="">Selecciona un tipo</option>
+                <?php foreach ($tipos as $tipo): ?>
+                    <option value="<?= $tipo['id'] ?>"><?= htmlspecialchars($tipo['nombre']) ?></option>
+                <?php endforeach; ?>
+            </select>
             </div>
             <button type="submit" class="btn btn-success">Guardar</button>
             <a href="./admin.php" class="btn btn-secondary">Cancelar</a>

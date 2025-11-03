@@ -145,6 +145,30 @@ body{
 
 }
 
+/* Informacion en Detalle de los Productos */
+
+.modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #212529;
+  font-family: Outfit-Light;
+
+}
+
+.modal-title {
+  color: #C19A6B;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+#modalDescripcion {
+ 
+  padding-top: 15px;
+  line-height: 1.6;
+  color: white !important;
+}
+
 /* Responsive */
 
 /* 

@@ -7,10 +7,16 @@ VERIFICAR LA INTEGRIDAD DE LOS ARCHIVOS DE GITHUB CON LOS LOCALES (SQL Usuarios)
 
 --- PHP ---
 
-- Se podria agregar una interfaz que muestre mas en detalle cada mueble a la hora de hacer click
-- Habria que hacer alguna opcion hacia el portal de venta o sino poner la informacion hacia donde ir (Que este abajo a la derecha como boton en todo momento)
-- La imagen principal de Modulo 23 tiene mucha resolucion , tarda un poco en cargar por lo tanto habria que hacerla de menor resolucion y hacer que quede igual que la actual
-- La imagen del inicio que es el fondo en aspectos mas pequeños como de un celular se bugea debido a que es una imagen del fondo y no una imagen del section , ver si se puede arreglar
+- HAY UN PROBLEMA AL INGRESAR VARIOS ITEMS , SE DUPLICAN IMAGENES , VERIFICAR Y ARREGLAR
+- ARREGLAR ANIMAIONES DE LOS ITEMS?? Se bugean dependiendo a a partir de cundo se ven y carga la animacion
+- SOLUCIONAR MODAL DEL ADMIN
+- Filtrar los muebles en Admin por recientes o ultimos
+- REALIZAR LA INFORMACION EXTRA EN EL ITEM CUANDO LE HACES CLICK (DESCRIPCION EXTRA) IMPLICA ALTERAR BD , AGREGAR Y MOSTRAR EN MODAL
+
+- SOLUCIONAR LOS TIPOS EN RELACION CON LO ANTERIOR
+- En el apartado Admin , poner un boton para poder agregar un nuevo tipo de mueble
+- Crear una tabla de tipos de muebles O SINO agregar mas tipos de muebles al array de tipos de muebles
+- QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
 - Cometi un error a la hora de diseñar el registro de usuarios , hubiese sido mejor primero verificar que la persona es dueño del email 
 con un link a su mail , el cual le permite continuar con el registro y recien ahi cargar sus datos a la base de datos , pero ahora ya es un poco tarde
@@ -24,10 +30,6 @@ con un link a su mail , el cual le permite continuar con el registro y recien ah
 
 - Si ya estas logeado y accedes al login o register no te redirreciona al index (No es algo tan importante)
 - QUEDA POR INVESTIGAR , NO ES COMPLETAMENTE NECESARIO
-
-- En el apartado Admin , poner un boton para poder agregar un nuevo tipo de mueble
-- Crear una tabla de tipos de muebles O SINO agregar mas tipos de muebles al array de tipos de muebles
-- QUEDA POR INVESTIGAR , ES NECESARIO (?)
 
 - SUBIR LA PAGINA WEB A INTERNET (INVESTIGAR)
 - Borrar todo aquello que no vaya a utilizar en la pagina final ( mi perfil , etc )

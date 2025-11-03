@@ -10,8 +10,6 @@ if (!Auth::esAdmin()) {
 $item = new Item();
 $id = $_GET['id'] ?? null;
 
-$tiposDisponibles = ["Sillas", "Mesas", "Roperas", "Armarios", "Camas", "Escritorios","Repisas"];
-
 if (!$id || !is_numeric($id)) {
     die("ID inválido");
 }
@@ -21,18 +19,41 @@ if (!$datos) {
     die("Ítem no encontrado");
 }
 
+$tipos = $item->obtenerTipos();
+
+$imagenes = $item->obtenerImagenesPorItem($id);
+
+if (isset($_GET['eliminar_imagen'])) {
+    $item->eliminarImagen((int)$_GET['eliminar_imagen']);
+    header("Location: editar.php?id=" . $id);
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
     $titulo = trim($_POST['titulo']);
     $descripcion = trim($_POST['descripcion']);
-    $imagen = $datos['imagen']; // Por defecto, mantener la actual
-    $tipo = trim($_POST['tipo']);
+    $tipo_id = trim($_POST['tipo_id']);
 
-    if ($_FILES['imagen']['name']) {
-        $imagen = basename($_FILES['imagen']['name']);
-        move_uploaded_file($_FILES['imagen']['tmp_name'], "../uploads/$imagen");
+    if (!empty($_FILES['imagenes']['name'][0])) {
+        $imagenesNombres = [];
+
+        foreach ($_FILES['imagenes']['tmp_name'] as $key => $tmp_name) {
+            $nombreArchivo = basename($_FILES['imagenes']['name'][$key]);
+            $rutaDestino = "../UPLOADS/" . $nombreArchivo;
+
+            if (move_uploaded_file($tmp_name, $rutaDestino)) {
+                $imagenesNombres[] = $nombreArchivo;
+            }
+        }
+
+        if (!empty($imagenesNombres)) {
+            $item->agregarImagenes($imagenesNombres,$id); 
+        }
     }
 
-    $item->actualizar($id, $titulo, $descripcion, $imagen ,$tipo);
+    $item->actualizar($id, $titulo, $descripcion,$tipo_id);
+    $item->agregarImagenes($imagenesNombres, $id);
     header("Location: ./admin.php");
 }
 ?>
@@ -61,27 +82,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <textarea name="descripcion" class="form-control" rows="4"><?= htmlspecialchars($datos['descripcion']) ?></textarea>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Imagen actual</label><br>
-                    <?php if ($datos['imagen']): ?>
-                        <img src="../uploads/<?= htmlspecialchars($datos['imagen']) ?>" width="150">
-                    <?php else: ?>
-                        <span>No hay imagen</span>
-                    <?php endif; ?>
+                    <label for="imagenesActuales" class="form-label">Imágenes actuales:</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <?php foreach ($imagenes as $img): ?>
+
+                            <?php
+                                    $idImagen = (int)$img['id'];
+                                    $href = 'editar.php?' . http_build_query(['id' => $id, 'eliminar_imagen' => $idImagen]);
+                                    $hrefEsc = htmlspecialchars($href, ENT_QUOTES, 'UTF-8');
+                            ?>
+
+                            <div style="position: relative; display: inline-block;">
+                                <img src="../UPLOADS/<?= htmlspecialchars($img['imagen']) ?>" alt="Imagen existente" width="120" height="120" style="object-fit: cover; border-radius: 5px;">
+
+                                <a href="<?= $hrefEsc ?>"
+                                    onclick="return confirm('¿Seguro que deseas eliminar esta imagen?')"
+                                    style="position: absolute; top: 2px; right: 6px; color: red; font-weight: bold; text-decoration: none;">✕
+                                </a>
+
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="nuevas_imagenes" class="form-label">Agregar nuevas imágenes:</label>
+                    <input type="file" name="imagenes[]" multiple class="form-control">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Tipo de Mueble</label>
-                    <select name="tipo" class="form-select" required>
-                        <option value="">Selecciona un tipo</option>
-                        <?php foreach ($tiposDisponibles as $t): ?>
-                            <option value="<?php echo $t; ?>" <?php if($datos['tipo'] == $t) echo "selected"; ?>>
-                                <?php echo ucfirst($t); ?>
+                    <select name="tipo_id" class="form-select">
+                        <option value="">Sin tipo</option>
+                        <?php foreach ($tipos as $tipo): ?>
+                            <option value="<?= $tipo['id'] ?>" <?= ($tipo['id'] == $datos['tipo_id']) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($tipo['nombre']) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Cambiar Imagen (opcional)</label>
-                    <input type="file" name="imagen" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-primary">Actualizar</button>
                 <a href="./admin.php" class="btn btn-secondary">Cancelar</a>

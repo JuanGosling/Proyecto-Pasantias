@@ -95,8 +95,6 @@ $items = $item->obtenerTodos();
                                 </a>
                                 
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-                                    <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
                                     <li><a class="dropdown-item" href="./PHP/cerrarsesion.php">Cerrar Sesion</a></li>
                                 </ul>
 
@@ -257,17 +255,23 @@ $items = $item->obtenerTodos();
                         $items_mostrados = array_slice($items, 0, 6);
                         foreach ($items_mostrados as $i): 
                         ?>
-                            <div class="col-lg-4 animacion arriba producto" style="margin-bottom:5%"
+                            <?php
+                                $imagenes = $item->obtenerImagenesPorItem($i['id']);
+                                $imagenesRutas = array_map(fn($img) => 'UPLOADS/' . $img['imagen'], $imagenes);
+                                $dataImagenes = htmlspecialchars(json_encode($imagenesRutas));
+                                $imagenPrincipal = isset($imagenesRutas[0]) ? $imagenesRutas[0] : null;
+                            ?>
+                            <div class="col-lg-4 animacion arriba producto"
                                 style="margin-bottom:5%; cursor:pointer;"
                                 data-bs-toggle="modal"
                                 data-bs-target="#modalProducto"
                                 data-titulo="<?= htmlspecialchars($i['titulo']) ?>"
                                 data-descripcion="<?= htmlspecialchars($i['descripcion']) ?>"
-                                data-imagen="UPLOADS/<?= htmlspecialchars($i['imagen']) ?>"
+                                data-imagenes='<?php echo $dataImagenes; ?>'
                             >
                                 <div style="margin-bottom: 3%;">
-                                    <?php if ($i['imagen']): ?>
-                                        <img src="UPLOADS/<?= htmlspecialchars($i['imagen']) ?>" class="img-fluid"
+                                    <?php if ($imagenPrincipal): ?>
+                                        <img src="<?= htmlspecialchars($imagenPrincipal) ?>" class="img-fluid"
                                             style="width: 70%; margin-bottom: 4%; object-fit: cover;" alt="Imagen">
                                     <?php else: ?>
                                         <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
@@ -316,14 +320,33 @@ $items = $item->obtenerTodos();
 <div class="modal fade" id="modalProducto" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content rounded-4 shadow-lg">
+
       <div class="modal-header border-0">
         <h5 class="modal-title" id="modalTitulo"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
+
       <div class="modal-body text-center">
-        <img id="modalImagen" src="" alt="" class="img-fluid rounded mb-3" style="max-height: 300px; object-fit: cover;">
-        <p id="modalDescripcion" class="fs-5 text-muted"></p>
+            <div id="carousel" class="carousel slide" >
+
+                <div class="carousel-inner">
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+            <p id="modalDescripcion" class="fs-5 text-muted"></p>
+
       </div>
+
     </div>
   </div>
 </div>
@@ -373,19 +396,43 @@ $items = $item->obtenerTodos();
     // Panel de los Productos
 
     document.addEventListener('DOMContentLoaded', function () {
-        const modal = document.getElementById('modalProducto');
+    const modal = document.getElementById('modalProducto');
+    const carouselInner = document.querySelector('#modalProducto .carousel-inner');
 
         modal.addEventListener('show.bs.modal', function (event) {
-            const item = event.relatedTarget; // el div clickeado
+            const item = event.relatedTarget;
             const titulo = item.getAttribute('data-titulo');
             const descripcion = item.getAttribute('data-descripcion');
-            const imagen = item.getAttribute('data-imagen');
+            const imagenes = JSON.parse(item.getAttribute('data-imagenes'));
 
+            // Actualizar título y descripción
             document.getElementById('modalTitulo').textContent = titulo;
             document.getElementById('modalDescripcion').textContent = descripcion;
-            document.getElementById('modalImagen').src = imagen;
+
+            // Vaciar carrusel anterior
+            carouselInner.innerHTML = '';
+
+            // Crear items del carrusel
+            imagenes.forEach((src, index) => {
+                const div = document.createElement('div');
+                div.classList.add('carousel-item');
+                if (index === 0) div.classList.add('active');
+
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'img-fluid rounded mb-3';
+                img.alt = `Imagen ${index + 1}`;
+
+                // Si se quiere ver o modificar el tamaño real de la Imagen borra la linea de abajo
+
+                img.style="max-height: 500px; object-fit: cover;";
+
+                div.appendChild(img);
+                carouselInner.appendChild(div);
+            });
         });
     });
+
 
     // Panel de Informacion
 

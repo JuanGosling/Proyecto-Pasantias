@@ -10,11 +10,11 @@ if (!Auth::esAdmin()) {
 
 $item = new Item();
 
-$tipo = isset($_GET['tipo']) ? $_GET['tipo'] : null;
-$busqueda = isset($_GET['busqueda']) ? $_GET['busqueda'] : null;
+$tipo_id = isset($_GET['tipo']) ? $_GET['tipo'] : null;
+$busqueda = isset($_GET['q']) ? $_GET['q'] : null;
 
 $items = $item->obtenerTodos();
-$items = $item->buscarItems($tipo, $busqueda);
+$items = $item->buscarItems($tipo_id, $busqueda);
 $tipos = $item->obtenerTipos();
 $usuario = Auth::obtenerUsuario();
 
@@ -165,11 +165,8 @@ $usuario = Auth::obtenerUsuario();
                     <div class="col-md-3">
                         <select name="tipo" class="form-select">
                             <option value="">Todos los tipos</option>
-                            <?php foreach ($tipos as $t): ?>
-                                <option value="<?php echo htmlspecialchars($t, ENT_QUOTES); ?>" 
-                                    <?php if ($tipo == $t) echo "selected"; ?>>
-                                    <?php echo ucfirst($t); ?>
-                                </option>
+                            <?php foreach ($tipos as $tipo): ?>
+                                <option value="<?= $tipo['id'] ?>"><?= htmlspecialchars($tipo['nombre']) ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -194,18 +191,30 @@ $usuario = Auth::obtenerUsuario();
                         <h4>Opciones</h4>
                         <ul class="nav flex-column">
                             <li class="nav-item"><a href="agregar.php" class="btn">Agregar Mueble</a></li>
+                            <li class="nav-item"><a href="tipos.php" class="btn">Agregar Tipo de Mueble</a></li>
                         </ul>
                     </div>
 
                     <!-- Muebles -->
                     <div class="col-md-10 p-4">
                         <h2>Listado de Muebles</h2>
-                        <div class="row">
+                        <div class="row ">
                             <?php foreach ($items as $i): ?>
-                                <div class="col-md-4 mb-4">
+                                <?php
+                                    $imagenes = $item->obtenerImagenesPorItem($i['id']);
+                                    $imagenesRutas = array_map(fn($img) => '../UPLOADS/' . $img['imagen'], $imagenes);
+                                    $dataImagenes = htmlspecialchars(json_encode($imagenesRutas));
+                                    $imagenPrincipal = isset($imagenesRutas[0]) ? $imagenesRutas[0] : null;
+                                ?>
+                                <div class="col-md-4 mb-4 producto"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalProducto"
+                                    data-titulo="<?= htmlspecialchars($i['titulo']) ?>"
+                                    data-descripcion="<?= htmlspecialchars($i['descripcion']) ?>"
+                                    data-imagenes='<?php echo $dataImagenes; ?>'>
                                     <div class="card h-100">
-                                        <?php if ($i['imagen']): ?>
-                                            <img src="../uploads/<?= htmlspecialchars($i['imagen']) ?>" class="card-img-top" alt="Imagen">
+                                        <?php if ($imagenPrincipal): ?>
+                                            <img src="../UPLOADS/<?= $imagenPrincipal ?>" class="card-img-top" alt="Imagen" style="cursor:pointer;">
                                         <?php else: ?>
                                             <div class="bg-secondary text-white text-center p-5">Sin imagen</div>
                                         <?php endif; ?>
@@ -240,6 +249,87 @@ $usuario = Auth::obtenerUsuario();
     </div>
 
 </body>
+
+<!-- Informacion en Detalle de los Productos -->
+
+<div class="modal fade" id="modalProducto" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4 shadow-lg">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="modalTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body text-center">
+            <div id="carousel" class="carousel slide" >
+
+                <div class="carousel-inner">
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+
+            <p id="modalDescripcion" class="fs-5 text-muted"></p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+
+    // Panel de los Productos
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modalProducto');
+    const carouselInner = document.querySelector('#modalProducto .carousel-inner');
+
+        modal.addEventListener('show.bs.modal', function (event) {
+            const item = event.relatedTarget;
+            const titulo = item.getAttribute('data-titulo');
+            const descripcion = item.getAttribute('data-descripcion');
+            const imagenes = JSON.parse(item.getAttribute('data-imagenes'));
+
+            // Actualizar título y descripción
+            document.getElementById('modalTitulo').textContent = titulo;
+            document.getElementById('modalDescripcion').textContent = descripcion;
+
+            // Vaciar carrusel anterior
+            carouselInner.innerHTML = '';
+
+            // Crear items del carrusel
+            imagenes.forEach((src, index) => {
+                const div = document.createElement('div');
+                div.classList.add('carousel-item');
+                if (index === 0) div.classList.add('active');
+
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'img-fluid rounded mb-3';
+                img.alt = `Imagen ${index + 1}`;
+
+                // Si se quiere ver o modificar el tamaño real de la Imagen borra la linea de abajo
+
+                img.style="max-height: 500px; object-fit: cover;";
+
+                div.appendChild(img);
+                carouselInner.appendChild(div);
+            });
+        });
+    });
+
+
+</script>
 
 <script src="../BOOTSTRAP_v5.3/js/bootstrap.bundle.min.js"></script>
 
