@@ -260,6 +260,8 @@ $items = $item->obtenerTodos();
                                 $imagenesRutas = array_map(fn($img) => 'UPLOADS/' . $img['imagen'], $imagenes);
                                 $dataImagenes = htmlspecialchars(json_encode($imagenesRutas));
                                 $imagenPrincipal = isset($imagenesRutas[0]) ? $imagenesRutas[0] : null;
+                                $descripcion = htmlspecialchars($i['descripcion']);
+                                $descripcion_corta = strlen($descripcion) > 150 ? substr($descripcion, 0, 150) . '...' : $descripcion;
                             ?>
                             <div class="col-lg-4 animacion arriba producto"
                                 style="margin-bottom:5%; cursor:pointer;"
@@ -283,7 +285,7 @@ $items = $item->obtenerTodos();
                                 </div>
                                 <div>
                                     <p style="font-size: 20px;">
-                                        <?= nl2br(htmlspecialchars($i['descripcion'])) ?>
+                                        <?= nl2br($descripcion_corta) ?>
                                     </p>
                                 </div>
                             </div>

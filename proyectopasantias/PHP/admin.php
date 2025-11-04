@@ -205,6 +205,8 @@ $usuario = Auth::obtenerUsuario();
                                     $imagenesRutas = array_map(fn($img) => '../UPLOADS/' . $img['imagen'], $imagenes);
                                     $dataImagenes = htmlspecialchars(json_encode($imagenesRutas));
                                     $imagenPrincipal = isset($imagenesRutas[0]) ? $imagenesRutas[0] : null;
+                                    $descripcion = htmlspecialchars($i['descripcion']);
+                                    $descripcion_corta = strlen($descripcion) > 150 ? substr($descripcion, 0, 150) . '...' : $descripcion;
                                 ?>
                                 <div class="col-md-4 mb-4 producto"
                                     data-bs-toggle="modal"
@@ -220,7 +222,7 @@ $usuario = Auth::obtenerUsuario();
                                         <?php endif; ?>
                                         <div class="card-body" style="background-color: #C19A6B; color: #ffffff;font-family: Outfit;">
                                             <h5 class="card-title"><?= htmlspecialchars($i['titulo']) ?></h5>
-                                            <p class="card-text"><?= nl2br(htmlspecialchars($i['descripcion'])) ?></p>
+                                            <p class="card-text"><?= nl2br($descripcion_corta) ?></p>
                                         </div>
                                         <div class="card-footer text-end" style="background-color: #C19A6B; color: #ffffff;font-family: Outfit;">
                                             <a href="editar.php?id=<?= $i['id'] ?>" style="background-color: #6bc16bff;" class="btn btn-sm btn-primary">Editar</a>
