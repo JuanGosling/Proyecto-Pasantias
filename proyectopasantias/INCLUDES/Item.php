@@ -29,7 +29,7 @@ class Item {
 
         // 🔹 Filtro por búsqueda (texto)
         if (!empty($busqueda)) {
-            $sql .= " AND (i.titulo LIKE ? OR i.descripcion LIKE ? ? OR t.nombre LIKE ?)";
+            $sql .= " AND (i.titulo LIKE ? OR i.descripcion LIKE ? OR t.nombre LIKE ?)";
             $parametros[] = "%$busqueda%";
             $parametros[] = "%$busqueda%";
             $parametros[] = "%$busqueda%";
