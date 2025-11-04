@@ -21,13 +21,11 @@ class Item {
                 WHERE 1=1";
         $parametros = [];
 
-        // 🔹 Filtro por tipo (id numérico)
         if (!empty($tipo_id)) {
             $sql .= " AND i.tipo_id = ?";
             $parametros[] = (int)$tipo_id;
         }
 
-        // 🔹 Filtro por búsqueda (texto)
         if (!empty($busqueda)) {
             $sql .= " AND (i.titulo LIKE ? OR i.descripcion LIKE ? OR t.nombre LIKE ?)";
             $parametros[] = "%$busqueda%";

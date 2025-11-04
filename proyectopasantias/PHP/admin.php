@@ -103,8 +103,6 @@ $usuario = Auth::obtenerUsuario();
                                 </a>
                                 
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
-                                    <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
                                     <li><a class="dropdown-item" href="./cerrarsesion.php">Cerrar Sesion</a></li>
                                 </ul>
 
